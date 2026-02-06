@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Distância da linha</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Distância da letra</value>
+  </data>
+  <data name="cBPauseWord.Text" xml:space="preserve">
+    <value>Adicionar Pausa antes da palavra</value>
+  </data>
+  <data name="btnApply.Text" xml:space="preserve">
+    <value>Criar código G</value>
+  </data>
+  <data name="cBPauseLine.Text" xml:space="preserve">
+    <value>Adicionar pausa antes da linha</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Criar código G a partir do texto</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Outras configurações do código G em Setup SVG-Import</value>
+  </data>
+  <data name="label11.ToolTip" xml:space="preserve">
+    <value>Distância entre linhas</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="cBConnectLetter.Text" xml:space="preserve">
+    <value>Conectar letras (somente dela)</value>
+  </data>
+  <data name="cBToolTable.ToolTip" xml:space="preserve">
+    <value>Dentro de uma palavra, conecte o último ponto da letra ao primeiro ponto da próxima letra</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Altura da letra</value>
+  </data>
+  <data name="cBPauseChar.Text" xml:space="preserve">
+    <value>Adicionar Pausa antes da letra</value>
+  </data>
+  <data name="cBConnectLetter.ToolTip" xml:space="preserve">
+    <value>Dentro de uma palavra, conecte o último ponto da letra ao primeiro ponto da próxima letra</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value>Altura das letras</value>
+  </data>
+  <data name="cBToolTable.Text" xml:space="preserve">
+    <value>Obter valores da tabela de ferramentas</value>
+  </data>
+  <data name="label10.ToolTip" xml:space="preserve">
+    <value>Espaço adicional entre letras</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Criação de texto</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Informação da fonte</value>
+  </data>
+  <data name="cBLineBreak.Text" xml:space="preserve">
+    <value>Quebra de linha após (estimado)</value>
+  </data>
+  <data name="cBLineBreak.ToolTip" xml:space="preserve">
+    <value>Estima o comprimento da palavra e adiciona uma quebra de linha após o comprimento especificado</value>
+  </data>
+  <data name="RbAlign3.Text" xml:space="preserve">
+    <value>Para a direita</value>
+  </data>
+  <data name="RbAlign2.Text" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="RbAlign1.Text" xml:space="preserve">
+    <value>Deixou</value>
+  </data>
+  <data name="CbInsertCode.Text" xml:space="preserve">
+    <value>Inserir texto na visualização 2D (na posição 0;0)</value>
+  </data>
+  <data name="CbOutline.Text" xml:space="preserve">
+    <value>Contorno</value>
+  </data>
+  <data name="CbOutline.ToolTip" xml:space="preserve">
+    <value>Letras de preenchimento com padrão de preenchimento de hachura, definido em [Configuração - Importação de gráficos - Importação de caminho - Modificações de caminho]</value>
+  </data>
+  <data name="CbHatchFill.Text" xml:space="preserve">
+    <value>Preenchimento de hachura</value>
+  </data>
+  <data name="CbHatchFill.ToolTip" xml:space="preserve">
+    <value>Letras de preenchimento com padrão de preenchimento de hachura, definido em [Configuração - Importação de gráficos - Importação de caminho - Modificações de caminho]</value>
+  </data>
+  <data name="CbWordWrap.Text" xml:space="preserve">
+    <value>Quebra de linha</value>
+  </data>
+  <data name="RbFont2.Text" xml:space="preserve">
+    <value>Fonte do sistema</value>
+  </data>
+  <data name="RbFont1.Text" xml:space="preserve">
+    <value>Fonte de linha única (Hershey)</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Alinhamento de texto</value>
+  </data>
+  <data name="BtnSelectFont.Text" xml:space="preserve">
+    <value>Selecione a fonte</value>
+  </data>
+  <data name="LblFont.Text" xml:space="preserve">
+    <value>Fonte:</value>
+  </data>
+  <data name="LblInfoFont.Text" xml:space="preserve">
+    <value>Fonte</value>
+  </data>
+  <data name="LblInfoSize.Text" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="LblSize.Text" xml:space="preserve">
+    <value>Tamanho:</value>
+  </data>
+  <data name="LblWidth.Text" xml:space="preserve">
+    <value>Largura:</value>
+  </data>
+  <data name="LblHeight.Text" xml:space="preserve">
+    <value>Altura:</value>
+  </data>
+  <data name="LblInfoWidth.Text" xml:space="preserve">
+    <value>10.000,00</value>
+  </data>
+  <data name="LblInfoWidth.ToolTip" xml:space="preserve">
+    <value>Largura do texto do G-Code criado com tamanho de fonte atual e configuração de quebra de linha</value>
+  </data>
+  <data name="LblInfoHeight.Text" xml:space="preserve">
+    <value>10.000,00</value>
+  </data>
+  <data name="LblInfoHeight.ToolTip" xml:space="preserve">
+    <value>Altura do texto do G-Code criado com tamanho de fonte atual e configuração de quebra de linha</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Fontes gratuitas</value>
+  </data>
+  <data name="linkLabel1.ToolTip" xml:space="preserve">
+    <value>Link para 'www.dafont.com' - o uso é por sua conta e risco.</value>
+  </data>
+  <data name="NUDWidth.ToolTip" xml:space="preserve">
+    <value>Defina a largura do texto desejada e adapte o tamanho da fonte para alcançá-la.</value>
+  </data>
+  <data name="NUDHeight.ToolTip" xml:space="preserve">
+    <value>Defina a altura do texto desejada e adapte o tamanho da fonte para alcançá-la.</value>
+  </data>
+  <data name="BtnSetWidth.Text" xml:space="preserve">
+    <value>definir</value>
+  </data>
+  <data name="BtnSetWidth.ToolTip" xml:space="preserve">
+    <value>Calcule e defina o tamanho da fonte para atingir a largura do texto</value>
+  </data>
+  <data name="BtnSetHeight.Text" xml:space="preserve">
+    <value>definir</value>
+  </data>
+  <data name="BtnSetHeight.ToolTip" xml:space="preserve">
+    <value>Calcule e defina o tamanho da fonte para atingir a altura do texto</value>
+  </data>
+  <data name="BtnSaveIni.ToolTip" xml:space="preserve">
+    <value>Salva as configurações desta janela como arquivo INI</value>
+  </data>
+  <data name="BtnHelp.ToolTip" xml:space="preserve">
+    <value>Ajuda online</value>
+  </data>
+  <data name="cBImportGraphicNoise.Text" xml:space="preserve">
+    <value>Adicionar ruído</value>
+  </data>
+  <data name="cBImportGraphicNoise.ToolTip" xml:space="preserve">
+    <value>Gera linhas instáveis, configurações em [Configuração - Importação de gráficos - Importação de caminho - Modificações de caminho]</value>
+  </data>
+</root>

@@ -1,0 +1,4085 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cBshowImportDialog.Text" xml:space="preserve">
+    <value>إظهار اختيار "استخدام الحالة" عند استيراد الرسومات</value>
+    <comment>TabPage1</comment>
+  </data>
+  <data name="btnReloadFile.Text" xml:space="preserve">
+    <value>تحديث SVG ، DXF ، ملف الحفر</value>
+    <comment>TabPage1</comment>
+  </data>
+  <data name="btnReloadFile.ToolTip" xml:space="preserve">
+    <value>إعادة تحميل البيانات لتطبيق مجموعات جديدة أثناء الاستيراد</value>
+    <comment>TabPage1</comment>
+  </data>
+  <data name="cBToolTableDefault.Text" xml:space="preserve">
+    <value>فقط استخدام الأداة الافتراضية العدد.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBToolTableUse.Text" xml:space="preserve">
+    <value>اضبط XY-Feed وما إلى ذلك من جدول الأدوات ،
+حدد عناصر في الصفحة التالية "إنشاء كود G-Code"</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1gB5.Text" xml:space="preserve">
+    <value>الجدول أداة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportSVGSortInvert.Text" xml:space="preserve">
+    <value>العودة ترتيب الفرز</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="rBImportSVGSort1.Text" xml:space="preserve">
+    <value>فرز المجموعات حسب خاصية المجموعة - بترتيب تصاعدي</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="rBImportSVGSort2.Text" xml:space="preserve">
+    <value>ترتيب المجموعات حسب رقم الأداة - بترتيب تصاعدي</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="rBImportSVGSort0.Text" xml:space="preserve">
+    <value>لا يوجد فرز</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGGroup.Text" xml:space="preserve">
+    <value>مجموعة الكائنات من نفس اللون = نفس الأداة</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGGroup.ToolTip" xml:space="preserve">
+    <value>كائن المجموعة من نفس اللون = أداة العدد.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1gB4.Text" xml:space="preserve">
+    <value>تجميع وفرز الكائنات</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>عرض الخطوة على محيط الأقواس</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportDXFSwitchWhite.Text" xml:space="preserve">
+    <value>التعامل مع قلم أبيض وأسود</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportDXFSwitchWhite.ToolTip" xml:space="preserve">
+    <value>يظهر LibreCAD لون القلم الأبيض على خلفية سوداء. لكن لون القلم الحقيقي أسود.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportDXFIndexToolNr.Text" xml:space="preserve">
+    <value>استخدم فهرس اللون (+1) كأداة رقم. (بدلا من اللون)</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportDXFIndexToolNr.ToolTip" xml:space="preserve">
+    <value>يستخدم تنسيق DXF فهرس الألوان من 0 إلى 255. سيتم استخدام هذا الفهرس + 1 كرقم للأداة.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1gB3.Text" xml:space="preserve">
+    <value>استيراد DXF</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGNodesOnly.Text" xml:space="preserve">
+    <value>عُقد مسار العملية فقط (على سبيل المثال ، مواضع الأظافر لفن السلسلة)</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGNodesOnly.ToolTip" xml:space="preserve">
+    <value>فقط معالجة العقد (على سبيل المثال نقاط نهاية الأسطر) لإجراء القلم لأعلى / لأعلى.
+هذا الخيار مخصص لفن الأوتار لمواقع الظفر المسبقة.
+في Inkscape ، قم أولاً بتحويل الكائنات إلى مسار "مسار كائن إلى مسار" ،
+ثم قم بإضافة العقد عبر "ملحقات - تعديل مسار - إضافة العقد" لتوزيع عقد إضافية على طول المسار.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="checkBox4.Text" xml:space="preserve">
+    <value>أضعاف كتل رمز</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="checkBox4.ToolTip" xml:space="preserve">
+    <value>أضف التعليقات المتعلقة بالرسومات إلى GCode</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>مرات</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="nUDImportRepeat.ToolTip" xml:space="preserve">
+    <value>كرر الشفرة التي تم إنشاؤها n-nets (على سبيل المثال ، بالنسبة لليزر الضعيف لقطع المواد السميكة)</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGRepeat.Text" xml:space="preserve">
+    <value>كرر الرمز الكامل (ليزر ضعيف)</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGRepeat.ToolTip" xml:space="preserve">
+    <value>كرر الشفرة التي تم إنشاؤها n-nets (على سبيل المثال ، بالنسبة لليزر الضعيف لقطع المواد السميكة)</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportUnitGCode.Text" xml:space="preserve">
+    <value>أضف G20 (بوصة) / G21 (مم) G- الرمز</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportUnitGCode.ToolTip" xml:space="preserve">
+    <value>إضافة أمر G20 / G21 في GCode.G21 هو الإعداد الافتراضي.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="rBImportUnitInch.Text" xml:space="preserve">
+    <value>بوصة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportUnitInch.ToolTip" xml:space="preserve">
+    <value>قيادة G20</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1lbl1.Text" xml:space="preserve">
+    <value>الوحدات المستهدفة والعرض</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1lbl1.ToolTip" xml:space="preserve">
+    <value>إذا تم إعطاء أي وحدة داخل ملف الاستيراد ، فحاول التحويل إلى وحدات مستهدفة</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="rBImportUnitmm.Text" xml:space="preserve">
+    <value>مم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportUnitmm.ToolTip" xml:space="preserve">
+    <value>قيادة G21</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGPauseP.Text" xml:space="preserve">
+    <value>وقفة (M0) قبل كل قلم لأسفل</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGPauseE.Text" xml:space="preserve">
+    <value>وقفة (M0) قبل كل مسار</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>الحد الأدنى</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="nUDImportReduce.ToolTip" xml:space="preserve">
+    <value>يتخطى هذا الخيار تحركات أصغر من القيمة المحددة ، لتقليل حجم gcode.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGReduce.Text" xml:space="preserve">
+    <value>إزالة التحركات قصيرة جدا &lt;</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGReduce.ToolTip" xml:space="preserve">
+    <value>يتخطى هذا الخيار تحركات أصغر من القيمة المحددة ، لتقليل حجم gcode.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGComments.Text" xml:space="preserve">
+    <value>استيراد تعليقات إضافية</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGComments.ToolTip" xml:space="preserve">
+    <value>أضف التعليقات المتعلقة بالرسومات إلى GCode</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="nUDImportSVGSegemnts.ToolTip" xml:space="preserve">
+    <value>سيتم رسم المنحنيات بواسطة قطاعات خطية. كما هو الحال في المزيد من القطاعات كلما زاد عدد المنحنى.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1lbl2.Text" xml:space="preserve">
+    <value>عدد مقاطع الخط في المنحنيات والخطوط</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1lbl2.ToolTip" xml:space="preserve">
+    <value>سيتم رسم المنحنيات بواسطة قطاعات خطية. كما هو الحال في المزيد من القطاعات كلما زاد عدد المنحنى.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1gB1.Text" xml:space="preserve">
+    <value>استيراد الرسومات العامة</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="tab1_1lbl3.Text" xml:space="preserve">
+    <value>إعداد DPI</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVG_DPI_72.ToolTip" xml:space="preserve">
+    <value>يتم استخدام 72 نقطة في البوصة بواسطة Adobe Illustrator</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVG_DPI_96.ToolTip" xml:space="preserve">
+    <value>96 نقطة في البوصة هو التحجيم الافتراضي</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGResize.Text" xml:space="preserve">
+    <value>حاول تغيير حجم الرسم إلى أقصى البعد X أو Y</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="cBImportSVGResize.ToolTip" xml:space="preserve">
+    <value>حاول توسيع نطاق الرسومات إلى وحدات معينة ، قبل إنشاء رمز gcode ،
+لتجنب المشاكل عند تخفيض gcode.</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="nUDSVGScale.ToolTip" xml:space="preserve">
+    <value>حاول توسيع نطاق الرسومات إلى وحدات معينة ، قبل إنشاء رمز gcode ،</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="lblSVGScale.Text" xml:space="preserve">
+    <value>وحدات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_1gB2.Text" xml:space="preserve">
+    <value>SVG استيراد</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Lasermode (استخدم S0 بدلاً من M5 لإيقاف تشغيل الليزر)</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="rBImportGCSpindleCmd2.ToolTip" xml:space="preserve">
+    <value>أرسل "M4" لتشغيل ساعة المغزل بحكمة
+وضع طاقة الليزر الديناميكي في وضع الليزر</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl6.Text" xml:space="preserve">
+    <value>الاتجاه / Lasermode</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="rBImportGCSpindleCmd1.ToolTip" xml:space="preserve">
+    <value>أرسل "M3" لتشغيل ساعة المغزل الحكيمة
+وضع طاقة الليزر الثابت في وضع الليزر</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl7.Text" xml:space="preserve">
+    <value>التأخير بعد المغزل</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl5.Text" xml:space="preserve">
+    <value>سرعة المغزل / pwr الليزر.</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl5.ToolTip" xml:space="preserve">
+    <value>سرعة المغزل للنقش</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCSpindleDelay.ToolTip" xml:space="preserve">
+    <value>أدخل التأخير في ثوانٍ بعد تشغيل المغزل (لتوفير وقت لإعادة التعيين في حالة إيقاف تشغيل المغزل)</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCSSpeed.ToolTip" xml:space="preserve">
+    <value>سرعة المغزل للنقش</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCTTSSpeed.Text" xml:space="preserve">
+    <value>من الجدول أداة</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCTTSSpeed.ToolTip" xml:space="preserve">
+    <value>حدد "التجميع والأدوات - جدول الأدوات" للحصول على القيم المحددة من جدول الأدوات أثناء الاستيراد</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB2.Text" xml:space="preserve">
+    <value>المغزل / الليزر</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCToolM0.Text" xml:space="preserve">
+    <value>أضف وقفة (M0) بدلاً من ذلك</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCToolM0.ToolTip" xml:space="preserve">
+    <value>استبدل أي أمر M06 (تغيير الأداة) بـ M0 (إيقاف مؤقت) للتغيير اليدوي للأداة.</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCTool.Text" xml:space="preserve">
+    <value>أضف أمر Change Tool Tx M06</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCTool.ToolTip" xml:space="preserve">
+    <value>قم بتنفيذ إجراء تغيير الأداة على أوامر Tx M06 إذا كانت المعلومات متاحة - حدد علامة التبويب "تغيير الأداة".</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCComments.Text" xml:space="preserve">
+    <value>تعليقات G-Code إضافية</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCComments.ToolTip" xml:space="preserve">
+    <value>أضف بعض التعليقات الإضافية إلى GCode</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCTTXYFeed.Text" xml:space="preserve">
+    <value>من الجدول أداة</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCTTXYFeed.ToolTip" xml:space="preserve">
+    <value>حدد "التجميع والأدوات - جدول الأدوات" للحصول على القيم المحددة من جدول الأدوات أثناء الاستيراد</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl1.Text" xml:space="preserve">
+    <value>منازل عشرية</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl1.ToolTip" xml:space="preserve">
+    <value>المنازل العشرية للإحداثيات في gcode.</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tBImportGCHeader.ToolTip" xml:space="preserve">
+    <value>حالة GRBL بعد إعادة التعيين: G0 ، G54 ، G17 ، G90 ، G94 ، G21 ، G40 ، G49 ، M0 ، M5 ، M9
+لا حاجة لضبط هذه الكلمات</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl4.Text" xml:space="preserve">
+    <value>XY تغذية</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl4.ToolTip" xml:space="preserve">
+    <value>قم بتغذية أوامر G1،2،3 باستخدام البعد X أو Y</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl2.ToolTip" xml:space="preserve">
+    <value>حالة GRBL بعد إعادة التعيين: G0 ، G54 ، G17 ، G90 ، G94 ، G21 ، G40 ، G49 ، M0 ، M5 ، M9
+لا حاجة لضبط هذه الكلمات</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCFeedXY.ToolTip" xml:space="preserve">
+    <value>قم بتغذية أوامر G1،2،3 باستخدام البعد X أو Y</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl3.Text" xml:space="preserve">
+    <value>تذييل G- كود</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportDecPlaces.ToolTip" xml:space="preserve">
+    <value>المنازل العشرية للإحداثيات في gcode.</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB1.Text" xml:space="preserve">
+    <value>جنرال لواء</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCZIncStartZero.Text" xml:space="preserve">
+    <value>ابدأ من Z = 0</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCZIncStartZero.ToolTip" xml:space="preserve">
+    <value>استخدم Z = 0 للمرور الأول</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCTTZAxis.Text" xml:space="preserve">
+    <value>من الجدول أداة</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCTTZAxis.ToolTip" xml:space="preserve">
+    <value>حدد "التجميع والأدوات - جدول الأدوات" للحصول على القيم المحددة من جدول الأدوات أثناء الاستيراد. سيتم أخذ كافة قيم Z من جدول الأدوات أثناء الاستيراد</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl35.Text" xml:space="preserve">
+    <value>عمق في تمرير</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl35.ToolTip" xml:space="preserve">
+    <value>ماكس. زيادة قيمة Z</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCZIncEnable.Text" xml:space="preserve">
+    <value>استخدام عدة تمريرات</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCZIncEnable.ToolTip" xml:space="preserve">
+    <value>كرر المسار مع زيادة عمق Z للوصول إلى العمق النهائي
+لا يمكن استخدامها مع خيارات القلم لأعلى / لأسفل!</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCUseZ.Text" xml:space="preserve">
+    <value>استخدام Z- المحور والمغزل</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCUseZ.ToolTip" xml:space="preserve">
+    <value>إدراج Z- محور التحركات في G- كود</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl32.Text" xml:space="preserve">
+    <value>ض الارتفاع حفظ</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_2lbl32.ToolTip" xml:space="preserve">
+    <value>الارتفاع فوق سطح الشغل - يجب أن يكون إيجابيا</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCZUp.ToolTip" xml:space="preserve">
+    <value>الارتفاع فوق سطح الشغل - يجب أن يكون إيجابيا</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCFeedZ.ToolTip" xml:space="preserve">
+    <value>السرعة عند الانتقال إلى الشغل للأمر G1</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl33.Text" xml:space="preserve">
+    <value>ض الارتفاع نقش</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_2lbl33.ToolTip" xml:space="preserve">
+    <value>العمق النهائي تحت سطح الشغل - يجب أن يكون سالبًا</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCZDown.ToolTip" xml:space="preserve">
+    <value>العمق النهائي تحت سطح الشغل - يجب أن يكون سالبًا</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl31.ToolTip" xml:space="preserve">
+    <value>السرعة عند الانتقال إلى الشغل</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB3.ToolTip" xml:space="preserve">
+    <value>إدراج Z- محور التحركات في G- كود</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl51.Text" xml:space="preserve">
+    <value>تحقق من إعدادات Spindle لاختيار M3 M4 وتأخيره</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCUseSpindle.Text" xml:space="preserve">
+    <value>المغزل تشغيل / إيقاف</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCUseSpindle.ToolTip" xml:space="preserve">
+    <value>قم بتبديل المغزل مع إيقاف تشغيل "القلم لأعلى" و "تشغيل" بأوامر "خفض القلم" (بالنسبة إلى حفارة الليزر)</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB5.Text" xml:space="preserve">
+    <value>تشغيل / إيقاف المغزل باستخدام القلم لأسفل / لأعلى (لليزر)</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB5.ToolTip" xml:space="preserve">
+    <value>قم بتبديل المغزل مع إيقاف تشغيل "القلم لأعلى" و "تشغيل" بأوامر "خفض القلم" (بالنسبة إلى حفارة الليزر)</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl62.Text" xml:space="preserve">
+    <value>القلم لأسفل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_2lbl61.Text" xml:space="preserve">
+    <value>القلم لأعلى</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCUseIndividual.Text" xml:space="preserve">
+    <value>استخدم أوامر فردية (أسطر منفصلة بعلامة "؛")</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB6.Text" xml:space="preserve">
+    <value>أوامر فردية لـ Pen Down / Up</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCUsePWM.Text" xml:space="preserve">
+    <value>سرعة المغزل كما PWM</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="cBImportGCUsePWM.ToolTip" xml:space="preserve">
+    <value>التحكم في RC-Servo عبر سرعة الدوران (إصدار GRBL خاص ضروري لتوليد 1 مللي واط - 2 مللي أمبير من الناتج PWM)</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCDlyDown.ToolTip" xml:space="preserve">
+    <value>أدخل G4: التأخير بالثواني قبل الأمر التالي</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCDlyUp.ToolTip" xml:space="preserve">
+    <value>أدخل G4: التأخير بالثواني قبل الأمر التالي</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCPWMDown.ToolTip" xml:space="preserve">
+    <value>سرعة المغزل لأسفل القلم</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="nUDImportGCPWMUp.ToolTip" xml:space="preserve">
+    <value>سرعة المغزل للقلم يصل</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB4.Text" xml:space="preserve">
+    <value>أجهزة التحكم</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB4.ToolTip" xml:space="preserve">
+    <value>التحكم في RC-Servo عبر سرعة الدوران (إصدار GRBL خاص ضروري لتوليد 1 مللي واط - 2 مللي أمبير من الناتج PWM)</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2gB7.Text" xml:space="preserve">
+    <value>القلم لأعلى / لأسفل الترجمة</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_3lbl31.Text" xml:space="preserve">
+    <value>إعدادات تحويل قائمة GCode ، تحويل Z إلى S</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tab1_3lbl33.Text" xml:space="preserve">
+    <value>الحد الأدنى S في Z كحد أقصى</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tab1_3lbl32.Text" xml:space="preserve">
+    <value>الحد الأقصى S في الحد الأدنى Z</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tab1_3gB3.Text" xml:space="preserve">
+    <value>تحويل Z- المحور إلى سرعة المغزل S</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tab1_3lbl41.Text" xml:space="preserve">
+    <value>قد لا تعمل مع الخيارات الأخرى</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCRelative.Text" xml:space="preserve">
+    <value>الحركات النسبية</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCRelative.ToolTip" xml:space="preserve">
+    <value>حساب الحركات النسبية ل G91
+ملاحظة: لا تستخدم "فرز الكائنات حسب فهرس القلم"</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCCompress.Text" xml:space="preserve">
+    <value>ضغط G- كود</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCCompress.ToolTip" xml:space="preserve">
+    <value>يتخطى البيانات الزائدة.
+ملاحظة: لا تستخدم "فرز الكائنات حسب فهرس القلم"</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tab1_3gB4.Text" xml:space="preserve">
+    <value>تجريبي</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="nUDImportGCDragKnifePercent.ToolTip" xml:space="preserve">
+    <value>حساب إزاحة اعتمادا على عمق Z</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCDragKnifePercent.Text" xml:space="preserve">
+    <value>في ٪ من Z- العمق</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCDragKnifePercent.ToolTip" xml:space="preserve">
+    <value>حساب إزاحة اعتمادا على عمق Z</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="lblDrag2.Text" xml:space="preserve">
+    <value>زاوية الدوران</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="lblDrag2.ToolTip" xml:space="preserve">
+    <value>تغيير في زاوية قبل إضافة قوس</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="lblDrag1.Text" xml:space="preserve">
+    <value>إزاحة من المركز</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="lblDrag1.ToolTip" xml:space="preserve">
+    <value>إزاحة من مركز الدوران. لسحب السحب عادة حوالي 0.3 ملم.</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="nUDImportGCDragKnifeAngle.ToolTip" xml:space="preserve">
+    <value>تغيير في زاوية قبل إضافة قوس</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGCDragKnifeLength.ToolTip" xml:space="preserve">
+    <value>إزاحة من مركز الدوران. لسحب السحب عادة حوالي 0.3 ملم.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCDragKnife.Text" xml:space="preserve">
+    <value>اسحب أداة التعويض</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCDragKnife.ToolTip" xml:space="preserve">
+    <value>تعويض تعويض عند استخدام سكين السحب أو فرشاة</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tab1_3gB2.Text" xml:space="preserve">
+    <value>اسحب أداة التعويض</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="nUDImportGCSegment.ToolTip" xml:space="preserve">
+    <value>عرض الخطوة على محيط القوس.
+إذا كانت القيمة&gt; نصف قطر قوس ، فسيتم تخفيض القيمة تلقائيًا.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCSubFirst.Text" xml:space="preserve">
+    <value>تضاف أيضا على بداية المسار</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="btnShowScriptSub.Text" xml:space="preserve">
+    <value>تبين</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="btnShowScriptSub.ToolTip" xml:space="preserve">
+    <value>انقر لإظهار محتوى الملف</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCLineSegmentsEquidistant.Text" xml:space="preserve">
+    <value>قطاعات متساوية</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCLineSegmentsEquidistant.ToolTip" xml:space="preserve">
+    <value>تم الفحص: سيتم تقسيم الخط إلى مقاطع من نفس الطول (&lt;= طول معين)
+لم يتم التحقق منه: آخر عدد من الخطوط هو أقصر ، وكل طول آخر محدد</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCNoArcs.Text" xml:space="preserve">
+    <value>تجنب أوامر G2 / 3 (Arc Move) ، ارسم أقواسًا / دوائر بمقاطع خطية</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCNoArcs.ToolTip" xml:space="preserve">
+    <value>قم بتحويل الدوائر والأقواس إلى مقاطع خطية - مطلوبة إذا كان هناك حاجة إلى مقياس X و Y مختلف</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tBImportGCSubroutine.ToolTip" xml:space="preserve">
+    <value>المسار إلى ملف مع روتين فرعي</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCSubEnable.Text" xml:space="preserve">
+    <value>إدراج الروتين الفرعي</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCSubEnable.ToolTip" xml:space="preserve">
+    <value>إدراج روتين فرعي لكل طول المقطع.</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCLineSegments.Text" xml:space="preserve">
+    <value>قسّم خطوط G1 إلى مقاطع
+مع ماكس. طول في الوحدات</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="cBImportGCLineSegments.ToolTip" xml:space="preserve">
+    <value>قطع التحركات الطويلة على التوالي إلى حركات أقصر مع الحد الأقصى. طول معين.
+لا تستخدم مع "الحركات النسبية"</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tab1_3gB1.Text" xml:space="preserve">
+    <value>تقسيم التحركات الأصلية</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tabPage11.Text" xml:space="preserve">
+    <value>إعدادات</value>
+    <comment>TabPage1_3</comment>
+  </data>
+  <data name="tab1_4lbl1.Text" xml:space="preserve">
+    <value>آخر تحميل:</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="tBUseCaseSetting1.Text" xml:space="preserve">
+    <value>حدد حالة الاستخدام لرؤية الإعدادات</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="tab1_4lbl2.Text" xml:space="preserve">
+    <value>اكتب معلومات عن حالة الاستخدام</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>احذف المختار</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="btnDelete.ToolTip" xml:space="preserve">
+    <value>حذف حالة الاستخدام المحددة</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="btnUseCaseSave.Text" xml:space="preserve">
+    <value>حفظ "حالة الاستخدام"</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="btnUseCaseSave.ToolTip" xml:space="preserve">
+    <value>حفظ إعدادات الاستيراد الحالية كحالة استخدام</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="btnUseCaseLoad.Text" xml:space="preserve">
+    <value>تحميل المحدد</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="btnUseCaseLoad.ToolTip" xml:space="preserve">
+    <value>تحميل إعدادات حالة الاستخدام المحدد</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="tab1_4gB1.Text" xml:space="preserve">
+    <value>حفظ إعدادات الاستيراد باسم "حالة الاستخدام"</value>
+    <comment>TabPage1_4</comment>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>استيراد الرسومات</value>
+    <comment>TabPage1</comment>
+  </data>
+  <data name="lblToolListChanged.Text" xml:space="preserve">
+    <value>-</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnDeleteToolTable.Text" xml:space="preserve">
+    <value>حذف القائمة المحددة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="btnDeleteToolTable.ToolTip" xml:space="preserve">
+    <value>حذف جدول الأداة المحدد</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="lblToolListLoaded.Text" xml:space="preserve">
+    <value>فارغة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>آخر جدول للأدوات المحملة:</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="btnLoadToolTable.Text" xml:space="preserve">
+    <value>تحميل المحدد</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="btnLoadToolTable.ToolTip" xml:space="preserve">
+    <value>تحميل جدول الأداة المحدد</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="btnToolExport.Text" xml:space="preserve">
+    <value>حفظ جدول الأداة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="btnToolExport.ToolTip" xml:space="preserve">
+    <value>حفظ الجدول أداة الحالية إلى ملف CSV</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="tab2gB1.Text" xml:space="preserve">
+    <value>الجداول أداة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="cBToolLaser.Text" xml:space="preserve">
+    <value>الليزر ذات الصلة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="cBToolLaser.ToolTip" xml:space="preserve">
+    <value>تقليل الأعمدة المرئية</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="btnReNumberTools.Text" xml:space="preserve">
+    <value>إعادة ترقيم</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="btnMoveToolXY.Text" xml:space="preserve">
+    <value>الانتقال إلى موضع XY للصف المميز</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="tab2gB2lbl1.Text" xml:space="preserve">
+    <value>إزاحة لمواقع الأداة في جدول الأدوات (X ، Y ، Z)</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>العدد.</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column1.ToolTipText" xml:space="preserve">
+    <value>رقم الأداة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column2.HeaderText" xml:space="preserve">
+    <value>اللون</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column2.ToolTipText" xml:space="preserve">
+    <value>لون القلم في 6 أرقام عرافة. انقر للفرز حسب السطوع.</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column3.HeaderText" xml:space="preserve">
+    <value>اسم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column3.ToolTipText" xml:space="preserve">
+    <value>اسم الأداة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column4.ToolTipText" xml:space="preserve">
+    <value>موقف الصرف X</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column5.ToolTipText" xml:space="preserve">
+    <value>موقف الصرف Y</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column6.ToolTipText" xml:space="preserve">
+    <value>موقف الصرف Z</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column7.ToolTipText" xml:space="preserve">
+    <value>قطر الأداة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column8.ToolTipText" xml:space="preserve">
+    <value>تغذية لخطوات XY</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column10.HeaderText" xml:space="preserve">
+    <value>سرعة Z</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column10.ToolTipText" xml:space="preserve">
+    <value>تغذية ل Z التحركات</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column15.HeaderText" xml:space="preserve">
+    <value>Z حفظ</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column15.ToolTipText" xml:space="preserve">
+    <value>حفظ الارتفاع فوق الشغل</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column9.HeaderText" xml:space="preserve">
+    <value>Z ديب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column9.ToolTipText" xml:space="preserve">
+    <value>عمق Z النهائي</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column13.HeaderText" xml:space="preserve">
+    <value>زيادة Z</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column13.ToolTipText" xml:space="preserve">
+    <value>ماكس. Z زيادة في تمرير</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column11.HeaderText" xml:space="preserve">
+    <value>مغزل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column11.ToolTipText" xml:space="preserve">
+    <value>سرعة دوران المغزل</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column12.HeaderText" xml:space="preserve">
+    <value>خطوة أكثر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column12.ToolTipText" xml:space="preserve">
+    <value>المسافة في قطر الأداة بين المسارات المتوازية</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="Column14.ToolTipText" xml:space="preserve">
+    <value>رمز لتطبيق بعد قيادة أداة التغيير</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="tab2gB2.Text" xml:space="preserve">
+    <value>الجدول أداة - وظائف في الإحداثيات آلة! صاروخ موجه أوصى الاستخدام السابق.</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="tabPage14.Text" xml:space="preserve">
+    <value>الجدول أداة</value>
+    <comment>TabPage2</comment>
+  </data>
+  <data name="nUDToolChangeEmpty.ToolTip" xml:space="preserve">
+    <value>استخدام أداة العدد. وهو غير مدرج في جدول الأدوات.</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="cBToolChangeEmpty.Text" xml:space="preserve">
+    <value>أخيرًا المغزل الفارغ بواسطة أداة "تحميل" رقم:</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="cBToolChangeEmpty.ToolTip" xml:space="preserve">
+    <value>إزالة آخر أداة مستخدمة ، عن طريق تحميل أداة غير موجودة كأمر نهائي.</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>كيف يعمل:
+لديك GCode مع أوامر Tx M6 لتغيير الأداة.
+أثناء التدفق إلى grbl (على Arduino أو وحدة تحكم أخرى) ، سيتم تفسير أمر تغيير الأداة بواسطة GRBL-Plotter وسيتم إدراج رمز البرنامج النصي:
+
+لاحظ أمر "Tx" ، احصل على رقم الأداة "x"
+اقرأ إحداثيات تغيير الأداة لرقم الأداة 'x' إلى متغيرات TOAX ، TOAY ، TOAZ من جدول الأدوات الفعلي.
+
+لاحظ الأمر "M6"
+إذا كانت الأداة في المغزل
+أدخل شفرة البرنامج النصي "REMOVE" (استخدم هنا TOLX ، Y ، Z لإحداثيات الأداة الأخيرة)
+أدخل رمز البرنامج النصي "SELECT" في قائمة انتظار الإرسال (استخدم هنا إحداثيات أداة TOAX و Y و Z)
+إدراج رمز البرنامج النصي "انتقاء"
+أدخل رمز البرنامج النصي "PROBE"
+نسخ إحداثيات الأداة الفعلية (TOAX ، Y ، Z إلى التنسيق الأخير. TOLX ، Y ، Z)
+أزل "M6" من قائمة انتظار الإرسال ، لأن grbl لا يمكنه التعامل مع هذا الأمر.</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="lbl_4.Text" xml:space="preserve">
+    <value>4) أداة التحقيق</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="lbl_4.ToolTip" xml:space="preserve">
+    <value>انقر لإظهار محتوى الملف</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="tBToolChangeScriptProbe.ToolTip" xml:space="preserve">
+    <value>4th أداة التحقيق طول</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="lbl_2.Text" xml:space="preserve">
+    <value>2) اختر أداة</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="lbl_2.ToolTip" xml:space="preserve">
+    <value>انقر لإظهار محتوى الملف</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="tBToolChangeScriptSelect.ToolTip" xml:space="preserve">
+    <value>2nd جلب أداة جديدة أمام المغزل</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="lbl_1.Text" xml:space="preserve">
+    <value>1) أداة إزالة (إذا كان في المغزل)</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="lbl_1.ToolTip" xml:space="preserve">
+    <value>انقر لإظهار محتوى الملف</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="tBToolChangeScriptPut.ToolTip" xml:space="preserve">
+    <value>أولاً ، يجب إزالة الأداة القديمة من spidle (باستثناء المرة الأولى)</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="lbl_3.Text" xml:space="preserve">
+    <value>3) انتقاء أداة</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="lbl_3.ToolTip" xml:space="preserve">
+    <value>انقر لإظهار محتوى الملف</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="tBToolChangeScriptGet.ToolTip" xml:space="preserve">
+    <value>3rd التقاط أداة جديدة</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="cBToolChange.Text" xml:space="preserve">
+    <value>إجراء تغيير الأداة على Tx M06</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="cBToolChange.ToolTip" xml:space="preserve">
+    <value>تنفيذ البرامج النصية التالية على أوامر Tx M06</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="gBToolChange.Text" xml:space="preserve">
+    <value>أداة تغيير الإعداد</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="tabPage8.Text" xml:space="preserve">
+    <value>تغيير الأداة</value>
+    <comment>TabPage3</comment>
+  </data>
+  <data name="cBresetSendCode.Text" xml:space="preserve">
+    <value>إرسال التالية G- كود بعد إعادة تعيين</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tBresetSendCode.ToolTip" xml:space="preserve">
+    <value>عيّن GCode العادي ، رمز منفصل في خطوط مختلفة باستخدام "؛" كما المفرق.
+أو قم بتعيين اسم ملف يحتوي على GCode.</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="cBrestoreCoordReset.Text" xml:space="preserve">
+    <value>إحداثيات استعادة العمل بعد إعادة تعيين وتعيين معدل التغذية الافتراضي</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tab4gB2.Text" xml:space="preserve">
+    <value>السلوك بعد إعادة تعيين grbl</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tab4gB3lbl1.Text" xml:space="preserve">
+    <value>الكشف التلقائي يفترض:
+الافتراضي (اردوينو أونو / نانو) - 127 بايت
+أكثر من 3 محاور (Mega2560) - 255 بايت</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>كشف تلقائيا</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tab4gB3.Text" xml:space="preserve">
+    <value>حجم العازلة grbl</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="cBpollIntervalReduce.Text" xml:space="preserve">
+    <value>تقليل التكرار. عندما يتدفقون gcode</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tab4gB1lbl1.Text" xml:space="preserve">
+    <value>تعيين تردد التحديث لتقرير حالة grbl. أعلى من الإجهاد أكثر لوحدة التحكم.</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tab4gB1.Text" xml:space="preserve">
+    <value>تواتر استطلاع الحالة</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="cBsimulation.Text" xml:space="preserve">
+    <value>محاكاة grbl متصلة</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tBflowControl.ToolTip" xml:space="preserve">
+    <value>عيّن GCode العادي ، رمز منفصل في خطوط مختلفة باستخدام "؛" كما المفرق.
+أو قم بتعيين اسم ملف يحتوي على GCode.</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="cBflowControl.Text" xml:space="preserve">
+    <value>أرسل الكود التالي على الإيقاف المؤقت أو التوقف</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tab4gB4.Text" xml:space="preserve">
+    <value>التحكم في التدفق للتدفق</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="tabPage13.Text" xml:space="preserve">
+    <value>التحكم في التدفق</value>
+    <comment>TabPage4</comment>
+  </data>
+  <data name="cBExtendedLogging.Text" xml:space="preserve">
+    <value>تمكين التسجيل الموسّع</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBSerialPortFixer.Text" xml:space="preserve">
+    <value>تطبيق المثبت المنفذ التسلسلي</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBSerialPortFixer.ToolTip" xml:space="preserve">
+    <value>قد يساعد على منع الأخطاء عند إغلاق التطبيق</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB9.Text" xml:space="preserve">
+    <value>لصق المحتوى الخاص</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="btnMachineRangeGet.Text" xml:space="preserve">
+    <value>الحصول على مجموعة من الإعدادات 130 دولار - 132 دولار</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB5lbl4.Text" xml:space="preserve">
+    <value>صاروخ موجه الآلة ، والانتقال إلى
+دقيقة X ، دقيقة Y و Max Z.
+ملاحظة إحداثيات الجهاز</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBMachineLimitsAlarm.Text" xml:space="preserve">
+    <value>ناقوس الخطر على الحد يتجاوز (X و Y)</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBMachineLimitsShow.Text" xml:space="preserve">
+    <value>تظهر حدود الجهاز</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB5lbl3.Text" xml:space="preserve">
+    <value>آلة السفر Z</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB5lbl2.Text" xml:space="preserve">
+    <value>آلة السفر Y</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB5lbl1.Text" xml:space="preserve">
+    <value>آلة السفر X</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB5.Text" xml:space="preserve">
+    <value>منطقة الآلة</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBSerialDIY.Text" xml:space="preserve">
+    <value>فتح المنفذ التسلسلي على بروغ. بداية</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB2.Text" xml:space="preserve">
+    <value>لوحة التحكم DIY عبر اتصال تسلسلي</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB6lbl2.Text" xml:space="preserve">
+    <value>يمكن تغيير حجم المحور الرابع في عرض ثنائي الأبعاد عبر القطر الدوار في قائمة تحويل gcode</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>عكس المحور 4 في عرض 2D</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>إظهار المحور الرابع على Y</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>إظهار المحور الرابع على X</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cB4thUse.Text" xml:space="preserve">
+    <value>إظهار الحالة والضوابط</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB6lbl1.Text" xml:space="preserve">
+    <value>اسم المحور الرابع</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB6.Text" xml:space="preserve">
+    <value>GRBL المحور الرابع (طبعة خاصة)</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB8lbl2.Text" xml:space="preserve">
+    <value>المحور الأساسي</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB8lbl2.ToolTip" xml:space="preserve">
+    <value>سيتم ضبط هذا الإعداد عند تعطيل استبدال المحور</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tBRotarySetupOff.ToolTip" xml:space="preserve">
+    <value>سيتم ضبط هذا الإعداد عند تعطيل استبدال المحور</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBRotarySetupApply.Text" xml:space="preserve">
+    <value>تطبيق الإعدادات في نموذج وثيق</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBRotarySetupApply.ToolTip" xml:space="preserve">
+    <value>تكييف إعدادات grbl تلقائيًا عند تمكين أو تعطيل الاستبدال</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tBRotarySetupOn.ToolTip" xml:space="preserve">
+    <value>سيتم ضبط هذا الإعداد عند تمكين استبدال المحور</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB8lbl1.Text" xml:space="preserve">
+    <value>محور الدوران</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB8lbl1.ToolTip" xml:space="preserve">
+    <value>سيتم ضبط هذا الإعداد عند تمكين استبدال المحور</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB8.Text" xml:space="preserve">
+    <value>إعداد GRBL للمحور الذي تم استبداله</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>وحدات</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB7lbl2.Text" xml:space="preserve">
+    <value>قطر جزء</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB7lbl2.ToolTip" xml:space="preserve">
+    <value>هناك حاجة لحساب محيط المسافة &lt;=&gt; الزاوية</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>وحدات</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB7lbl1.Text" xml:space="preserve">
+    <value>360 درجة يتوافق مع</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="rBRotaryY.Text" xml:space="preserve">
+    <value>المحور ص</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBRotarySubstitute.Text" xml:space="preserve">
+    <value>استخدام استبدال المحور</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB7.Text" xml:space="preserve">
+    <value>التحكم في المحور الدوار (بدلاً من المحور X أو Y)</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBCtrlCommentOut.Text" xml:space="preserve">
+    <value>التعليق خارج المجهول</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBCtrlCommentOut.ToolTip" xml:space="preserve">
+    <value>إخفاء GCode غير معروف بين قوسين لتجنب الأخطاء من GRBL</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="rBCtrlReplaceM4.Text" xml:space="preserve">
+    <value>استبدل "M4" بـ "M3"</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="rBCtrlReplaceM4.ToolTip" xml:space="preserve">
+    <value>وضع طاقة الليزر M3 الثابت</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="rBCtrlReplaceM3.Text" xml:space="preserve">
+    <value>استبدل "M3" بـ "M4"</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="rBCtrlReplaceM3.ToolTip" xml:space="preserve">
+    <value>وضع طاقة الليزر الديناميكي M4:</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBCtrlMCmd.Text" xml:space="preserve">
+    <value>تحويل أوامر "المغزل على"</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBCtrlMCmd.ToolTip" xml:space="preserve">
+    <value>عند التمكين ، أثناء تحميل ملف GCode ، سيتم استبدال أوامر M3 أو M4 بأوامر M4 أو M3 لتنشيطها
+وضع طاقة الليزر M3 الثابت
+أو
+M4 وضع الطاقة ليزر ديناميكي</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB4.Text" xml:space="preserve">
+    <value>"وضع الليزر"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab5gB3.Text" xml:space="preserve">
+    <value>تحميل GCode</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBSerial2.Text" xml:space="preserve">
+    <value>فتح المنفذ التسلسلي 2nd على بروغ. بداية</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBSerial2.ToolTip" xml:space="preserve">
+    <value>يفتح منفذ COM ثاني للتحكم في GRBL 2nd. مفيد لمغير الأداة أو المحور الرابع.</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBSerialMinimize.Text" xml:space="preserve">
+    <value>تقليل النماذج التسلسلية بعد الاتصال</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBSerialMinimize.ToolTip" xml:space="preserve">
+    <value>سوف تقلل من النوافذ التسلسلية بعد اتصال ناجح</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab5gB1.Text" xml:space="preserve">
+    <value>اتصال تسلسلي</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBBackgroundImage.Text" xml:space="preserve">
+    <value>تعطيل تحديث مسار الوقت الفعلي أثناء التدفق.
+يوفر تحميل وحدة المعالجة المركزية ، ويعطل التكبير أثناء التدفق</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="cBcheckupdate.Text" xml:space="preserve">
+    <value>يوفر تحميل وحدة المعالجة المركزية ، ويعطل التكبير أثناء التدفق</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab6lbl1.Text" xml:space="preserve">
+    <value>عيّن GCode العادي ، رمز منفصل في خطوط مختلفة باستخدام "؛" كما المفرق.
+أو قم بتعيين اسم ملف يحتوي على GCode.
+يبدأ مسار الملف النسبي من هنا:</value>
+    <comment>TabPage6</comment>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>عصا التحكم الافتراضية</value>
+    <comment>TabPage6</comment>
+  </data>
+  <data name="cBGPEnable.Text" xml:space="preserve">
+    <value>تمكين تحكم GamePad في واجهة المستخدم الرسومية</value>
+    <comment>TabPage7</comment>
+  </data>
+  <data name="cBRInvert.Text" xml:space="preserve">
+    <value>عكس الاتجاه</value>
+    <comment>TabPage7</comment>
+  </data>
+  <data name="cBZInvert.Text" xml:space="preserve">
+    <value>عكس الاتجاه</value>
+    <comment>TabPage7</comment>
+  </data>
+  <data name="cBYInvert.Text" xml:space="preserve">
+    <value>عكس الاتجاه</value>
+    <comment>TabPage7</comment>
+  </data>
+  <data name="cBXInvert.Text" xml:space="preserve">
+    <value>عكس الاتجاه</value>
+    <comment>TabPage7</comment>
+  </data>
+  <data name="tab7gB1lbl1.Text" xml:space="preserve">
+    <value>اضغط على الأزرار الموجودة على لوحة الألعاب للتحقق من مهمة الزر.
+
+تعيين GCode العادية (تحقق من قواعد "أزرار مخصصة") أو وظائف خاصة داخل مربعات التحرير.
+
+وظائف خاصة (تبدأ بـ #):
+#Start (بدء البث)
+#Stop (إيقاف البث)
+# F-10 (-1 ، 100 ، +1 ، + 10 تجاوز Feedr.)
+# S-10 (-1 ، 100 ، +1 ، +10 Spindle spd o.)
+#تغذية تعليق
+#استئنف
+#KILLALARM
+#RST (إعادة تعيين ناعمة عبر CTRL-X)
+#HRST (إعادة ضبط الأجهزة عبر DTR / RTS)
+
+تعيين المحور وعكس الاتجاه
+تحديث الفاصل = 50ms.
+
+يجب إغلاق نافذة الإعداد لاستخدام GamePad في واجهة المستخدم الرسومية.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblgp.Text" xml:space="preserve">
+    <value>رسالة من GamePad</value>
+    <comment>TabPage7</comment>
+  </data>
+  <data name="tab7gB1.Text" xml:space="preserve">
+    <value>GamePad زر الاحالة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>2D- عرض / محرر / </value>
+    <comment>TabPage7</comment>
+  </data>
+  <data name="cBKeepPenWidth.Text" xml:space="preserve">
+    <value>لا تقم بتغيير عرض القلم عند التكبير</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDRotaryInfo.ToolTip" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorRotaryInfo.Text" xml:space="preserve">
+    <value>معلومات دوارة</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorMachineLimit.Text" xml:space="preserve">
+    <value>حد الماكينة</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="tab8gB2lbl2.Text" xml:space="preserve">
+    <value>يتم تعيين عرض القلم لوحدات مم. عند التبديل إلى بوصة ، سيتم تكييف العرض.</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="tab8gB2lbl1.Text" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="nUDHeightMap.ToolTip" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorHeightMap.Text" xml:space="preserve">
+    <value>خريطة الارتفاع</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="nUDMarker.ToolTip" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorMarker.Text" xml:space="preserve">
+    <value>علامة</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="nUDTool.ToolTip" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="nUDPenDown.ToolTip" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="nUDPenUp.ToolTip" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="nUDRuler.ToolTip" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorTool.Text" xml:space="preserve">
+    <value>أداة</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorPenDown.Text" xml:space="preserve">
+    <value>القلم لأسفل</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorPenUp.Text" xml:space="preserve">
+    <value>القلم لأعلى</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorRuler.Text" xml:space="preserve">
+    <value>مسطرة</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnColorBackground.Text" xml:space="preserve">
+    <value>خلفية</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="tab8gB2.Text" xml:space="preserve">
+    <value>رسم الألوان</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="label77.Text" xml:space="preserve">
+    <value>أ ، ب ، ج عرض الخطوة + السرعة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab8gB1lbl2.Text" xml:space="preserve">
+    <value>اضغط على "تطبيق التغييرات" لتغيير حجم عناصر التحكم بعصا التحكم</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="tab8gB1lbl1.Text" xml:space="preserve">
+    <value>ماكس. حجم الضوابط جويستيك في بكسل</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnJoyZCalc.Text" xml:space="preserve">
+    <value>احسب. أفضل سرعة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnJoyZCalc.ToolTip" xml:space="preserve">
+    <value>حساب سرعات للوصول إلى عرض الخطوة ضمن معدل التكرار من 0.5 ثانية</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Z الخطوة عرض + السرعة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>XY عرض الخطوة + السرعة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnJoyXYCalc.ToolTip" xml:space="preserve">
+    <value>حساب سرعات للوصول إلى عرض الخطوة ضمن معدل التكرار من 0.5 ثانية</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="tab8gB1.Text" xml:space="preserve">
+    <value>إعداد جويستيك الظاهري</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>الة تصوير</value>
+    <comment>TabPage8</comment>
+  </data>
+  <data name="btnOpenHotkeys.Text" xml:space="preserve">
+    <value>افتح hotkeys.xml في المفكرة</value>
+    <comment>TabPage9</comment>
+  </data>
+  <data name="lblPathHotkeys.Text" xml:space="preserve">
+    <value>مسار</value>
+    <comment>TabPage9</comment>
+  </data>
+  <data name="btnHotkeyRefresh.Text" xml:space="preserve">
+    <value>إعادة تحميل hotkey.xml</value>
+    <comment>TabPage9</comment>
+  </data>
+  <data name="tab9gB1lbl2.Text" xml:space="preserve">
+    <value>محتوى hotkeys.xml (يجب تحريره خارجيًا ، اضغط على "تطبيق التغييرات" لتحديث المهمة):</value>
+    <comment>TabPage9</comment>
+  </data>
+  <data name="tab9gB1lbl1.Text" xml:space="preserve">
+    <value>تحقق من البيانات الرئيسية هنا (سيتم نسخها إلى الحافظة):</value>
+    <comment>TabPage9</comment>
+  </data>
+  <data name="tB_kP_Left1.Text" xml:space="preserve">
+    <value>أ ، التحكم ، البديل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab9gB1.Text" xml:space="preserve">
+    <value>الساخن مفاتيح</value>
+    <comment>TabPage9</comment>
+  </data>
+  <data name="tab10lbl1.Text" xml:space="preserve">
+    <value>حفظ الإعدادات في مجموعات المعلمات المسماة واستدعائها في نافذة الكاميرا لتغيير سلوك التعرف على الشكل. إغلاق / فتح نافذة الكاميرا بعد تغيير الأسماء.</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="btnShapeSetSave4.Text" xml:space="preserve">
+    <value>حفظ</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="btnShapeSetLoad4.Text" xml:space="preserve">
+    <value>حمل</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="btnShapeSetSave3.Text" xml:space="preserve">
+    <value>حفظ</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="btnShapeSetLoad3.Text" xml:space="preserve">
+    <value>حمل</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="btnShapeSetSave2.Text" xml:space="preserve">
+    <value>حفظ</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="btnShapeSetLoad2.Text" xml:space="preserve">
+    <value>حمل</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="btnShapeSetSave1.Text" xml:space="preserve">
+    <value>حفظ</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="btnShapeSetLoad1.Text" xml:space="preserve">
+    <value>حمل</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="cBFilterOuside.Text" xml:space="preserve">
+    <value>بكسل مملوءة خارج نطاقات الألوان المحددة</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab10gB2lbl3.Text" xml:space="preserve">
+    <value>أزرق</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab10gB2lbl2.Text" xml:space="preserve">
+    <value>أخضر</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab10gB2lbl1.Text" xml:space="preserve">
+    <value>أحمر</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab10gB3lbl3.Text" xml:space="preserve">
+    <value>تشويه مقبول كحد أقصى.</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab10gB3lbl5.Text" xml:space="preserve">
+    <value>بكسل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab10gB3lbl4.Text" xml:space="preserve">
+    <value>بكسل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab10gB3lbl2.Text" xml:space="preserve">
+    <value>دقيقة تشويه مقبول.</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab10gB3lbl1.Text" xml:space="preserve">
+    <value>دقيقة. كحد أقصى. حجم الشكل</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="cBShapeRect.Text" xml:space="preserve">
+    <value>مستطيل</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="cBShapeCircle.Text" xml:space="preserve">
+    <value>دائرة</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab10gB3.Text" xml:space="preserve">
+    <value>التعرف على الشكل</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab10gB1.Text" xml:space="preserve">
+    <value>إعدادات التعرف على الشكل</value>
+    <comment>TabPage10</comment>
+  </data>
+  <data name="tab11gB1lbl3.Text" xml:space="preserve">
+    <value>وصف حول EggBot Inkscape المكون الإضافي</value>
+    <comment>TabPage11</comment>
+  </data>
+  <data name="linkLabel14.Text" xml:space="preserve">
+    <value>إنشاء مناطق مليئة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab11gB1lbl2.Text" xml:space="preserve">
+    <value>ملحقات مفيدة لـ Inkscape</value>
+    <comment>TabPage11</comment>
+  </data>
+  <data name="tab11gB1lbl1.Text" xml:space="preserve">
+    <value>برنامج الرسومات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="linkLabel13.Text" xml:space="preserve">
+    <value>EggBot_extensions</value>
+    <comment>ok</comment>
+  </data>
+  <data name="linkLabel12.Text" xml:space="preserve">
+    <value>إنكسكيب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab11gB1.Text" xml:space="preserve">
+    <value>إنشاء SVG ، تعديل</value>
+    <comment>TabPage11</comment>
+  </data>
+  <data name="linkLabel15.Text" xml:space="preserve">
+    <value>مولد بانوراما من قبل Draradech / jigsaw.html في جيثب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="linkLabel10.Text" xml:space="preserve">
+    <value>maker.js</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab11gB3.Text" xml:space="preserve">
+    <value>قم بإنشاء رسومات SVG عبر الإنترنت</value>
+    <comment>TabPage11</comment>
+  </data>
+  <data name="tab11gB4.Text" xml:space="preserve">
+    <value>الخطوط المجانية ، على سبيل المثال لالاستنسل أو يطفو على السطح</value>
+    <comment>TabPage11</comment>
+  </data>
+  <data name="linkLabel8.Text" xml:space="preserve">
+    <value>نظرة عامة على GCode linuxcnc</value>
+    <comment>ok</comment>
+  </data>
+  <data name="linkLabel7.Text" xml:space="preserve">
+    <value>GRBL على جيثب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab11gB5.Text" xml:space="preserve">
+    <value>GRBL و GCode ذات الصلة</value>
+    <comment>TabPage11</comment>
+  </data>
+  <data name="tab11gB2lbl1.Text" xml:space="preserve">
+    <value>ملاحظة: لا يعمل السحب والإفلات مع متصفح IE ، ولكن مع Google Chrome</value>
+    <comment>TabPage11</comment>
+  </data>
+  <data name="tab11gB2.Text" xml:space="preserve">
+    <value>مصادر رسومات SVG مجانية (مع إمكانية السحب والإفلات)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>روابط WWW</value>
+    <comment>TabPage11</comment>
+  </data>
+  <data name="btnApplyChangings.Text" xml:space="preserve">
+    <value>تطبيق التغييرات</value>
+    <comment>TabPage0</comment>
+  </data>
+  <data name="btnApplyChangings.ToolTip" xml:space="preserve">
+    <value>اضغط على الزر لتطبيق الإعدادات الجديدة فورًا على الأزرار المخصصة.
+سيتم تخزين الإعدادات الأخرى عند التغيير ، عادة.</value>
+    <comment>TabPage0</comment>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>اقامة</value>
+    <comment>Form</comment>
+  </data>
+  <data name="cBcheckupdate.ToolTip" xml:space="preserve">
+    <value>أثناء كل بداية من اختبار GRBL-Plotter ، ابحث عن إصدار برنامج جديد:
+أول تجربة على github.com/svenhb/GRBL-Plotter
+2nd محاولة على svenhb.bplaced.net</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>برنامج التحكم</value>
+    <comment>TabPage5</comment>
+  </data>
+  <data name="tab6lbl2.Text" xml:space="preserve">
+    <value>يتم إخفاء الأزرار 13 إلى 16 عندما تكون الحقول فارغة</value>
+    <comment>TabPage6</comment>
+  </data>
+  <data name="Column20.HeaderText" xml:space="preserve">
+    <value>لا.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column21.HeaderText" xml:space="preserve">
+    <value>ضع الكلمة المناسبة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column22.HeaderText" xml:space="preserve">
+    <value>جي كود</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab7gB2lbl3.Text" xml:space="preserve">
+    <value>الحد الأدنى لعرض الخطوة أدناه قيمة معينة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab7gB2lbl5.Text" xml:space="preserve">
+    <value>معدل التغذية</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab7gB2lbl4.Text" xml:space="preserve">
+    <value>وحدات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDMinimum.ToolTip" xml:space="preserve">
+    <value>بين هذه القيمة و deadzone سيتم إرسال عرض الخطوات ومعدل التغذية المعطى - إذا تم تنشيط محور عصا التحكم واحد فقط.
+في هذه الحالة ، يكون الفاصل الزمني للتكرار 200 مللي ثانية بدلاً من 50 مللي ثانية.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab7gB2lbl2.Text" xml:space="preserve">
+    <value>منطقة شديدة الخطورة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab7gB2lbl1.Text" xml:space="preserve">
+    <value>تعويض عن موقف الوسط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDOffset.ToolTip" xml:space="preserve">
+    <value>Subtrahend للحصول على "0" في مركز الوسط.
+حرك عصا التحكم بعد تغيير الإزاحة.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDDead.ToolTip" xml:space="preserve">
+    <value>الحد الأدنى للوصول إلى القيمة ، قبل إرسال أي أمر هرول.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>إعدادات جويستيك التناظرية</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblValR.ToolTip" xml:space="preserve">
+    <value>القيمة مع الإزاحة المطبقة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblValY.ToolTip" xml:space="preserve">
+    <value>القيمة مع الإزاحة المطبقة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblValZ.ToolTip" xml:space="preserve">
+    <value>القيمة مع الإزاحة المطبقة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblValX.ToolTip" xml:space="preserve">
+    <value>القيمة مع الإزاحة المطبقة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tBRAxis.ToolTip" xml:space="preserve">
+    <value>محور G- الرمز للتحرك</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tBZAxis.ToolTip" xml:space="preserve">
+    <value>محور G- الرمز للتحرك</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tBYAxis.ToolTip" xml:space="preserve">
+    <value>محور G- الرمز للتحرك</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tBXAxis.ToolTip" xml:space="preserve">
+    <value>محور G- الرمز للتحرك</value>
+    <comment>ok</comment>
+  </data>
+  <data name="trackBarR.ToolTip" xml:space="preserve">
+    <value>قيمة جويستيك R القناة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="trackBarZ.ToolTip" xml:space="preserve">
+    <value>قيمة جويستيك Z القناة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="trackBarY.ToolTip" xml:space="preserve">
+    <value>قيمة جويستيك Y القناة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="trackBarX.ToolTip" xml:space="preserve">
+    <value>قيمة جويستيك X القناة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBgrblTranslate.Text" xml:space="preserve">
+    <value>ترجمة رسائل grbl</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBgrblTranslate.ToolTip" xml:space="preserve">
+    <value>ترجمة رسائل grbl مثل IDLE و RUN و HOLD</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDFeedrate.ToolTip" xml:space="preserve">
+    <value>تغذية للركض</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDStepwidth.ToolTip" xml:space="preserve">
+    <value>خطوة مع الركض</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCTangential.Text" xml:space="preserve">
+    <value>إضافة المحور العرضي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_3gB5.Text" xml:space="preserve">
+    <value>أوامر المحور العرضي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGSort3.Text" xml:space="preserve">
+    <value>فرز المجموعات حسب طول المسار - تنازليًا</value>
+    <comment>TabPage1_1</comment>
+  </data>
+  <data name="lblDImportGCTangential3.Text" xml:space="preserve">
+    <value>وحدات لكل بدوره</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblDImportGCTangential2.Text" xml:space="preserve">
+    <value>زاوية الدوران</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblDImportGCTangential2.ToolTip" xml:space="preserve">
+    <value>إذا كان التغيير في الزاوية أكبر من زاوية الدوران ،
+سيتم نقل المحور Z لأعلى
+سوف محور بدوره
+سيتم نقل المحور Z لأسفل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGCTangentialSwivel.ToolTip" xml:space="preserve">
+    <value>قم بتغيير الزاوية قبل رفع السكين وتحويله وخفضه</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblDImportGCTangential1.Text" xml:space="preserve">
+    <value>اسم المحور العرضي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportLasermode.Text" xml:space="preserve">
+    <value>Lasermode (استخدم S0 بدلاً من M5 لإيقاف تشغيل الليزر)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_2lbl2.Text" xml:space="preserve">
+    <value>عنوان G-Code</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="tab1_2lbl31.Text" xml:space="preserve">
+    <value>Z Feedrate</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_2gB3.Text" xml:space="preserve">
+    <value>المحور Z</value>
+    <comment>TabPage1_2</comment>
+  </data>
+  <data name="Column14.HeaderText" xml:space="preserve">
+    <value>كود G</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnJoyXYCalc.Text" xml:space="preserve">
+    <value>احسب. أفضل سرعة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab10gB2.Text" xml:space="preserve">
+    <value>مرشح اللون</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCTangentialRange.Text" xml:space="preserve">
+    <value>حد زاوية الأداة إلى&gt; = 0 ° ، &lt;360 °</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCTangentialRange.ToolTip" xml:space="preserve">
+    <value>استخدم هذا الخيار لتجنب الزوايا أقل من 0 درجة وما فوق 360 درجة.
+لا يعمل مع G2 / 3 - تنشيط "تجنب أوامر G2 / 3"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportSVGCircleToDot.Text" xml:space="preserve">
+    <value>تحويل نصف قطر الدائرة إلى عمق النقطة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDSimulation.ToolTip" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnColorSimulation.Text" xml:space="preserve">
+    <value>محاكاة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>تحويل الصورة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>يحول الصور الثابتة إلى خطوط متعرجة مناسبة للتخطيط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>ينشئ رسومات متقطعة و "فن TSP" من ملفات الصور.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab11gB1lbl1a.Text" xml:space="preserve">
+    <value>ملحقات إنكسكيب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="linkLabel16.Text" xml:space="preserve">
+    <value>ملحقات إنكسكيب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportSVGCircleToDotZ.Text" xml:space="preserve">
+    <value>تحويل نصف قطر الدائرة إلى عمق النقطة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportSVGCircleToDotZ.ToolTip" xml:space="preserve">
+    <value>يقتصر العمق على نقش "Z-height".
+الفكرة: استخدم ثقب غاطس لتعيين قطر الدائرة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportSVGCircleToDot.ToolTip" xml:space="preserve">
+    <value>استخدم المثقاب لتحديد مركز الدائرة بعمق نقش "Z-Height"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicOffsetOrigin.Text" xml:space="preserve">
+    <value>إزاحة أصل الرسومات إلى 0 ؛ 0</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicOffsetOrigin.ToolTip" xml:space="preserve">
+    <value>تعيين الحافة اليسرى السفلية للرسم المستورد إلى إحداثي س 0 ؛ 0</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicSortDistance.Text" xml:space="preserve">
+    <value>فرز الكائنات حسب أقصر الاتصالات والدمج</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicSortDistance.ToolTip" xml:space="preserve">
+    <value>سيتم فرز الكائنات حسب أقرب مسافة بين إحداثيات البداية والنهاية ، وسيتم عكس مسار الكائنات المفيدة.
+سيتم دمج الكائنات التي لها نفس إحداثيات البداية والنهاية معًا.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>تفسير المسار</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>تكرار المسار (ليزر ضعيف)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>مظهر G-Code</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>التحكم في التدفق</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_1_2lbl2.Text" xml:space="preserve">
+    <value>يجب افتراض المسافة على قدم المساواة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_1_2lbl2.ToolTip" xml:space="preserve">
+    <value>سيتم إغلاق الفجوات الصغيرة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage21.Text" xml:space="preserve">
+    <value>سلوك البرنامج</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage22.Text" xml:space="preserve">
+    <value>مظهر البرنامج</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>استيراد CSV (* .csv ، * .dat)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>محدد</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>تبدأ القيم عند الخط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>قيمة ص</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>قيمة X</value>
+    <comment>ok</comment>
+  </data>
+  <data name="radioButton4.Text" xml:space="preserve">
+    <value>إحداثيات العملية كنقاط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="radioButton3.Text" xml:space="preserve">
+    <value>ربط الإحداثيات مع الخطوط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>مقياس</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>عمود</value>
+    <comment>ok</comment>
+  </data>
+  <data name="checkBox8.Text" xml:space="preserve">
+    <value>العملية Z أيضًا (النقطة فقط)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="checkBox7.Text" xml:space="preserve">
+    <value>حاول التعرف التلقائي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGRepeat2.Text" xml:space="preserve">
+    <value>كرر المسار عن طريق المسار</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGRepeat1.Text" xml:space="preserve">
+    <value>كرر الرمز الكامل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="gBHatchFill.Text" xml:space="preserve">
+    <value>املأ المسارات المغلقة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicHatchFillInset.Text" xml:space="preserve">
+    <value>أقحم ملء من حواف</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicHatchFillChangeAngle.Text" xml:space="preserve">
+    <value>قم بتغيير الزاوية بعد كل مسار</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicHatchFillCross.Text" xml:space="preserve">
+    <value>فتحة متقاطعة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblHatchFill2.Text" xml:space="preserve">
+    <value>زاوية الخط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblHatchFill1.Text" xml:space="preserve">
+    <value>مسافة الخط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicHatchFill.Text" xml:space="preserve">
+    <value>هاتش ملء</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblDImportGCTangential4.Text" xml:space="preserve">
+    <value>زاوية البدء الصحيحة إذا كان الانحراف&gt;</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblDImportGCTangential4.ToolTip" xml:space="preserve">
+    <value>إذا كان التغيير في الزاوية أكبر من هذه الزاوية ، فسيتم إدراج أمر منعطف واحد</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGCTangentialSwivel2.ToolTip" xml:space="preserve">
+    <value>تغير الزاوية قبل رفع السكين وتدويره وخفضه</value>
+    <comment>ok</comment>
+  </data>
+  <data name="gBClipping.Text" xml:space="preserve">
+    <value>قص / تجانب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>عرض / ارتفاع أبعاد القطع / التجانب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGraphicClipOffsetY.ToolTip" xml:space="preserve">
+    <value>إزاحة منطقة القطع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGraphicClipOffsetX.ToolTip" xml:space="preserve">
+    <value>إزاحة X لمنطقة القطع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportGraphicClip1.Text" xml:space="preserve">
+    <value>تحويل الرسومات إلى مربعات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportGraphicClip0.Text" xml:space="preserve">
+    <value>قص عند النقطة اليسرى السفلية X / Y:</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportGraphicClip0.ToolTip" xml:space="preserve">
+    <value>نتيجة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGraphicClipHeight.ToolTip" xml:space="preserve">
+    <value>البعد Y للبلاط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicTile.Text" xml:space="preserve">
+    <value>تطبيق قص أو تجانب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicTile.ToolTip" xml:space="preserve">
+    <value>اقطع الرسم بالكامل إلى بلاط ليتم تجفيفه بشكل منفصل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>GCode قبل التجانب</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label11.ToolTip" xml:space="preserve">
+    <value>GCode لتطبيق قبل معالجة البلاط التالي.
+على سبيل المثال "M0" لإيقاف النقل اليدوي للورق مؤقتًا ، أو "(^ 2 G91 X100)" لنقل X من وحدة التحكم grbl الثانية لنقل الورق.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicClipOffsetApply.Text" xml:space="preserve">
+    <value>تعيين أصل المنطقة / البلاط المقطوع إلى 0 ؛ 0</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGSort4.Text" xml:space="preserve">
+    <value>فرز المجموعات حسب بُعد الكائن - بترتيب تصاعدي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_1_4gB2.Text" xml:space="preserve">
+    <value>خاصية التجميع وحدد Tool-Nr. عبر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGGroupItem3.Text" xml:space="preserve">
+    <value>تجميع حسب الطبقة (اسم الأداة ~ = طبقة)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGGroupItem3.ToolTip" xml:space="preserve">
+    <value>اجمع حسب طبقة الرسم وحدد رقم الأداة وفقًا لاسم الأداة الأكثر ملاءمة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGGroupItem2.Text" xml:space="preserve">
+    <value>تجميع حسب عرض القلم (قطر الأداة ~ = عرض القلم)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGGroupItem2.ToolTip" xml:space="preserve">
+    <value>تجميع حسب عرض القلم واختيار رقم الأداة وفقًا لقطر الأداة الأكثر ملاءمة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGGroupItem1.Text" xml:space="preserve">
+    <value>تجميع حسب لون القلم (Tool-Color ~ = لون القلم)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGGroupItem1.ToolTip" xml:space="preserve">
+    <value>اجمع حسب لون القلم وحدد رقم الأداة وفقًا لأنسب لون الأداة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage26.Text" xml:space="preserve">
+    <value>مراقبة البرنامج</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>احصل على إشعار إذا تجاوز الرمز أبعاد الماكينة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage23.Text" xml:space="preserve">
+    <value>الأزرار المخصصة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage24.Text" xml:space="preserve">
+    <value>غمبد</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox12.Text" xml:space="preserve">
+    <value>محرر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>مسافة خط المحرر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_1_4gB3.Text" xml:space="preserve">
+    <value>فرز المجموعات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="Column16.ToolTipText" xml:space="preserve">
+    <value>موقف الصرف A</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox13.Text" xml:space="preserve">
+    <value>اتصال grbl</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage25.Text" xml:space="preserve">
+    <value>التحكم في التدفق</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>ماكس</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportPenWidthToZMax.ToolTip" xml:space="preserve">
+    <value>سيتم ترجمة أكبر عرض للقلم إلى هذا العمق - ولكن محدودًا بنقش Z-Height في "الجيل G-Code"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportPenWidthToZMin.ToolTip" xml:space="preserve">
+    <value>سيتم ترجمة أصغر عرض للقلم إلى هذا العمق</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportPenWidthToZ.Text" xml:space="preserve">
+    <value>ترجمة عرض القلم إلى قيمة Z</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportPenWidthToZ.ToolTip" xml:space="preserve">
+    <value>سيتم معالجة عرض القلم كقيمة Z للعمق.
+سيتم تحديد الحد الأقصى للعمق بواسطة نقش Z-Height.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_3gB8.Text" xml:space="preserve">
+    <value>تداخل المسار المغلق</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPathModification.Text" xml:space="preserve">
+    <value>أي من هذه التعديلات ستمكّن "تجنب أوامر G2 / G3"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBDashedLine2.Text" xml:space="preserve">
+    <value>G0 على القلم لأعلى</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBDashedLine2.ToolTip" xml:space="preserve">
+    <value>الافتراضي هو G1 لحركة سلسة ،</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBDashedLine1.Text" xml:space="preserve">
+    <value>معالجة نمط الخط المتقطع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBDashedLine1.ToolTip" xml:space="preserve">
+    <value>تحويل الخط المتقطع في القلم الحقيقي لأعلى / لأسفل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBPathOverlapEnable.Text" xml:space="preserve">
+    <value>تداخل المسار</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBPathOverlapEnable.ToolTip" xml:space="preserve">
+    <value>بعد الانتهاء من مسار مغلق ، ابدأ في البداية وتحرك لمسافة معينة.
+مفيد لقص الليزر.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnReloadSettings.Text" xml:space="preserve">
+    <value>اضبط جميع الإعدادات على الافتراضي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>يترجم الحد الأدنى / الأقصى لعرض القلم أو نصف قطر الدائرة في Z في النطاق:</value>
+    <comment>ok</comment>
+  </data>
+  <data name="gBCreateZValue.Text" xml:space="preserve">
+    <value>إنشاء قيمة Z (يجب تمكين المحور Z)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox11.Text" xml:space="preserve">
+    <value>متنوع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBShowStreamingProgress.Text" xml:space="preserve">
+    <value>إظهار تقدم التدفق في عرض ثنائي الأبعاد</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab4gB5.Text" xml:space="preserve">
+    <value>أثناء تدفق G-Code</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicSortDistanceRotatePath.Text" xml:space="preserve">
+    <value>السماح بنقطة بداية جديدة في مسار مغلق</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportPenWidthToZRamp.Text" xml:space="preserve">
+    <value>ضع منحدرًا بدلاً من خطوة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblImportPenWidthToZWarning.Text" xml:space="preserve">
+    <value>انتباه: Z-Engrave سيحد من الحد الأقصى. عمق!</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblGroupInfo.Text" xml:space="preserve">
+    <value>يتم إلغاء التجميع إذا تم العثور على خاصية واحدة فقط (مثل لون واحد)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBLineEndEnable.Text" xml:space="preserve">
+    <value>تطبيق النص</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_3gB6.Text" xml:space="preserve">
+    <value>إنشاء G- كود</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>اكتب قيمة M19 (موسعة)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>اكتب القيمة لـ M15 (سكين)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>اكتب قيمة D2 (دبوس)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBGerberGeometryEnable.Text" xml:space="preserve">
+    <value>حدد قيمة النوع في علامة الشكل G-Code</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab1_3gB7.Text" xml:space="preserve">
+    <value>استيراد جربر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportSVGGroupItem4.Text" xml:space="preserve">
+    <value>نوع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBDisableProgramPause.Text" xml:space="preserve">
+    <value>قم بتعطيل وضع الإيقاف المؤقت الخاص ، قم بالمرور عبر M0</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBDisableProgramPause.ToolTip" xml:space="preserve">
+    <value>إذا تم تعطيله ، فسيتوقف البث على M0 وسيتم حفظ حالة المحلل اللغوي (لكن M0 لن يرسل إلى وحدة التحكم) ، ثم يمكن للمستخدم التحكم في الجهاز.
+بعد التوقف المؤقت ، ستتم استعادة حالة المحلل اللغوي واستمرار البث.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cB2DViewFigureId.Text" xml:space="preserve">
+    <value>يعرض معرّف الحرف التالي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cB2DViewDirectionArrow.Text" xml:space="preserve">
+    <value>تأشير مسار القلم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox14.Text" xml:space="preserve">
+    <value>عرض ثنائي الأبعاد</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBColorModeEnable.Text" xml:space="preserve">
+    <value>وضع اللون</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBColorModeEnable.ToolTip" xml:space="preserve">
+    <value>سيظهر مسار القلم في اللون والعرض مثل الرسوم المستوردة (SVG أو DXF)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>G- كود قبل تغيير الأداة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>يسمح وضع الإيقاف المؤقت الخاص للمستخدم باستخدام الجهاز. بعد الانتهاء من الإيقاف المؤقت ، ستتم استعادة آخر إحداثي للعملية وحالة الجهاز واستمرار التدفق
+في حين أن M0 العادي يبدأ تغذية ، دون إمكانية استخدام الآلة.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBStreanProtocoll2.Text" xml:space="preserve">
+    <value>استجابة إرسال بسيطة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>بروتوكول التدفق:</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBStreanProtocoll1.Text" xml:space="preserve">
+    <value>عد الأحرف</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tab4gB7.Text" xml:space="preserve">
+    <value>خصائص التدفق</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBCodeCreationLineNumbers.Text" xml:space="preserve">
+    <value>أضف أرقام الأسطر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cbNotifierMsg1.Text" xml:space="preserve">
+    <value>تحديث متكرر للتقدم (بالدقائق)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifierMsg1.Text" xml:space="preserve">
+    <value>إنهاء الرسالة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox16.Text" xml:space="preserve">
+    <value>إشعارات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btn_notifierMail_Test.Text" xml:space="preserve">
+    <value>إرسال بريد تجريبي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifier8.Text" xml:space="preserve">
+    <value>موضوع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifier7.Text" xml:space="preserve">
+    <value>لإرسال بريد إلكتروني</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifier6.Text" xml:space="preserve">
+    <value>من البريد الإلكترونى</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifier3.Text" xml:space="preserve">
+    <value>ميناء</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifier5.Text" xml:space="preserve">
+    <value>كلمه السر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifier2.Text" xml:space="preserve">
+    <value>عنوان</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifier4.Text" xml:space="preserve">
+    <value>اسم المستخدم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox15.Text" xml:space="preserve">
+    <value>خادم SMTP</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifier1.Text" xml:space="preserve">
+    <value>قم بإعداد وصول خادم SMTP لحساب بريدك الإلكتروني
+ملاحظة: غالبًا ما يجب أن يكون "من البريد الإلكتروني" هو نفس البريد الإلكتروني لصندوق بريد SMTP.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabControl5_Level2.Text" xml:space="preserve">
+    <value>إشعار</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>البريد الإلكتروني: لأسباب تتعلق بالسلامة ، يجب عليك استخدام حساب بريد إلكتروني "مهملات" ، ولا يمكن حفظ كلمة المرور بصيغة مشفرة.
+
+Pushbullet: لأسباب تتعلق بالسلامة ، يجب عليك استخدام حساب "سلة المهملات" ، ولا يمكن حفظ رمز الوصول في شكل مشفر.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox17.Text" xml:space="preserve">
+    <value>ملاحظات الأمان</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cbNotifierTitle.Text" xml:space="preserve">
+    <value>إضافة تدفق التقدم إلى العنوان</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifierPBToken.Text" xml:space="preserve">
+    <value>رمز الوصول إلى API</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblNotifierPBChannel.Text" xml:space="preserve">
+    <value>القناة (اتركها فارغة لإرسال ملاحظة)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cbNotifierEmailEnable.Text" xml:space="preserve">
+    <value>تمكين إعلام البريد الإلكتروني</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cbNotifierPBEnable.Text" xml:space="preserve">
+    <value>تفعيل إعلام الدفع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>إرسال رسالة تجريبية</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>رقم في الاتجاه ص</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>رقم في الاتجاه X</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>المسافة بين الرسومات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBimportGraphicMultiplyGraphicsEnable.Text" xml:space="preserve">
+    <value>ضاعف الرسومات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label45.Text" xml:space="preserve">
+    <value>طبقة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label40.Text" xml:space="preserve">
+    <value>عرض القلم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label39.Text" xml:space="preserve">
+    <value>لون القلم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="groupBox21.Text" xml:space="preserve">
+    <value>خصائص التجمع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBimportGraphicAddFrameRadius.Text" xml:space="preserve">
+    <value>تقريب الزاوية</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>المسافة إلى الرسم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBimportGraphicAddFrameEnable.Text" xml:space="preserve">
+    <value>ارسم الإطار</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>تحميل الملف</value>
+    <comment>ok</comment>
+  </data>
+  <data name="checkBox6.Text" xml:space="preserve">
+    <value>يفتح واجهة تسلسلية ثالثة عند بدء تشغيل البرنامج</value>
+    <comment>ok</comment>
+  </data>
+  <data name="checkBox6.ToolTip" xml:space="preserve">
+    <value>يفتح منفذ COM الثاني للتحكم في GRBL الثاني. مفيد لمبدلات الأدوات أو المحور الرابع.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGraphicClipSkipCode.Text" xml:space="preserve">
+    <value>رمز التخطي للبلاط الأول (س ص = 0 ؛ 0)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>المتغيرات:
+# INDX # فهرس INDY للتجانب لاتجاه x أو y (على سبيل المثال 0 ، 1 ، 2 ...)
+#OFFX #OFFY إزاحة التجانب لاتجاه x أو y (على سبيل المثال 0 ، 200 ، 400 ...)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label47.Text" xml:space="preserve">
+    <value>ثواني</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>التأخير بعد النص</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCPWMSkipM30.Text" xml:space="preserve">
+    <value>تخطي الأمر M30</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCPWMSkipM30.ToolTip" xml:space="preserve">
+    <value>تخطي الأمر M30 "إنهاء البرنامج" لتجنب إيقاف تشغيل المغزل عن طريق إعادة تعيين حالة المحلل اللغوي ، مما يؤدي إلى انتقال المؤازرة إلى الموضع "0".</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnGCPWMDown.Text" xml:space="preserve">
+    <value>القلم لأسفل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnGCPWMUp.Text" xml:space="preserve">
+    <value>القلم</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCPWMSendCode.Text" xml:space="preserve">
+    <value>أرسل الأمر للتحكم في المؤازرة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCPWMSendCode.ToolTip" xml:space="preserve">
+    <value>أرسل الأمر بشأن تغيير القيمة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportSVGRepeatHF.Text" xml:space="preserve">
+    <value>الجميع</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportSVGRepeatHF.ToolTip" xml:space="preserve">
+    <value>يتضمن رأس وتذييل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label48.Text" xml:space="preserve">
+    <value>مسافه: بعد</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBimportGraphicLeadInEnable.Text" xml:space="preserve">
+    <value>المنحدر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="gBPathAddOn3.Text" xml:space="preserve">
+    <value>منحدر على القلم لأسفل (المحور Z أو PWM)</value>
+    <comment>ok</comment>
+  </data>
+  <data name="gBPathAddOn3.ToolTip" xml:space="preserve">
+    <value>مفيد فقط لاستخدام القلم / الفرشاة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="gBPathAddOn2.Text" xml:space="preserve">
+    <value>Multiplizieren</value>
+    <comment>ok</comment>
+  </data>
+  <data name="gBPathAddOn1.Text" xml:space="preserve">
+    <value>إطار</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnGCPWMZero.Text" xml:space="preserve">
+    <value>القلم صفر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnGCPWMZero.ToolTip" xml:space="preserve">
+    <value>القلم يلامس السطح
+مطلوب فقط لتشغيل المنحدر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGCPWMZero.ToolTip" xml:space="preserve">
+    <value>سرعة المغزل للقلم صفر
+مطلوب فقط لتشغيل المنحدر</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblInfoPWM.ToolTip" xml:space="preserve">
+    <value>ممكن ماكس. يتم تعيين القيمة عبر 30 دولارًا (افتراضي = 1000) ، دقيقة عبر 31 دولارًا (افتراضي = 0).
+نسخة Grbl "grbl_v1.1f_Servo.hex" من https://github.com/cprezzi/grbl-servo ،
+يستخدم 31 خطوة للإخراج من 0.5 مللي ثانية إلى 2.5 مللي ثانية (انظر cpu_map.h).
+النطاق الحقيقي القابل للاستخدام سيكون 30 دولارًا = 31 ، 31 دولارًا = 0.</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnGCPWMDown.ToolTip" xml:space="preserve">
+    <value>حرك القلم لأسفل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnGCPWMUp.ToolTip" xml:space="preserve">
+    <value>تحريك القلم إلى أعلى</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBCtrlToolTable.Text" xml:space="preserve">
+    <value>عرض ثنائي الأبعاد: استخدم ألوانًا من قائمة الأدوات</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBCtrlToolTable.ToolTip" xml:space="preserve">
+    <value>يحلل قيم S و Z و F في كود G لتعيين اللون من قائمة الأدوات إلى مسار الأداة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label66.Text" xml:space="preserve">
+    <value>أقصى موضع Z</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label65.Text" xml:space="preserve">
+    <value>دقيقة موقف ص</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label63.Text" xml:space="preserve">
+    <value>الحد الأدنى للمركز X</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBimportGCSubPenUpDown.Text" xml:space="preserve">
+    <value>Pen-up / -down قبل / بعد الروتين الفرعي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage12.Text" xml:space="preserve">
+    <value>المحور Z</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnPWMAdvanced.Text" xml:space="preserve">
+    <value>إعدادات متقدمة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnPWMAdvanced.ToolTip" xml:space="preserve">
+    <value>عرض مزيد من المواقف المؤازرة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMP94.ToolTip" xml:space="preserve">
+    <value>عدد الروتين الفرعي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGCDlyP94.ToolTip" xml:space="preserve">
+    <value>أدخل G4: تأخير بالثواني قبل الأمر التالي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMP93.ToolTip" xml:space="preserve">
+    <value>عدد الروتين الفرعي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMP92.ToolTip" xml:space="preserve">
+    <value>عدد الروتين الفرعي "القلم لأسفل"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGCDlyP93.ToolTip" xml:space="preserve">
+    <value>أدخل G4: تأخير بالثواني قبل الأمر التالي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMP91.ToolTip" xml:space="preserve">
+    <value>عدد الروتين الفرعي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMFunction.Text" xml:space="preserve">
+    <value>دور</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMFunction.ToolTip" xml:space="preserve">
+    <value>وظيفة الروتين الفرعي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMSub.Text" xml:space="preserve">
+    <value>الفرعية</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMSub.ToolTip" xml:space="preserve">
+    <value>عدد الروتين الفرعي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="lblPWMP90.ToolTip" xml:space="preserve">
+    <value>عدد الروتين الفرعي "القلم"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label55.Text" xml:space="preserve">
+    <value>تأخير بعد</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label55.ToolTip" xml:space="preserve">
+    <value>التأخير بعد تطبيق قيمة PWM الجديدة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>PWM</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label56.ToolTip" xml:space="preserve">
+    <value>قيمة PWM</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnPWMInc.Text" xml:space="preserve">
+    <value>المؤتمر الوطني العراقي 10</value>
+    <comment>ok</comment>
+  </data>
+  <data name="btnPWMInc.ToolTip" xml:space="preserve">
+    <value>قيمة زيادة PWM 1 أو 10 أو 100</value>
+    <comment>ok</comment>
+  </data>
+  <data name="nUDImportGCLineSegment.ToolTip" xml:space="preserve">
+    <value>إذا كانت القيمة 0 ، فستتم معالجة "الإدراج أيضًا عند بداية المسار" فقط</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBFCTBBlockExpandKeepLastOpen.Text" xml:space="preserve">
+    <value>يترك آخر كتلة محددة موسعة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBFCTBBlockExpandOnSelect.Text" xml:space="preserve">
+    <value>يوسع كتلة التعليمات البرمجية عند النقر في العرض ثنائي الأبعاد</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>يوسع المسار المقطوع إلى ما بعد الحدود</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCUseSpindle2.Text" xml:space="preserve">
+    <value>مغزل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label67.ToolTip" xml:space="preserve">
+    <value>عدد الروتين الفرعي "القلم لأسفل"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label64.ToolTip" xml:space="preserve">
+    <value>عدد الروتين الفرعي "القلم"</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage28.Text" xml:space="preserve">
+    <value>مغزل</value>
+    <comment>ok</comment>
+  </data>
+  <data name="color.HeaderText" xml:space="preserve">
+    <value>اللون</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>بعد المسافة</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBimportGraphicLeadOutEnable.Text" xml:space="preserve">
+    <value>يؤدي بها</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportGCSpindleCmd2.Text" xml:space="preserve">
+    <value>'M4' CCW</value>
+    <comment>ok</comment>
+  </data>
+  <data name="rBImportGCSpindleCmd1.Text" xml:space="preserve">
+    <value>'M3' CW</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCUseIndividual2.Text" xml:space="preserve">
+    <value>فردي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCUsePWM2.Text" xml:space="preserve">
+    <value>PWM</value>
+    <comment>ok</comment>
+  </data>
+  <data name="cBImportGCUseZ2.Text" xml:space="preserve">
+    <value>المحور Z</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage27.Text" xml:space="preserve">
+    <value>PWM</value>
+    <comment>ok</comment>
+  </data>
+  <data name="tabPage29.Text" xml:space="preserve">
+    <value>فردي</value>
+    <comment>ok</comment>
+  </data>
+  <data name="label62.Text" xml:space="preserve">
+    <value>ملاحظة: إذا تم تنشيط جدول الأدوات ، يتم استبدال الألوان الأصلية للأشكال بألوان الأداة المستخدمة</value>
+  </data>
+  <data name="label60.Text" xml:space="preserve">
+    <value>زاوية الأداة</value>
+  </data>
+  <data name="groupBox22.Text" xml:space="preserve">
+    <value>أداة V</value>
+  </data>
+  <data name="label57.Text" xml:space="preserve">
+    <value>تغذية بعد الانتهاء من الشكل</value>
+  </data>
+  <data name="label54.Text" xml:space="preserve">
+    <value>ارتفاع Z للقطع قبل / بعد الشكل (إذا تم تمكين Z)</value>
+  </data>
+  <data name="cBDImportGraphicDevelopNotchLift.Text" xml:space="preserve">
+    <value>أداة الرفع بعد الشق</value>
+  </data>
+  <data name="label59.Text" xml:space="preserve">
+    <value>ارتفاع Z لنقش القطع (إذا تم تمكين Z)</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>دقيقة. المسافة من الشق إلى الشق في المنحنيات</value>
+  </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>طول الشق (عرض رأس العمل)</value>
+  </data>
+  <data name="groupBox20.Text" xml:space="preserve">
+    <value>خصائص الشق</value>
+  </data>
+  <data name="rBImportGraphicDevelopFeedInvert.Text" xml:space="preserve">
+    <value>عكس اتجاه التغذية</value>
+  </data>
+  <data name="rBImportGraphicDevelopFeedX.Text" xml:space="preserve">
+    <value>التغذية على المحور X ، الشق على المحور Y.</value>
+  </data>
+  <data name="rBImportGraphicDevelopFeedY.Text" xml:space="preserve">
+    <value>تتغذى على المحور Y ، الشق على المحور X.</value>
+  </data>
+  <data name="groupBox19.Text" xml:space="preserve">
+    <value>اتجاه التغذية والشق</value>
+  </data>
+  <data name="cBImportGraphicDevelopEnable.Text" xml:space="preserve">
+    <value>تطبيق تطوير الشكل</value>
+  </data>
+  <data name="gBDevelop.Text" xml:space="preserve">
+    <value>تحويل مخطط الشكل ثنائي الأبعاد إلى تطوير</value>
+  </data>
+  <data name="cBImportDXFUseZ.Text" xml:space="preserve">
+    <value>استيراد معلومات Z</value>
+  </data>
+  <data name="tab4gB6.Text" xml:space="preserve">
+    <value>مميز</value>
+  </data>
+  <data name="cBImportGraphicClipShowOrigPosition.Text" xml:space="preserve">
+    <value>إظهار موضع البلاط الأصلي</value>
+  </data>
+  <data name="cBImportGraphicClipShowOrigPosition.ToolTip" xml:space="preserve">
+    <value>إظهار موضع البلاط الأصلي</value>
+  </data>
+  <data name="cBImportGraphicClipOffsetApply.ToolTip" xml:space="preserve">
+    <value>اضبط أصل المربعات على 0 ؛ 0</value>
+  </data>
+  <data name="btnColorDimension.Text" xml:space="preserve">
+    <value>البعد</value>
+  </data>
+  <data name="btnColorBackgroundPath.Text" xml:space="preserve">
+    <value>مسار المعلومات</value>
+  </data>
+  <data name="checkBox9.Text" xml:space="preserve">
+    <value>احفظ G-Code كـ unicode UTF-16 (وإلا ASCII)</value>
+  </data>
+  <data name="LblImportGraphicDevelopNotchDistance.Text" xml:space="preserve">
+    <value>دقيقة. المسافة من الشق إلى الشق في المنحنيات</value>
+  </data>
+  <data name="LblCameraFiducial.Text" xml:space="preserve">
+    <value>اسم الطبقة الرسومية أو الشكل للائتمانات</value>
+  </data>
+  <data name="groupBox23.Text" xml:space="preserve">
+    <value>إيمانيات</value>
+  </data>
+  <data name="cBImportGraphicClipShowOrigPositionShift.Text" xml:space="preserve">
+    <value>ينقل المربعات إلى الأصل 0 ؛ 0 أثناء التدفق</value>
+  </data>
+  <data name="cBImportGraphicClipShowOrigPositionShift.ToolTip" xml:space="preserve">
+    <value>ينقل المربعات إلى الأصل 0 ؛ 0 أثناء التدفق لتكييفها مع موضع أداة grbl</value>
+  </data>
+  <data name="CbImportGraphicDevelopNoCurve.Text" xml:space="preserve">
+    <value>لا يوجد منحنى</value>
+  </data>
+  <data name="CbCameraFiducialSkip.Text" xml:space="preserve">
+    <value>تخطي رمز G للنقاط الإئتمانية أثناء البث</value>
+  </data>
+  <data name="LblShowVertex.Text" xml:space="preserve">
+    <value>اكتب وحجم علامة عقدة المسار</value>
+  </data>
+  <data name="CbShowVertexEnable.Text" xml:space="preserve">
+    <value>يعرض عقد مسار القلم لأسفل</value>
+  </data>
+  <data name="groupBox24.Text" xml:space="preserve">
+    <value>وصف الدبوس ("تجاوز حالات الملحقات")</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="LblSaveEncoding.Text" xml:space="preserve">
+    <value>الترميز لتخزين G- كود</value>
+  </data>
+  <data name="checkBox11.Text" xml:space="preserve">
+    <value>إزالة جميع التعليقات عند الحفظ</value>
+  </data>
+  <data name="cBExtendedLoggingCOM.Text" xml:space="preserve">
+    <value>المسلسل COM / الجري</value>
+  </data>
+  <data name="groupBox25.Text" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="BtnAccessoryRefresh.Text" xml:space="preserve">
+    <value>ينعش</value>
+  </data>
+  <data name="BtnAccessoryMistReset.Text" xml:space="preserve">
+    <value>إعادة ضبط</value>
+  </data>
+  <data name="BtnAccessoryFloodReset.Text" xml:space="preserve">
+    <value>إعادة ضبط</value>
+  </data>
+  <data name="BtnAccessorySpindleReset.Text" xml:space="preserve">
+    <value>إعادة ضبط</value>
+  </data>
+  <data name="LblAccessoryMist.Text" xml:space="preserve">
+    <value>شبورة:</value>
+  </data>
+  <data name="LblAccessoryFlood.Text" xml:space="preserve">
+    <value>فيضان:</value>
+  </data>
+  <data name="LblAccessorySpindle.Text" xml:space="preserve">
+    <value>مغزل:</value>
+  </data>
+  <data name="GbAccessoryRunTime.Text" xml:space="preserve">
+    <value>أوقات تشغيل الملحق (مللي ثانية)</value>
+  </data>
+  <data name="LbLAuxDescription.Text" xml:space="preserve">
+    <value>استخدم هذا الخيار للتحكم في محور إضافي يضخ الطلاء أو يغذي الفتيل بكمية تعتمد على المسافة.
+بالإضافة إلى ذلك ، يمكن استخدام موضع المحور Z لزيادة كمية الطلاء على سبيل المثال عندما تضغط الفرشاة بقوة أكبر على القماش.</value>
+  </data>
+  <data name="CbAux2ZMode.Items" xml:space="preserve">
+    <value>استخدم نقاط البيع و Neg Z مع الإشارة</value>
+  </data>
+  <data name="CbAux2ZMode.Items1" xml:space="preserve">
+    <value>استخدم نقاط البيع و Neg Z المطلقة</value>
+  </data>
+  <data name="CbAux2ZMode.Items2" xml:space="preserve">
+    <value>استخدم فقط نقاط البيع Z</value>
+  </data>
+  <data name="CbAux2ZMode.Items3" xml:space="preserve">
+    <value>استخدم Neg Z.</value>
+  </data>
+  <data name="LblAux12.Text" xml:space="preserve">
+    <value>عامل</value>
+  </data>
+  <data name="CbAux2ZUse.Text" xml:space="preserve">
+    <value>اعتبر Z</value>
+  </data>
+  <data name="groupBox28.Text" xml:space="preserve">
+    <value>اضرب في قيمة Z الحالية</value>
+  </data>
+  <data name="LblAux11.Text" xml:space="preserve">
+    <value>عامل</value>
+  </data>
+  <data name="LblAux10.Text" xml:space="preserve">
+    <value>محور</value>
+  </data>
+  <data name="CbAux2SumUp.Text" xml:space="preserve">
+    <value>قيمه مطلقه</value>
+  </data>
+  <data name="CbAux2SumUp.ToolTip" xml:space="preserve">
+    <value>القيمة المطلقة: كما هو الحال مع وضع المسافة G90 ، يتم تلخيص قيم المسافة.</value>
+  </data>
+  <data name="NudAux2Factor.ToolTip" xml:space="preserve">
+    <value>عامل لحساب قيمة المحور = المسافة * العامل</value>
+  </data>
+  <data name="CbAux2Enable.Text" xml:space="preserve">
+    <value>أضف الأمر المتعلق بالمسافة2 </value>
+  </data>
+  <data name="CbAux1ZMode.Items" xml:space="preserve">
+    <value>استخدم نقاط البيع و Neg Z مع الإشارة</value>
+  </data>
+  <data name="CbAux1ZMode.Items1" xml:space="preserve">
+    <value>استخدم نقاط البيع و Neg Z المطلقة</value>
+  </data>
+  <data name="CbAux1ZMode.Items2" xml:space="preserve">
+    <value>استخدم فقط نقاط البيع Z</value>
+  </data>
+  <data name="CbAux1ZMode.Items3" xml:space="preserve">
+    <value>استخدم Neg Z.</value>
+  </data>
+  <data name="LblAux3.Text" xml:space="preserve">
+    <value>عامل</value>
+  </data>
+  <data name="CbAux1ZUse.Text" xml:space="preserve">
+    <value>اعتبر Z</value>
+  </data>
+  <data name="groupBox27.Text" xml:space="preserve">
+    <value>اضرب في قيمة Z الحالية</value>
+  </data>
+  <data name="LblAux2.Text" xml:space="preserve">
+    <value>عامل</value>
+  </data>
+  <data name="LblAux1.Text" xml:space="preserve">
+    <value>محور</value>
+  </data>
+  <data name="CbAux1SumUp.Text" xml:space="preserve">
+    <value>قيمه مطلقه</value>
+  </data>
+  <data name="CbAux1SumUp.ToolTip" xml:space="preserve">
+    <value>القيمة المطلقة: كما هو الحال مع وضع المسافة G90 ، يتم تلخيص قيم المسافة.</value>
+  </data>
+  <data name="NudAux1Factor.ToolTip" xml:space="preserve">
+    <value>عامل لحساب قيمة المحور = المسافة * العامل</value>
+  </data>
+  <data name="CbAux1Enable.Text" xml:space="preserve">
+    <value>أضف الأمر المتعلق بالمسافة 1</value>
+  </data>
+  <data name="groupBox26.Text" xml:space="preserve">
+    <value>القيمة المتعلقة بالمسافة لمضخة الطلاء أو وحدة تغذية الفتيل</value>
+  </data>
+  <data name="checkBox12.Text" xml:space="preserve">
+    <value>إظهار النماذج الأخرى دائمًا في المقدمة (مثل نموذج الإعداد)</value>
+  </data>
+  <data name="label68.Text" xml:space="preserve">
+    <value>الحجم بالبكسل</value>
+  </data>
+  <data name="groupBox29.Text" xml:space="preserve">
+    <value>متفرقات</value>
+  </data>
+  <data name="checkBox10.Text" xml:space="preserve">
+    <value>إظهار حالة الدبوس</value>
+  </data>
+  <data name="label69.Text" xml:space="preserve">
+    <value>مراقب لا. لفتح النافذة</value>
+  </data>
+  <data name="BtnProjectorColorBackground.Text" xml:space="preserve">
+    <value>خلفية</value>
+  </data>
+  <data name="BtnProjectorColorDimension.Text" xml:space="preserve">
+    <value>البعد</value>
+  </data>
+  <data name="BtnProjectorColorRuler.Text" xml:space="preserve">
+    <value>مسطرة</value>
+  </data>
+  <data name="BtnProjectorColorPenUp.Text" xml:space="preserve">
+    <value>القلم لأعلى</value>
+  </data>
+  <data name="BtnProjectorColorPenDown.Text" xml:space="preserve">
+    <value>القلم لأسفل</value>
+  </data>
+  <data name="CbProjectorMarker.Text" xml:space="preserve">
+    <value>تبين</value>
+  </data>
+  <data name="CbProjectorTool.Text" xml:space="preserve">
+    <value>تبين</value>
+  </data>
+  <data name="CbProjectorPenUp.Text" xml:space="preserve">
+    <value>تبين</value>
+  </data>
+  <data name="CbProjectorRuler.Text" xml:space="preserve">
+    <value>تبين</value>
+  </data>
+  <data name="CbProjectorDimension.Text" xml:space="preserve">
+    <value>تبين</value>
+  </data>
+  <data name="LblProjector1.Text" xml:space="preserve">
+    <value>اللون</value>
+  </data>
+  <data name="tabPage32.Text" xml:space="preserve">
+    <value>كشاف ضوئي</value>
+  </data>
+  <data name="BtnProjectorColorTool.Text" xml:space="preserve">
+    <value>أداة</value>
+  </data>
+  <data name="BtnProjectorColorMarker.Text" xml:space="preserve">
+    <value>علامة</value>
+  </data>
+  <data name="LblProjector2.Text" xml:space="preserve">
+    <value>عرض القلم</value>
+  </data>
+  <data name="LblProjector5.Text" xml:space="preserve">
+    <value>تعويض Y</value>
+  </data>
+  <data name="LblProjector4.Text" xml:space="preserve">
+    <value>تعويض X</value>
+  </data>
+  <data name="LblProjector3.Text" xml:space="preserve">
+    <value>التحجيم (يعتمد أيضًا على حدود الماكينة)</value>
+  </data>
+  <data name="GbProjector.Text" xml:space="preserve">
+    <value>ألوان لشكل جهاز العرض</value>
+  </data>
+  <data name="label71.Text" xml:space="preserve">
+    <value>العرض الحقيقي المقاس</value>
+  </data>
+  <data name="label70.Text" xml:space="preserve">
+    <value>عرض الرسم</value>
+  </data>
+  <data name="BtnProjectorCalc.Text" xml:space="preserve">
+    <value>حساب التحجيم</value>
+  </data>
+  <data name="GbProjectorCalc.Text" xml:space="preserve">
+    <value>حساب التحجيم</value>
+  </data>
+  <data name="cBImportGCZPreventSpindle.Text" xml:space="preserve">
+    <value>لا تقم بتشغيل المغزل</value>
+  </data>
+  <data name="cBImportGCDragKnifeUse.Text" xml:space="preserve">
+    <value>استخدام سكين السحب (يكون اتجاه البداية دائمًا عند 0 درجة = إلى اليمين)</value>
+  </data>
+  <data name="CbMarlin.Text" xml:space="preserve">
+    <value>تواصل مع مارلين</value>
+  </data>
+  <data name="CbProjectorScaleEnable.Text" xml:space="preserve">
+    <value>التحجيم والإزاحة</value>
+  </data>
+  <data name="label72.Text" xml:space="preserve">
+    <value>ألف سطر قبل تخطي خيارات العرض</value>
+  </data>
+  <data name="NudCtrlImportSkip.ToolTip" xml:space="preserve">
+    <value>يجب تجاوز عدد الأسطر (مرات بالآلاف) قبل تخطي خيارات العرض.</value>
+  </data>
+  <data name="RbWireBenderAnglePcnt.Text" xml:space="preserve">
+    <value>استخدم كنسبة مئوية</value>
+  </data>
+  <data name="RbWireBenderAngleAbs.Text" xml:space="preserve">
+    <value>استخدم القيمة المطلقة</value>
+  </data>
+  <data name="label83.Text" xml:space="preserve">
+    <value>قطع الأسلاك</value>
+  </data>
+  <data name="label82.Text" xml:space="preserve">
+    <value>الوتد تعطيل</value>
+  </data>
+  <data name="label81.Text" xml:space="preserve">
+    <value>الوتد نشط</value>
+  </data>
+  <data name="textBox6.ToolTip" xml:space="preserve">
+    <value>قم بتطبيق الأوامر هنا لقطع السلك</value>
+  </data>
+  <data name="textBox5.ToolTip" xml:space="preserve">
+    <value>قم بتطبيق الأوامر هنا لتعطيل أوتاد الانحناء</value>
+  </data>
+  <data name="textBox4.ToolTip" xml:space="preserve">
+    <value>قم بتطبيق الأوامر هنا لتنشيط أوتاد الانحناء</value>
+  </data>
+  <data name="label80.Text" xml:space="preserve">
+    <value>G- كود لإجراءات محددة (أوامر منفصلة باستخدام "؛" أو تعيين مسار البرنامج النصي):</value>
+  </data>
+  <data name="label74.Text" xml:space="preserve">
+    <value>نصف قطر الانحناء</value>
+  </data>
+  <data name="label75.Text" xml:space="preserve">
+    <value>المحور العاشر لتغذية الأسلاك</value>
+  </data>
+  <data name="label76.Text" xml:space="preserve">
+    <value>المحور ص لزاوية الانحناء</value>
+  </data>
+  <data name="groupBox31.Text" xml:space="preserve">
+    <value>معلمة الآلة</value>
+  </data>
+  <data name="label79.Text" xml:space="preserve">
+    <value>قطر السلك</value>
+  </data>
+  <data name="label78.Text" xml:space="preserve">
+    <value>الزاوية تضاف للوصول إلى الزاوية المرغوبة</value>
+  </data>
+  <data name="CbWireBenderEnable.Text" xml:space="preserve">
+    <value>توليد رمز لثني الأسلاك</value>
+  </data>
+  <data name="GbWireBender.Text" xml:space="preserve">
+    <value>بندر الأسلاك</value>
+  </data>
+  <data name="tabPage33.Text" xml:space="preserve">
+    <value>متفرقات</value>
+  </data>
+  <data name="CbImportDXFDontPlot.Text" xml:space="preserve">
+    <value>تخطي الطبقات المخفية</value>
+  </data>
+  <data name="CbImportDXFDontPlot.ToolTip" xml:space="preserve">
+    <value>إذا كانت الطبقة غير مرئية أو تم تعطيل الطباعة في LibreCAD ، فلن يتم استيراد الطبقة</value>
+  </data>
+  <data name="CbImportSVGDontPlot.Text" xml:space="preserve">
+    <value>تخطي الطبقات المخفية وسمة عتامة التعبئة = "0".</value>
+  </data>
+  <data name="CbImportSVGDontPlot.ToolTip" xml:space="preserve">
+    <value>إذا كانت الطبقة أو الكائن غير مرئي في Inkscape أو إذا تم تعيين خاصية عتامة التعبئة = "0"، فلن يتم استيراد الطبقة أو الكائن.</value>
+  </data>
+  <data name="cBImportGraphicHatchFillDash.Text" xml:space="preserve">
+    <value>استخدم نمط الشرطة للمسار المغلق</value>
+  </data>
+  <data name="label73.Text" xml:space="preserve">
+    <value>إذا تجاوز عدد الأرقام هذه القيمة ، فسيتم تلخيص جميع الأرقام الخاصة بمجموعة واحدة في رقم واحد.</value>
+  </data>
+  <data name="groupBox30.Text" xml:space="preserve">
+    <value>بخصوص التحويل</value>
+  </data>
+  <data name="label87.Text" xml:space="preserve">
+    <value>ثانية.</value>
+  </data>
+  <data name="label86.Text" xml:space="preserve">
+    <value>مهلة التعرف</value>
+  </data>
+  <data name="CbDuplicateAddHeight.Text" xml:space="preserve">
+    <value>أضف ارتفاع التحديد</value>
+  </data>
+  <data name="CbDuplicateAddWidth.Text" xml:space="preserve">
+    <value>أضف عرض التحديد</value>
+  </data>
+  <data name="groupBox32.Text" xml:space="preserve">
+    <value>إزاحة مكررة</value>
+  </data>
+  <data name="groupBox32.ToolTip" xml:space="preserve">
+    <value>قم بتطبيق الإزاحة على التحديد المنسوخ والمُدرج.</value>
+  </data>
+  <data name="cBImportGCZIncNoZUp.Text" xml:space="preserve">
+    <value>تجنب Z-up DANGEROUS ، إذا كانت المسارات لها إحداثيات بداية وإيقاف مختلفة!</value>
+  </data>
+  <data name="cBImportGCZIncNoZUp.ToolTip" xml:space="preserve">
+    <value>لا ترفع Z إلى الارتفاع الآمن بعد كل تمريرة</value>
+  </data>
+  <data name="groupBox33.Text" xml:space="preserve">
+    <value>مظهر عصا التحكم</value>
+  </data>
+  <data name="GbSeveralPasses.Text" xml:space="preserve">
+    <value>عدة تمريرات</value>
+  </data>
+  <data name="RbApperance2.Text" xml:space="preserve">
+    <value>الأزرار الكلاسيكية</value>
+  </data>
+  <data name="RbApperance1.Text" xml:space="preserve">
+    <value>منطقة حساسة</value>
+  </data>
+  <data name="label88.Text" xml:space="preserve">
+    <value>بثبات:</value>
+  </data>
+  <data name="cBimportGraphicLeadTopZUp.Text" xml:space="preserve">
+    <value>ابدأ منحدر في Pen-Up</value>
+  </data>
+  <data name="BtnImportGraphicClipGetOff.Text" xml:space="preserve">
+    <value>تطبيق الإزاحة من GCode</value>
+  </data>
+  <data name="BtnImportGraphicClipGetOff.ToolTip" xml:space="preserve">
+    <value>تم تطبيق الإزاحة المحسوبة ، إذا تم تطبيق "تعويض أصل الرسومات إلى 0 ؛ 0".
+يرد في قسم رأس GCode: "Graphic offset".</value>
+  </data>
+  <data name="BtnImportGraphicClipGetDim.Text" xml:space="preserve">
+    <value>تطبيق البعد من SVG</value>
+  </data>
+  <data name="BtnImportGraphicClipGetDim.ToolTip" xml:space="preserve">
+    <value>أبعاد رسومات SVG - "العرض" و "الارتفاع".
+معطى في قسم رأس GCode: "SVG dimension".</value>
+  </data>
+  <data name="nUDImportGraphicClipWidth.ToolTip" xml:space="preserve">
+    <value>البعد X للبلاط</value>
+  </data>
+  <data name="CbImportGraphicClipGetDimAuto.Text" xml:space="preserve">
+    <value>تطبيق تلقائي عند الاستيراد</value>
+  </data>
+  <data name="CbImportGraphicClipGetDimAuto.ToolTip" xml:space="preserve">
+    <value>قم بتطبيق القيم تلقائيًا أثناء الاستيراد</value>
+  </data>
+  <data name="BtnGetFilterSave.Text" xml:space="preserve">
+    <value>حفظ على الكمبيوتر</value>
+  </data>
+  <data name="BtnGetFilterLoad.Text" xml:space="preserve">
+    <value>مرشحات الحمل</value>
+  </data>
+  <data name="BtnGetFilterValueClear.Text" xml:space="preserve">
+    <value>حذف النص</value>
+  </data>
+  <data name="RbimportGraphicFilterChoiceRemove2.Text" xml:space="preserve">
+    <value>احتفظ بالأشياء</value>
+  </data>
+  <data name="RbimportGraphicFilterChoiceRemove1.Text" xml:space="preserve">
+    <value>إزالة الأشياء</value>
+  </data>
+  <data name="CbimportGraphicFilterEnable.Text" xml:space="preserve">
+    <value>تفعيل المرشح حسب لون القلم أو عرض القلم</value>
+  </data>
+  <data name="GbFilter.Text" xml:space="preserve">
+    <value>احتفظ أو أزل الأشياء حسب الخصائص</value>
+  </data>
+  <data name="BtnLoadToolTableDialog.ToolTip" xml:space="preserve">
+    <value>تحميل جدول الأدوات من موقع آخر</value>
+  </data>
+  <data name="BtnOpenLogFile.Text" xml:space="preserve">
+    <value>افتح ملف السجل</value>
+  </data>
+  <data name="label89.Text" xml:space="preserve">
+    <value>قم بإزالة جميع الكائنات التي تحتوي على هذه الخصائص (منفصلة بـ "؛")</value>
+  </data>
+  <data name="label90.Text" xml:space="preserve">
+    <value>احتفظ بجميع الكائنات بهذه الخصائص (منفصلة بـ "؛")</value>
+  </data>
+  <data name="CbImportGraphicClipAngleEnable.Text" xml:space="preserve">
+    <value>دور</value>
+  </data>
+  <data name="cBColorModeWidth.Text" xml:space="preserve">
+    <value>+ العرض</value>
+  </data>
+  <data name="cBColorModeWidth.ToolTip" xml:space="preserve">
+    <value>يطبق أيضًا عرض القلم المستورد على العرض ثنائي الأبعاد</value>
+  </data>
+  <data name="pathImport1.Text" xml:space="preserve">
+    <value>التنسيق ذات الصلة</value>
+  </data>
+  <data name="pathImport2.Text" xml:space="preserve">
+    <value>خيارات عامة</value>
+  </data>
+  <data name="pathImport3.Text" xml:space="preserve">
+    <value>الوظائف الإضافية للمسار</value>
+  </data>
+  <data name="pathImport4.Text" xml:space="preserve">
+    <value>تعديلات المسار</value>
+  </data>
+  <data name="pathImport5.Text" xml:space="preserve">
+    <value>لقطة</value>
+  </data>
+  <data name="pathImport6.Text" xml:space="preserve">
+    <value>التجميع والأدوات</value>
+  </data>
+  <data name="BtnGetFilterSave.ToolTip" xml:space="preserve">
+    <value>احفظ إعدادات التصفية في ../data/filters كملف ini</value>
+  </data>
+  <data name="BtnGetFilterLoad.ToolTip" xml:space="preserve">
+    <value>تحميل إعدادات التصفية من ../data/filters</value>
+  </data>
+  <data name="BtnGetFilterValueClear.ToolTip" xml:space="preserve">
+    <value>احذف الحقول النصية</value>
+  </data>
+  <data name="pathImport7.Text" xml:space="preserve">
+    <value>منقي</value>
+  </data>
+  <data name="pathImport8.Text" xml:space="preserve">
+    <value>تحويل خاص</value>
+  </data>
+  <data name="pathImport9.Text" xml:space="preserve">
+    <value>تمديد القيادة</value>
+  </data>
+  <data name="graphicImport1.Text" xml:space="preserve">
+    <value>استيراد المسار</value>
+  </data>
+  <data name="graphicImport2.Text" xml:space="preserve">
+    <value>جيل رمز جيل</value>
+  </data>
+  <data name="graphicImport3.Text" xml:space="preserve">
+    <value>تعديل G-Code</value>
+  </data>
+  <data name="graphicImport4.Text" xml:space="preserve">
+    <value>استخدم حالات</value>
+  </data>
+  <data name="BtnGetFilterValueKeepWidth.ToolTip" xml:space="preserve">
+    <value>يضيف لون الحرف أو المجموعة المحددة</value>
+  </data>
+  <data name="BtnGetFilterValueKeepColor.ToolTip" xml:space="preserve">
+    <value>يضيف لون الحرف أو المجموعة المحددة</value>
+  </data>
+  <data name="BtnGetFilterValueRemoveWidth.ToolTip" xml:space="preserve">
+    <value>يضيف لون الحرف أو المجموعة المحددة</value>
+  </data>
+  <data name="BtnGetFilterValueRemoveColor.ToolTip" xml:space="preserve">
+    <value>يضيف لون الحرف أو المجموعة المحددة</value>
+  </data>
+  <data name="Import_Parameter.Text" xml:space="preserve">
+    <value>استيراد معلمة</value>
+  </data>
+  <data name="Import_Output.Text" xml:space="preserve">
+    <value>خصائص الإخراج</value>
+  </data>
+  <data name="GbMetaData.Text" xml:space="preserve">
+    <value>مثال الكلمات الرئيسية للبيانات الوصفية</value>
+  </data>
+  <data name="CbImportSVGMetaData.Text" xml:space="preserve">
+    <value>معالجة البيانات الوصفية</value>
+  </data>
+  <data name="CbImportSVGMetaData.ToolTip" xml:space="preserve">
+    <value>قم بتطبيق XY-Feed و Z-Feed و SpindleSpeed ​​و Zup و Zdown أثناء الاستيراد.</value>
+  </data>
+  <data name="groupBox34.Text" xml:space="preserve">
+    <value>ينشئ قيمة S (يجب تمكين PWM أو المغزل / الليزر)</value>
+  </data>
+  <data name="cBImportPenWidthToS.Text" xml:space="preserve">
+    <value>ترجمة عرض القلم إلى قيمة S.</value>
+  </data>
+  <data name="cBImportPenWidthToS.ToolTip" xml:space="preserve">
+    <value>ستتم معالجة عرض القلم كقيمة S لطاقة الليزر PWM.
+سيتم تحديد العمق الأقصى بواسطة نقش Z-Height.</value>
+  </data>
+  <data name="label92.Text" xml:space="preserve">
+    <value>الأعلى</value>
+  </data>
+  <data name="label93.Text" xml:space="preserve">
+    <value>دقيقة</value>
+  </data>
+  <data name="label91.Text" xml:space="preserve">
+    <value>يترجم الحد الأدنى / الأقصى لعرض القلم أو نصف قطر الدائرة في S في النطاق:</value>
+  </data>
+  <data name="nUDSBottom.ToolTip" xml:space="preserve">
+    <value>سيتم ترجمة عرض القلم الأوسع إلى هذا العمق</value>
+  </data>
+  <data name="label94.Text" xml:space="preserve">
+    <value>التأخير قبل إغلاق المعلومات المعروضة تلقائيًا</value>
+  </data>
+  <data name="groupBox35.Text" xml:space="preserve">
+    <value>استيراد HPGL (* .plt ، * .hpgl)</value>
+  </data>
+  <data name="CbImportSVGApplyFill.Text" xml:space="preserve">
+    <value>قم بتطبيق تعبئة الفتحة إذا كان الكائن ممتلئًا</value>
+  </data>
+  <data name="BtnGetFilterValueRemoveWidth.Text" xml:space="preserve">
+    <value>احصل على اللون</value>
+  </data>
+  <data name="BtnGetFilterValueRemoveColor.Text" xml:space="preserve">
+    <value>احصل على اللون</value>
+  </data>
+  <data name="groupBox37.Text" xml:space="preserve">
+    <value>نموذج الرسالة</value>
+  </data>
+  <data name="groupBox37.ToolTip" xml:space="preserve">
+    <value>نموذج رسالة للحصول على معلومات الاستيراد ، التأخير قبل الإغلاق التلقائي</value>
+  </data>
+  <data name="cBImportSVGCircleToDotS.Text" xml:space="preserve">
+    <value>تحويل نصف قطر الدائرة إلى قيمة S.</value>
+  </data>
+  <data name="BtnHelp_ImportParameter.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_SvgDxfCsv.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="label97.Text" xml:space="preserve">
+    <value>غير مدعوم: FS ، VS ، WU ، PW</value>
+  </data>
+  <data name="label96.Text" xml:space="preserve">
+    <value>الأوامر المدعومة: IN ، SP ، PU ، PD ، PA ، PR</value>
+  </data>
+  <data name="label98.Text" xml:space="preserve">
+    <value>لا يوجد خيارات</value>
+  </data>
+  <data name="groupBox36.Text" xml:space="preserve">
+    <value>استيراد المثقاب (* .drd ، * .drl ، * .dri)</value>
+  </data>
+  <data name="tabFormat_Drill.Text" xml:space="preserve">
+    <value>تدريبات</value>
+  </data>
+  <data name="label99.Text" xml:space="preserve">
+    <value>سيتم فتح نموذج جديد للإعدادات.</value>
+  </data>
+  <data name="groupBox38.Text" xml:space="preserve">
+    <value>استيراد الصور (* .bmp ، * .gif ، * .png ، * .jpg)</value>
+  </data>
+  <data name="BtnHelp_Pathinterpretation.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Pathaddons.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Pathmodification2.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="button5.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Conversion.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Tooltable.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Grouping.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Filter.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Wirebender.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Outline.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Extension.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_General.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Penupdown.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_misc.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Usecase.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_TooltableSet.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Toolchange.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Programstart.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Programcontrol.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Flowcontrol.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Camera.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Notifier.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="cBImportGraphicHatchFillInset2.Text" xml:space="preserve">
+    <value>تقليص مسار التغليف بدلاً من تقصير الخطوط</value>
+  </data>
+  <data name="CbImportGraphicHatchFillDeletePath.Text" xml:space="preserve">
+    <value>احذف مسار التغليف بعد التعبئة</value>
+  </data>
+  <data name="label100.Text" xml:space="preserve">
+    <value>أدخل البرنامج النصي بعد عدد النقاط</value>
+  </data>
+  <data name="NudImportGraphicOffsetOriginY.ToolTip" xml:space="preserve">
+    <value>أصل المحور ص</value>
+  </data>
+  <data name="cBImportGraphicSortDimension.Text" xml:space="preserve">
+    <value>يرتب الأشياء حسب الحجم ، يأتي الأكبر في النهاية</value>
+  </data>
+  <data name="cBImportGraphicSortDimension.ToolTip" xml:space="preserve">
+    <value>سيتم فرز الكائنات حسب الحجم ، من الأصغر إلى الأكبر ومن الأعمق إلى الأبعد.
+على سبيل المثال لقطع الليزر</value>
+  </data>
+  <data name="cBImportGraphicLargestLast.Text" xml:space="preserve">
+    <value>أكبر كائن أخيرًا</value>
+  </data>
+  <data name="cBImportGraphicLargestLast.ToolTip" xml:space="preserve">
+    <value>معالجة أكبر كائن أخيرًا ، على سبيل المثال مسار القطع للنقش / القطع بالليزر</value>
+  </data>
+  <data name="NudImportGraphicOffsetOriginX.ToolTip" xml:space="preserve">
+    <value>أصل المحور س</value>
+  </data>
+  <data name="cBImportGCTTSSpeedPWM.ToolTip" xml:space="preserve">
+    <value>حدد "التجميع والأدوات - جدول الأدوات" للحصول على القيم المحددة من جدول الأدوات أثناء الاستيراد</value>
+  </data>
+  <data name="label104.Text" xml:space="preserve">
+    <value>الفجوة بين المحتويات</value>
+  </data>
+  <data name="label104.ToolTip" xml:space="preserve">
+    <value>يحافظ على المسافة المحددة بين محتويات الملف</value>
+  </data>
+  <data name="CbMultipleLoadAllwaysClear.Text" xml:space="preserve">
+    <value>قم دائمًا بمسح مساحة العمل</value>
+  </data>
+  <data name="CbMultipleLoadAllwaysClear.ToolTip" xml:space="preserve">
+    <value>يمسح مساحة العمل قبل تحميل محتوى جديد</value>
+  </data>
+  <data name="CbMultipleLoadAllwaysLoad.Text" xml:space="preserve">
+    <value>السماح دائمًا باستيراد ملفات متعددة</value>
+  </data>
+  <data name="CbMultipleLoadAllwaysLoad.ToolTip" xml:space="preserve">
+    <value>السماح دائمًا بالاستيراد المتعدد أو السماح فقط في حالة تمكين "الإضافة إلى العرض ثنائي الأبعاد".</value>
+  </data>
+  <data name="groupBox42.Text" xml:space="preserve">
+    <value>اتجاه الترتيب</value>
+  </data>
+  <data name="groupBox41.Text" xml:space="preserve">
+    <value>الحد من القيمة</value>
+  </data>
+  <data name="label101.Text" xml:space="preserve">
+    <value>ترتيب المحتوى من استيراد رسومي متعدد</value>
+  </data>
+  <data name="groupBox40.Text" xml:space="preserve">
+    <value>تحميل ملفات متعددة</value>
+  </data>
+  <data name="TbImportSVGAddOnFile.ToolTip" xml:space="preserve">
+    <value>مسار الملف لملف svg المراد تحميله كـ add.on</value>
+  </data>
+  <data name="CbImportSVGAddOnPosition.Items" xml:space="preserve">
+    <value>لا أحد</value>
+  </data>
+  <data name="CbImportSVGAddOnPosition.Items1" xml:space="preserve">
+    <value>المركز (الإطار)</value>
+  </data>
+  <data name="CbImportSVGAddOnPosition.Items2" xml:space="preserve">
+    <value>أسفل اليسار</value>
+  </data>
+  <data name="CbImportSVGAddOnPosition.Items3" xml:space="preserve">
+    <value>أسفل اليمين</value>
+  </data>
+  <data name="CbImportSVGAddOnPosition.Items4" xml:space="preserve">
+    <value>أعلى اليسار</value>
+  </data>
+  <data name="CbImportSVGAddOnPosition.Items5" xml:space="preserve">
+    <value>اعلى اليمين</value>
+  </data>
+  <data name="CbImportSVGAddOnPosition.Text" xml:space="preserve">
+    <value>حدد الموقف</value>
+  </data>
+  <data name="CbImportSVGAddOnPosition.ToolTip" xml:space="preserve">
+    <value>حدد الموضع المطلوب للوظيفة الإضافية، بالنسبة للرسم المستورد</value>
+  </data>
+  <data name="label105.Text" xml:space="preserve">
+    <value>حجم</value>
+  </data>
+  <data name="label105.ToolTip" xml:space="preserve">
+    <value>يقيس حجم الرسم المستورد بناءً على الحجم الأصلي أو تغيير الحجم المطلوب</value>
+  </data>
+  <data name="NudImportSVGAddOnScale.ToolTip" xml:space="preserve">
+    <value>للإطار: على سبيل المثال. "0.9" يقيس حجم الكائن الأصلي ليناسب الإطار</value>
+  </data>
+  <data name="cBImportSVGAddOnEnable.Text" xml:space="preserve">
+    <value>يُمكَِن</value>
+  </data>
+  <data name="BtnImportSVGAddOnSelectFile.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="BtnImportSVGAddOnSelectFile.ToolTip" xml:space="preserve">
+    <value>حدد ملف SVG للإطار أو الشعار أو العلامة أو العلامة المائية</value>
+  </data>
+  <data name="GbImportSVGAddOn.Text" xml:space="preserve">
+    <value>أضف إطارًا وشعارًا وعلامة مائية وعلامة مائية من الملف</value>
+  </data>
+  <data name="GbImportSVGAddOn.ToolTip" xml:space="preserve">
+    <value>يضيف رسم SVG إضافيًا إلى الرسم المستورد، على سبيل المثال:
+أضف إطارًا يتم فيه وضع النص الأصلي: استخدم مقياس 0.9 أو أقل و"الوسط"
+ارسم توقيعًا في الهامش الأيمن السفلي: مقياس 0.1 أو أقل واستخدم "أسفل اليمين"</value>
+  </data>
+  <data name="BtnSetSValues.Text" xml:space="preserve">
+    <value>يحصل على قيم PWM</value>
+  </data>
+  <data name="BtnSetSValues.ToolTip" xml:space="preserve">
+    <value>الحصول على قيم PWM صفر/أسفل للقلم من علامة تبويب أخرى [استيراد الرسومات - إنشاء G-Code - ترجمة القلم لأعلى/لأسفل - PWM]</value>
+  </data>
+  <data name="nUDSTop.ToolTip" xml:space="preserve">
+    <value>سيتم ترجمة أصغر عرض للقلم إلى هذا العمق</value>
+  </data>
+  <data name="LblNoise2.Text" xml:space="preserve">
+    <value>مسافة</value>
+  </data>
+  <data name="LblNoise1.Text" xml:space="preserve">
+    <value>السعة</value>
+  </data>
+  <data name="NudNoiseDensity.ToolTip" xml:space="preserve">
+    <value>السعة القصوى</value>
+  </data>
+  <data name="NudNoiseAmplitude.ToolTip" xml:space="preserve">
+    <value>السعة القصوى</value>
+  </data>
+  <data name="cBImportGraphicNoise.Text" xml:space="preserve">
+    <value>زد الضوضاء</value>
+  </data>
+  <data name="cBImportGraphicNoise.ToolTip" xml:space="preserve">
+    <value>توليد خطوط متذبذبة</value>
+  </data>
+  <data name="gBNoise.Text" xml:space="preserve">
+    <value>ضوضاء</value>
+  </data>
+  <data name="CbImportGraphicHatchFillNoise.Text" xml:space="preserve">
+    <value>زد الضوضاء</value>
+  </data>
+  <data name="CbImportGraphicHatchFillNoise.ToolTip" xml:space="preserve">
+    <value>قم بإنشاء خطوط متذبذبة لملء الفتحة فقط</value>
+  </data>
+  <data name="BtnSaveIni_SvgDxfCsv.ToolTip" xml:space="preserve">
+    <value>يحفظ إعدادات علامات التبويب هذه كملف INI</value>
+  </data>
+  <data name="BtnSaveIni_ImportParameter.ToolTip" xml:space="preserve">
+    <value>يحفظ إعدادات علامات التبويب هذه كملف INI</value>
+  </data>
+  <data name="BtnSaveIni_Gcode.ToolTip" xml:space="preserve">
+    <value>يحفظ إعدادات علامات التبويب هذه كملف INI</value>
+  </data>
+  <data name="TbImportGCPWMSlider.ToolTip" xml:space="preserve">
+    <value>تبديل "الإعدادات المتقدمة" لتحديث الحدود الدنيا والقصوى من إعداد grbl</value>
+  </data>
+  <data name="cBImportGCTTSSpeedPWM.Text" xml:space="preserve">
+    <value>من جدول الأدوات</value>
+  </data>
+  <data name="LblPolar.Text" xml:space="preserve">
+    <value>يحول جميع قيم XY (نظام الإحداثيات الديكارتية) إلى نصف القطر / الزاوية (الإحداثيات القطبية) عند استيراد الرسومات.
+تحصل X على قيم نصف القطر، بينما تحصل Y على قيم الزاوية.
+ملحوظة: المزيد من تحرير الرسومات (التدوير، القياس، التحول) يؤدي إلى نتائج غير سارة، لأنها مبرمجة لإحداثيات XY.
+التحويل ممكن أيضًا عبر القائمة - تحويل GCode - "التحويل إلى الإحداثيات القطبية".</value>
+  </data>
+  <data name="label106.Text" xml:space="preserve">
+    <value>الدقة بالملليمتر</value>
+  </data>
+  <data name="CbConvertToPolar.Text" xml:space="preserve">
+    <value>تحويل XY إلى الإحداثيات القطبية</value>
+  </data>
+  <data name="GbConvertToPolar.Text" xml:space="preserve">
+    <value>تحويل XY إلى الإحداثيات القطبية</value>
+  </data>
+  <data name="nUDImportGCTangentialShorting.ToolTip" xml:space="preserve">
+    <value>يبدأ مسار الأشكال لاحقًا وينهيه مبكرًا (للقاطع الدوار).</value>
+  </data>
+  <data name="cBImportGCTangentialShortingEnable.Text" xml:space="preserve">
+    <value>تمكين تقصير المسار عن طريق...</value>
+  </data>
+  <data name="cBImportGCTangentialShortingEnable.ToolTip" xml:space="preserve">
+    <value>يبدأ مسار الأشكال لاحقًا وينهيه مبكرًا (للقاطع الدوار).</value>
+  </data>
+  <data name="cBImportGraphicOffsetLargestRemove.Text" xml:space="preserve">
+    <value>إزالة أكبر كائن</value>
+  </data>
+  <data name="cBImportGraphicOffsetLargestRemove.ToolTip" xml:space="preserve">
+    <value>ابحث عن أكبر كائن وقم بإزالته على سبيل المثال. تجنب مسار القطع للنقش/القطع بالليزر</value>
+  </data>
+  <data name="cBImportGraphicOffsetLargestLast.Text" xml:space="preserve">
+    <value>نقل أكبر كائن إلى النهاية</value>
+  </data>
+  <data name="cBImportGraphicOffsetLargestLast.ToolTip" xml:space="preserve">
+    <value>معالجة أكبر كائن أخيرًا، على سبيل المثال مسار انقطاع للنقش / القطع بالليزر</value>
+  </data>
+  <data name="lblSorting.Text" xml:space="preserve">
+    <value>نقطة البداية الأولية للفرز</value>
+  </data>
+  <data name="CbImportGraphicSortDistanceStart.Items" xml:space="preserve">
+    <value>اكسمين، يماكس</value>
+  </data>
+  <data name="CbImportGraphicSortDistanceStart.Items1" xml:space="preserve">
+    <value>اكس ماكس، واي ماكس</value>
+  </data>
+  <data name="CbImportGraphicSortDistanceStart.Items2" xml:space="preserve">
+    <value>اكس ماكس، يمين</value>
+  </data>
+  <data name="CbImportGraphicSortDistanceStart.Items3" xml:space="preserve">
+    <value>اكسمين، يمين</value>
+  </data>
+  <data name="CbImportGraphicSortDistanceStart.Items4" xml:space="preserve">
+    <value>إكسنتر، يسيمتر</value>
+  </data>
+  <data name="CbImportGraphicSortDistanceStart.Items6" xml:space="preserve">
+    <value>نقاط البيع الفعلية.</value>
+  </data>
+  <data name="CbImportGraphicSortDistanceStart.Text" xml:space="preserve">
+    <value>وضع البداية</value>
+  </data>
+  <data name="CbImportGraphicSortDistanceStart.ToolTip" xml:space="preserve">
+    <value>تحديد موضع البداية للفرز</value>
+  </data>
+  <data name="gBSorting.Text" xml:space="preserve">
+    <value>خيارات الفرز</value>
+  </data>
+  <data name="tabControlSort.Text" xml:space="preserve">
+    <value>فرز</value>
+  </data>
+  <data name="CbImportSVGPathStartNewFigure.Text" xml:space="preserve">
+    <value>ابدأ شخصية جديدة على المسار الفرعي</value>
+  </data>
+  <data name="CbImportSVGPathStartNewFigure.ToolTip" xml:space="preserve">
+    <value>الافتراضي (غير محدد): يقوم الأمر 'm' (moveto) داخل عنصر مسار SVG بإنشاء تسلسل قلم لأعلى/لأسفل مع نفس الشكل.
+إذا تم تحديده، فإن كل أمر 'm' ينشئ رقمًا جديدًا.</value>
+  </data>
+  <data name="label107.Text" xml:space="preserve">
+    <value>يعمل التوجيه الهندسي بشكل جيد مع الأشكال الهندسية ورسومات البكسل</value>
+  </data>
+  <data name="NudImportPDNDpi.ToolTip" xml:space="preserve">
+    <value>DPI = بكسل/بوصة - عادة 96</value>
+  </data>
+  <data name="label108.Text" xml:space="preserve">
+    <value>دورات التجانس بعد التوجيه</value>
+  </data>
+  <data name="rBImportPDNLayerAll.Text" xml:space="preserve">
+    <value>استيراد كافة الطبقات</value>
+  </data>
+  <data name="rBImportPDNLayerVisible.Text" xml:space="preserve">
+    <value>قم باستيراد الطبقات المرئية فقط</value>
+  </data>
+  <data name="groupBox44.Text" xml:space="preserve">
+    <value>استيراد الصور ذات الطبقات (PaintDotNet Json)</value>
+  </data>
+  <data name="cBImportGraphicHatchFillChangeOffset.Text" xml:space="preserve">
+    <value>تغيير الإزاحة بعد كل مسار</value>
+  </data>
+  <data name="BtnGetFilterValueKeepWidth.Text" xml:space="preserve">
+    <value>احصل على اللون</value>
+  </data>
+  <data name="BtnGetFilterValueKeepColor.Text" xml:space="preserve">
+    <value>احصل على اللون</value>
+  </data>
+  <data name="button2.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="label103.Text" xml:space="preserve">
+    <value>البعد</value>
+  </data>
+  <data name="label102.Text" xml:space="preserve">
+    <value>لا.</value>
+  </data>
+  <data name="nUDMultipleLoadDimY.ToolTip" xml:space="preserve">
+    <value>الحد الأقصى لنطاق Y. انظر أيضًا علامة التبويب "التحكم في البرنامج" - "منطقة الآلة".</value>
+  </data>
+  <data name="nUDMultipleLoadDimX.ToolTip" xml:space="preserve">
+    <value>الحد الأقصى لنطاق X. انظر أيضًا علامة التبويب "التحكم في البرنامج" - "منطقة الآلة".</value>
+  </data>
+  <data name="nUDMultipleLoadNoY.ToolTip" xml:space="preserve">
+    <value>الحد الأقصى لعدد محتويات الملف في العمود</value>
+  </data>
+  <data name="RbMultipleLoadByX.Text" xml:space="preserve">
+    <value>X - صفًا تلو الآخر</value>
+  </data>
+  <data name="nUDMultipleLoadNoX.ToolTip" xml:space="preserve">
+    <value>الحد الأقصى لعدد محتويات الملف في صف واحد</value>
+  </data>
+  <data name="RbMultipleLoadByY.Text" xml:space="preserve">
+    <value>ص - عمود بعمود</value>
+  </data>
+  <data name="RbMultipleLoadLimitDim.Text" xml:space="preserve">
+    <value>الحد من أبعاد الجهاز</value>
+  </data>
+  <data name="RbMultipleLoadLimitDim.ToolTip" xml:space="preserve">
+    <value>يضع محتوى ملف واحدًا بجوار الآخر طالما لم يتم تجاوز الحد الأقصى للجهاز. ثم يبدأ صف أو عمود جديد.</value>
+  </data>
+  <data name="RbMultipleLoadLimitNo.Text" xml:space="preserve">
+    <value>الحد حسب العدد</value>
+  </data>
+  <data name="RbMultipleLoadLimitNo.ToolTip" xml:space="preserve">
+    <value>يضع محتوى ملف واحد بجانب الآخر حتى يتم الوصول إلى الرقم المحدد. ثم يبدأ صف أو عمود جديد.</value>
+  </data>
+  <data name="BtnHelp_Buttons.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Hotkeys.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Gamepad.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Joystick.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_2dview.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Projector.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="BtnHelp_Misc2.ToolTip" xml:space="preserve">
+    <value>مساعدة على الانترنت</value>
+  </data>
+  <data name="RrBImportVectorizeDPISet.Text" xml:space="preserve">
+    <value>ضبط نقطة لكل بوصة</value>
+  </data>
+  <data name="RrBImportVectorizeDPISet.ToolTip" xml:space="preserve">
+    <value>ضبط دقة الصورة</value>
+  </data>
+  <data name="RrBImportVectorizeDPIFromImage.Text" xml:space="preserve">
+    <value>DPI من الصورة</value>
+  </data>
+  <data name="RrBImportVectorizeDPIFromImage.ToolTip" xml:space="preserve">
+    <value>دقة الصورة المخزنة في الصورة</value>
+  </data>
+  <data name="groupBox49.Text" xml:space="preserve">
+    <value>مقاس</value>
+  </data>
+  <data name="rBImportVectorizeAlgoMyTrace.Text" xml:space="preserve">
+    <value>التتبع الهندسي (بطيء - جيد للأشكال الهندسية)</value>
+  </data>
+  <data name="rBImportVectorizeAlgoPoTrace.Text" xml:space="preserve">
+    <value>PoTrace (سريع - جيد للصور والرسومات)</value>
+  </data>
+  <data name="groupBox48.Text" xml:space="preserve">
+    <value>خوارزمية المتجهات</value>
+  </data>
+  <data name="rBImportVectorizeTransparency.Text" xml:space="preserve">
+    <value>الشفافية</value>
+  </data>
+  <data name="rBImportVectorizeTransparency.ToolTip" xml:space="preserve">
+    <value>إذا لم يتم العثور على الشفافية، فسيتم تطبيق كشف السطوع.</value>
+  </data>
+  <data name="rBImportVectorizeBrightness.Text" xml:space="preserve">
+    <value>سطوع</value>
+  </data>
+  <data name="label109.Text" xml:space="preserve">
+    <value>عتبة</value>
+  </data>
+  <data name="groupBox47.Text" xml:space="preserve">
+    <value>كشف الخلفية</value>
+  </data>
+  <data name="label113.Text" xml:space="preserve">
+    <value>Potrace هو برنامج مفتوح المصدر يقوم بتحويل الصور النقطية إلى رسومات متجهة. تمت كتابته وصيانته بواسطة بيتر سيلينجر.</value>
+  </data>
+  <data name="BtnSetPoTraceDefaults.Text" xml:space="preserve">
+    <value>إعادة ضبط</value>
+  </data>
+  <data name="label112.Text" xml:space="preserve">
+    <value>منحنى التسامح الأمثل</value>
+  </data>
+  <data name="label111.Text" xml:space="preserve">
+    <value>عتبة الزاوية</value>
+  </data>
+  <data name="label110.Text" xml:space="preserve">
+    <value>مساحة المسار الأكبر التي يجب تجاهلها</value>
+  </data>
+  <data name="CBImportPoTraceOptimazion.Text" xml:space="preserve">
+    <value>استخدم تحسين المنحنى</value>
+  </data>
+  <data name="groupBox46.Text" xml:space="preserve">
+    <value>تقدم بطلب للحصول على</value>
+  </data>
+  <data name="groupBox45.Text" xml:space="preserve">
+    <value>المتجهات التلقائية</value>
+  </data>
+  <data name="RrBImportVectorizeWidthSet.Text" xml:space="preserve">
+    <value>اضبط عرض الصورة على</value>
+  </data>
+  <data name="RrBImportVectorizeWidthSet.ToolTip" xml:space="preserve">
+    <value>عرض الصورة مم</value>
+  </data>
+  <data name="NudImportPDNWidth.ToolTip" xml:space="preserve">
+    <value>سيتم حساب دقة الصورة بالعرض المحدد</value>
+  </data>
+  <data name="rBImportVectorizeAlgoMyTrace.ToolTip" xml:space="preserve">
+    <value>لرسومات البكسل المرسومة ذاتيًا</value>
+  </data>
+  <data name="NudImportVectorizeThreshold.ToolTip" xml:space="preserve">
+    <value>نطاق العتبة هو 0 - 255.
+يجب أن يكون السطوع &gt; عتبة ليتم التعرف عليه كخلفية، أو
+يجب أن تكون الشفافية &lt; العتبة حتى يتم التعرف عليها كخلفية</value>
+  </data>
+  <data name="CbToolChangeM6PassThrough.Text" xml:space="preserve">
+    <value>قم بتمرير الأمر M6 دون مزيد من المعالجة بواسطة جهاز رسم GRBL</value>
+  </data>
+  <data name="CbToolChangeM6PassThrough.ToolTip" xml:space="preserve">
+    <value>ملحوظة: لا يمكن لـ Grbl "الكلاسيكي" على Arduino Uno معالجة أمر M6 ويعطي خطأ.</value>
+  </data>
+  <data name="BtnSetGrblCustomString.Text" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="BtnSetGrblCustomString.ToolTip" xml:space="preserve">
+    <value>تعيين/تجاوز السلسلة المخصصة. ثم قم بإعادة ضبط وحدة التحكم لقراءة السلسلة المخصصة.
+لتعيين هذه السلسلة، أرسل Grbl $I=xxx، حيث xxx هي سلسلة التخصيص الخاصة بك والتي يقل طولها عن 80 حرفًا. يتم تخزين هذه السلسلة بأحرف كبيرة، ويتم إزالة المسافات، ويمكن أن تحتوي على أحرف أبجدية رقمية فقط.</value>
+  </data>
+  <data name="label115.Text" xml:space="preserve">
+    <value>سلسلة - اسم الملف المطلوب</value>
+  </data>
+  <data name="CbLoadMachineDefaults.Text" xml:space="preserve">
+    <value>تحميل الإعدادات الافتراضية</value>
+  </data>
+  <data name="CbLoadMachineDefaults.ToolTip" xml:space="preserve">
+    <value>يقوم بتحميل الإعدادات الافتراضية مرة واحدة فقط، بعد الاتصال، إذا تم العثور على اسم الملف.</value>
+  </data>
+  <data name="label114.Text" xml:space="preserve">
+    <value>يستخدم السلسلة المخصصة "$I" كاسم ملف لتحميل حالة الاستخدام من data\usecases.
+استخدم "تصدير إعدادات الجهاز" لحفظ "الإعدادات الافتراضية".</value>
+  </data>
+  <data name="GbGrblDefaults.Text" xml:space="preserve">
+    <value>تحميل الإعدادات الافتراضية عند الاتصال</value>
+  </data>
+  <data name="groupBox50.Text" xml:space="preserve">
+    <value>نص المعلومات</value>
+  </data>
+  <data name="CbShowVertexEnable.ToolTip" xml:space="preserve">
+    <value>يجب إعادة تحميل الرسم البياني حتى يسري مفعوله.</value>
+  </data>
+  <data name="cB2DViewFigureId.ToolTip" xml:space="preserve">
+    <value>يجب إعادة تحميل الرسم البياني حتى يسري مفعوله.</value>
+  </data>
+  <data name="cB2DViewDirectionArrow.ToolTip" xml:space="preserve">
+    <value>يجب إعادة تحميل الرسم البياني حتى يسري مفعوله.</value>
+  </data>
+  <data name="BtnOpenGrblCustomStringIniFile.Text" xml:space="preserve">
+    <value>فتح ملف</value>
+  </data>
+  <data name="BtnOpenGrblCustomStringIniFile.ToolTip" xml:space="preserve">
+    <value>افتح ملف INI في محرر النصوص "المفكرة".</value>
+  </data>
+  <data name="BtnSetGrblCustomStringIniFile.Text" xml:space="preserve">
+    <value>احفظ الإعدادات</value>
+  </data>
+  <data name="BtnSetGrblCustomStringIniFile.ToolTip" xml:space="preserve">
+    <value>احفظ بعض الإعدادات المهمة في ملف INI.</value>
+  </data>
+  <data name="BtnTestGrblCustomStringIniFile.Text" xml:space="preserve">
+    <value>اختبر ملف INI</value>
+  </data>
+  <data name="BtnTestGrblCustomStringIniFile.ToolTip" xml:space="preserve">
+    <value>اعرض بعض الإعدادات المهمة في ملف INI.</value>
+  </data>
+  <data name="BtnApply2DViewChanges.Text" xml:space="preserve">
+    <value>تطبيق</value>
+  </data>
+  <data name="label118.Text" xml:space="preserve">
+    <value>مؤشر حجم النص</value>
+  </data>
+  <data name="label117.Text" xml:space="preserve">
+    <value>معلومات حجم النص</value>
+  </data>
+  <data name="label116.Text" xml:space="preserve">
+    <value>شفافية الخلفية</value>
+  </data>
+  <data name="groupBox43.Text" xml:space="preserve">
+    <value>تغيير حجم النموذج الرئيسي</value>
+  </data>
+  <data name="NudInfoTextSize2.ToolTip" xml:space="preserve">
+    <value>حجم نص المعلومات بجوار المؤشر</value>
+  </data>
+  <data name="NudInfoTextSize1.ToolTip" xml:space="preserve">
+    <value>حجم نص المعلومات في الحافة العلوية اليسرى للعرض ثنائي الأبعاد</value>
+  </data>
+  <data name="HsbInfoTransparency.ToolTip" xml:space="preserve">
+    <value>شفافية خلفية النص</value>
+  </data>
+</root>

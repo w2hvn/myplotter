@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblInfo1.Text" xml:space="preserve">
+    <value>Bilgi</value>
+  </data>
+  <data name="btnKeepSizeReso.Text" xml:space="preserve">
+    <value>orijini koru. piksel boyutu, hesap. Çözünürlük</value>
+  </data>
+  <data name="btnKeepSizeWidth.Text" xml:space="preserve">
+    <value>orijini koru. piksel boyutu, hesap. Genişlik</value>
+  </data>
+  <data name="lblSizeOrig.Text" xml:space="preserve">
+    <value>Boyut</value>
+  </data>
+  <data name="nUDResoX.ToolTip" xml:space="preserve">
+    <value>Çizgiler arasındaki mesafe, kalem genişliğine uygun olmalıdır</value>
+  </data>
+  <data name="lblSizeResult.Text" xml:space="preserve">
+    <value>Boyut</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Genişlik</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Çözünürlük X / kalem genişliği</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Yükseklik</value>
+  </data>
+  <data name="cbLockRatio.Text" xml:space="preserve">
+    <value>oranı koru</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Birim cinsinden çıktı boyutu</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Hat mesafesi</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Gama</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Zıtlık</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Parlaklık</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>CMYK / RGB'yi çıkarın</value>
+  </data>
+  <data name="cbGrayscaleChannel.Text" xml:space="preserve">
+    <value>Tek renkli kanal</value>
+  </data>
+  <data name="cbGrayscale.Text" xml:space="preserve">
+    <value>gri tonlama</value>
+  </data>
+  <data name="rbModeDither.Text" xml:space="preserve">
+    <value>titreme</value>
+  </data>
+  <data name="rbModeGray.Text" xml:space="preserve">
+    <value>gri tonlama</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Gri tonlama / siyah beyaz dönüştürme</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Eşik</value>
+  </data>
+  <data name="CbBlackWhiteEnable.Text" xml:space="preserve">
+    <value>Siyah ve beyaz</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>Eşik üzerinden siyah ve beyaz</value>
+  </data>
+  <data name="btnInvert.ToolTip" xml:space="preserve">
+    <value>Renkleri ters çevir</value>
+  </data>
+  <data name="btnHorizMirror.ToolTip" xml:space="preserve">
+    <value>yatay çevirme</value>
+  </data>
+  <data name="btnVertMirror.ToolTip" xml:space="preserve">
+    <value>Dikey çevirme</value>
+  </data>
+  <data name="btnRotateRight.ToolTip" xml:space="preserve">
+    <value>Resmi 90° sağa döndür</value>
+  </data>
+  <data name="btnRotateLeft.ToolTip" xml:space="preserve">
+    <value>Resmi 90° ccw döndür</value>
+  </data>
+  <data name="CBoxPatternFiles.Text" xml:space="preserve">
+    <value>Örnek desen seçin</value>
+  </data>
+  <data name="BtnReloadPattern.Text" xml:space="preserve">
+    <value>Deseni yeniden yükle</value>
+  </data>
+  <data name="CbPenUpOn0.Text" xml:space="preserve">
+    <value>0'da kalem-up</value>
+  </data>
+  <data name="nUDResoY.ToolTip" xml:space="preserve">
+    <value>Çizgiler arasındaki mesafe, kalem genişliğine uygun olmalıdır</value>
+  </data>
+  <data name="cBCompress.Text" xml:space="preserve">
+    <value>sıkıştırma Kodu</value>
+  </data>
+  <data name="cBCompress.ToolTip" xml:space="preserve">
+    <value>Daha hızlı akış için kod yükünden kaçının</value>
+  </data>
+  <data name="Cb2DViewHide0.Text" xml:space="preserve">
+    <value>2B görünüm gizle 0</value>
+  </data>
+  <data name="Cb2DViewHide0.ToolTip" xml:space="preserve">
+    <value>2B görünümde beyaz değeri gösterme (kalem genişliği = 0)</value>
+  </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Özellikler</value>
+  </data>
+  <data name="rbEngravingPattern4.Text" xml:space="preserve">
+    <value>2B görünümden</value>
+  </data>
+  <data name="rbEngravingPattern4.ToolTip" xml:space="preserve">
+    <value>Görüntü için model olarak bir SVG veya DXF grafiği yükleyin.</value>
+  </data>
+  <data name="rbEngravingPattern3.Text" xml:space="preserve">
+    <value>Sarmal</value>
+  </data>
+  <data name="rbEngravingPattern3.ToolTip" xml:space="preserve">
+    <value>Dahili olarak oluşturulan sarmal model. 'Hat mesafesi' = dönüş başına yarıçap artışı.</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Merkez poz. desen</value>
+  </data>
+  <data name="cBOnlyLeftToRight.Text" xml:space="preserve">
+    <value>Sadece soldan sağa</value>
+  </data>
+  <data name="cBOnlyLeftToRight.ToolTip" xml:space="preserve">
+    <value>Ofsetleri önlemek için yalnızca bir yönden çizin</value>
+  </data>
+  <data name="rbEngravingPattern2.Text" xml:space="preserve">
+    <value>diyagonal</value>
+  </data>
+  <data name="rbEngravingPattern1.Text" xml:space="preserve">
+    <value>yatay</value>
+  </data>
+  <data name="GbGcodeDirection.Text" xml:space="preserve">
+    <value>Çizim yönü / deseni</value>
+  </data>
+  <data name="btnGenerate.Text" xml:space="preserve">
+    <value>G Kodu Oluştur</value>
+  </data>
+  <data name="copyToolStripMenuItem.Text" xml:space="preserve">
+    <value>kopyala</value>
+  </data>
+  <data name="setAsOriginalToolStripMenuItem.Text" xml:space="preserve">
+    <value>Orijinal olarak ayarla</value>
+  </data>
+  <data name="lblImageSource.Text" xml:space="preserve">
+    <value>orijinal</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>ton kayması</value>
+  </data>
+  <data name="tBarHueShift.ToolTip" xml:space="preserve">
+    <value>HSV renk aralığında, HUE'ye değer katın</value>
+  </data>
+  <data name="nUDMaxColors.ToolTip" xml:space="preserve">
+    <value>Maks. miktar = maks. araç tablosu girişleri</value>
+  </data>
+  <data name="lblColors.Text" xml:space="preserve">
+    <value>renk sayısı</value>
+  </data>
+  <data name="cbExceptColor.Text" xml:space="preserve">
+    <value>İstisna Renk</value>
+  </data>
+  <data name="cbExceptColor.ToolTip" xml:space="preserve">
+    <value>Çizilmeyecek rengi seçmek için resmin içine sol tıklayın</value>
+  </data>
+  <data name="cbSkipToolOrder.Text" xml:space="preserve">
+    <value>orijinali atla araç numarası sıra numarası kullan</value>
+  </data>
+  <data name="cbSkipToolOrder.ToolTip" xml:space="preserve">
+    <value>Alet tablosundaki alet numarasını (örn. 3,7,9) kullanmak yerine, aletler artan sırada (1,2,3) sayılacaktır.</value>
+  </data>
+  <data name="tBRMin.ToolTip" xml:space="preserve">
+    <value>Bunun altındaki Kırmızı Değerler, sıfır olarak ayarlanacaktır.</value>
+  </data>
+  <data name="tBRMax.ToolTip" xml:space="preserve">
+    <value>Bunun üzerindeki Kırmızı Değerler, sıfır olarak ayarlanacaktır.</value>
+  </data>
+  <data name="tBGMax.ToolTip" xml:space="preserve">
+    <value>Bunun üzerindeki Yeşil Değerler, sıfır olarak ayarlanacaktır.</value>
+  </data>
+  <data name="tBGMin.ToolTip" xml:space="preserve">
+    <value>Bunun altındaki Yeşil Değerler, sıfır olarak ayarlanacaktır.</value>
+  </data>
+  <data name="tBBMax.ToolTip" xml:space="preserve">
+    <value>Mavi Bunun üzerindeki değerler, sıfır olarak ayarlanacaktır.</value>
+  </data>
+  <data name="tBBMin.ToolTip" xml:space="preserve">
+    <value>Bunun altındaki Mavi Değerler, sıfır olarak ayarlanacaktır.</value>
+  </data>
+  <data name="label13.ToolTip" xml:space="preserve">
+    <value>Filtre, belirtilen değer aralığının içinde/dışında bulunan değerleri (siyah olarak ayarlanmış) temizleyerek renk kanallarının filtrelemesini yapar.
+Filtre, belirli RGB renk kanalı aralıklarını belirtilen değerle doldurmaya izin verir.</value>
+  </data>
+  <data name="label14.ToolTip" xml:space="preserve">
+    <value>Filtre, belirtilen değer aralığının içinde/dışında bulunan değerleri (siyah olarak ayarlanmış) temizleyerek renk kanallarının filtrelemesini yapar.</value>
+  </data>
+  <data name="label15.ToolTip" xml:space="preserve">
+    <value>Filtre, belirtilen değer aralığının içinde/dışında bulunan değerleri (siyah olarak ayarlanmış) temizleyerek renk kanallarının filtrelemesini yapar.</value>
+  </data>
+  <data name="rBMode0.Text" xml:space="preserve">
+    <value>RGB Alanında Mesafe</value>
+  </data>
+  <data name="rBMode0.ToolTip" xml:space="preserve">
+    <value>RGB Uzayında Uzaklık: Math.Sqrt((c1.R - ​​c2.R) * (c1.R - ​​c2.R) + (c1.G - c2.G) * (c1.G - c2.G) + (c1.B - c2.B)*(c1.B - c2.B)); }</value>
+  </data>
+  <data name="rBMode1.Text" xml:space="preserve">
+    <value>Renk tonunda mesafe (0°-360°)</value>
+  </data>
+  <data name="rBMode1.ToolTip" xml:space="preserve">
+    <value>Renk tonunda mesafe (0°-360°)</value>
+  </data>
+  <data name="rBMode2.Text" xml:space="preserve">
+    <value>Mesafe renk tonu,-doymuş,-parlak.</value>
+  </data>
+  <data name="rBMode2.ToolTip" xml:space="preserve">
+    <value>Renk tonu mesafesi (0°-360°) + renk doygunluğu + renk parlaklığı</value>
+  </data>
+  <data name="btnTest.Text" xml:space="preserve">
+    <value>Ön izleme</value>
+  </data>
+  <data name="btnTest.ToolTip" xml:space="preserve">
+    <value>Alet tablosundaki renklerle resmi kontrol etmek için düğmeyi basılı tutun</value>
+  </data>
+  <data name="nUDColorPercent.ToolTip" xml:space="preserve">
+    <value>Renk oluşumunun minimum limit %'si</value>
+  </data>
+  <data name="btnPresetCorrection3.Text" xml:space="preserve">
+    <value>Komik - birkaç renk</value>
+  </data>
+  <data name="btnPresetCorrection3.ToolTip" xml:space="preserve">
+    <value>Belirli bir oranın altındaki renkleri atarak mümkün olduğunca az renk kullanmaya çalışın.</value>
+  </data>
+  <data name="btnShowSettings.Text" xml:space="preserve">
+    <value>ayarları göster</value>
+  </data>
+  <data name="btnShowSettings.ToolTip" xml:space="preserve">
+    <value>Uygulanan düzeltme değerlerini göster</value>
+  </data>
+  <data name="btnShowOrig.Text" xml:space="preserve">
+    <value>orijinal</value>
+  </data>
+  <data name="btnShowOrig.ToolTip" xml:space="preserve">
+    <value>Orijinal değiştirilmemiş resmi görmek için basın</value>
+  </data>
+  <data name="nUDGCodeOutlineSmooth.ToolTip" xml:space="preserve">
+    <value>Yumuşatma döngüleri</value>
+  </data>
+  <data name="cBGCodeOutlineShrink.Text" xml:space="preserve">
+    <value>Yolu küçült</value>
+  </data>
+  <data name="cBGCodeOutlineShrink.ToolTip" xml:space="preserve">
+    <value>Kalem genişliğini telafi etmek için yolu daraltın</value>
+  </data>
+  <data name="btnGetPWMValues.Text" xml:space="preserve">
+    <value>Servo-PWM ayarlarını alın</value>
+  </data>
+  <data name="btnGetPWMValues.ToolTip" xml:space="preserve">
+    <value>Kurulum iletişim kutusundan RC-Servo Pen-down ve Pen-Zero için değerleri alın</value>
+  </data>
+  <data name="cBToolChange.Text" xml:space="preserve">
+    <value>Tx M06'da takım değiştirme gerçekleştirin</value>
+  </data>
+  <data name="cBToolChange.ToolTip" xml:space="preserve">
+    <value>Tx M06 komutlarında aşağıdaki komut dosyalarını yürütün</value>
+  </data>
+  <data name="cBImportGCToolM0.Text" xml:space="preserve">
+    <value>Bunun yerine Duraklat (M0) ekleyin</value>
+  </data>
+  <data name="cBImportGCToolM0.ToolTip" xml:space="preserve">
+    <value>Manuel takım değişimi için herhangi bir M06 (takım değiştirme) komutunu M0 (duraklatma) ile değiştirin.</value>
+  </data>
+  <data name="cBImportGCTool.Text" xml:space="preserve">
+    <value>Takım Değiştirme komutu ekle Tx M06</value>
+  </data>
+  <data name="cBImportGCTool.ToolTip" xml:space="preserve">
+    <value>Bilgi varsa, Tx M06 komutlarında takım değiştirme eylemini gerçekleştirin - 'Takım değiştirme' sekmesini kontrol edin.</value>
+  </data>
+  <data name="nUDSBottom.ToolTip" xml:space="preserve">
+    <value>Düşük değer</value>
+  </data>
+  <data name="nUDZBottom.ToolTip" xml:space="preserve">
+    <value>Düşük değer</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Renk değiştirme modu</value>
+  </data>
+  <data name="loadPictureToolStripMenuItem.Text" xml:space="preserve">
+    <value>Resim Yükle</value>
+  </data>
+  <data name="pasteFromClipboardToolStripMenuItem.Text" xml:space="preserve">
+    <value>Panodan yapıştır</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Z maks (beyaz)</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Z dak (siyah)</value>
+  </data>
+  <data name="RbStartGrayS.Text" xml:space="preserve">
+    <value>İş mili hızı (PWM) olarak gri değer</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>S dk (beyaz)</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>S maks (siyah)</value>
+  </data>
+  <data name="cBPreview.Text" xml:space="preserve">
+    <value>Alet tablosundan renklerle ön izleme</value>
+  </data>
+  <data name="cBResolutionPenWidth.Text" xml:space="preserve">
+    <value>Çözünürlükten kalem genişliği</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Kalem aşağı renk modu</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>2B Görünümde Görüntüle</value>
+  </data>
+  <data name="btnLoad.Text" xml:space="preserve">
+    <value>Kullanım senaryosunu yükleyin ve uygulayın</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Son yüklenen:</value>
+  </data>
+  <data name="GbUseCaseLoad.Text" xml:space="preserve">
+    <value>Kullanım senaryosunu yükle</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Kurulum formundan</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Alet tablosu seçimi ve içeriği:</value>
+  </data>
+  <data name="CboxToolTable.Text" xml:space="preserve">
+    <value>Alet tablosunun içeriği</value>
+  </data>
+  <data name="CboxToolFiles.Text" xml:space="preserve">
+    <value>Son yüklenen alet tablosu</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Keçeli kalemler, renkli kalemler, sulu boyalar için...
+Araç renklerini görüntü renklerine atamak ve bunları gruplandırmak için bir araç tablosu kullanır. Filtre uygulanarak renk miktarı azaltılabilir.
+Manuel veya otomatik takım değiştirme uygulanabilir.</value>
+  </data>
+  <data name="tabPage2Color.Text" xml:space="preserve">
+    <value>Renk modu</value>
+  </data>
+  <data name="RbStartGrayZ.Text" xml:space="preserve">
+    <value>Z (derinlik) olarak gri değer</value>
+  </data>
+  <data name="LblStartGrayMode.Text" xml:space="preserve">
+    <value>Yönlendirici, lazer veya tek renkli kalem veya fırça için
+Aletin derinliğini veya gücünü kontrol etmek için gri tonlama değerini (0 - 255) kullanır.
+Gri tonlama oluşturulurken renk filtreleri ve efektler dikkate alınacaktır.</value>
+  </data>
+  <data name="cBLaserModeOffEnd.Text" xml:space="preserve">
+    <value>G kodu sonunda lazer modu KAPALI</value>
+  </data>
+  <data name="cBLaserModeOnStart.Text" xml:space="preserve">
+    <value>G kodu başlangıcında lazer modu AÇIK</value>
+  </data>
+  <data name="tabPage2Gray.Text" xml:space="preserve">
+    <value>S/B Gri tonlama modu</value>
+  </data>
+  <data name="tabPageSetup.Text" xml:space="preserve">
+    <value>Başlangıç</value>
+  </data>
+  <data name="RbGrayscaleVector.Text" xml:space="preserve">
+    <value>vektörleştir</value>
+  </data>
+  <data name="RbGrayscalePattern.Text" xml:space="preserve">
+    <value>Hat izleme</value>
+  </data>
+  <data name="GbGrayscaleProcess.Text" xml:space="preserve">
+    <value>Gri tonlamalı işleme</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Aynı renkteki alanları toplar</value>
+  </data>
+  <data name="cBGCodeFill.Text" xml:space="preserve">
+    <value>Alanları doldurun</value>
+  </data>
+  <data name="cBGCodeOutline.Text" xml:space="preserve">
+    <value>Taslak çiz</value>
+  </data>
+  <data name="cBGCodeOutlineSmooth.Text" xml:space="preserve">
+    <value>düz</value>
+  </data>
+  <data name="gBgcodeSelection.Text" xml:space="preserve">
+    <value>vektörleştir</value>
+  </data>
+  <data name="tabPageSize.Text" xml:space="preserve">
+    <value>Boyut / Desen</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Olaya göre sıralanmış araç listesi</value>
+  </data>
+  <data name="GbToolEnable.Text" xml:space="preserve">
+    <value>Gerekmiyorsa renklerin seçimini kaldırın</value>
+  </data>
+  <data name="LblExceptionValue.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="cBReduceColorsToolTable.Text" xml:space="preserve">
+    <value>Renkleri azalt</value>
+  </data>
+  <data name="cBReduceColorsDithering.Text" xml:space="preserve">
+    <value>titreme</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Renk azaltma</value>
+  </data>
+  <data name="btnPresetCorrection4.Text" xml:space="preserve">
+    <value>Kontur (geri dönüş yok)</value>
+  </data>
+  <data name="btnPresetCorrection2.Text" xml:space="preserve">
+    <value>Grafik - birçok renk</value>
+  </data>
+  <data name="btnResetCorrection.Text" xml:space="preserve">
+    <value>SIFIRLAMA değerleri</value>
+  </data>
+  <data name="btnPresetCorrection1.Text" xml:space="preserve">
+    <value>Resim - koyu arka plan</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Dönüşüm Sihirbazı</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>ön ayar</value>
+  </data>
+  <data name="cBFilterEdge.Text" xml:space="preserve">
+    <value>Kenar filtresi</value>
+  </data>
+  <data name="cBFilterRemoveArtefact.Text" xml:space="preserve">
+    <value>Tek pikselleri kaldır</value>
+  </data>
+  <data name="cBPosterize.Text" xml:space="preserve">
+    <value>posterleştirme</value>
+  </data>
+  <data name="cBFilterHistogram.Text" xml:space="preserve">
+    <value>Histogram Eşitleme</value>
+  </data>
+  <data name="GbSpecialEffects.Text" xml:space="preserve">
+    <value>Özel efektler</value>
+  </data>
+  <data name="GbColorEffects.Text" xml:space="preserve">
+    <value>Renk efektleri</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Doyma</value>
+  </data>
+  <data name="GbCOlorCorrection.Text" xml:space="preserve">
+    <value>Renk düzeltmesi</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Renk düzeltmesi</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Görüntüden G Kodu Oluşturun</value>
+  </data>
+  <data name="NudEngravingAngle.ToolTip" xml:space="preserve">
+    <value>Çizgi deseninin açısı</value>
+  </data>
+  <data name="button3.ToolTip" xml:space="preserve">
+    <value>Çevrimiçi yardım</value>
+  </data>
+  <data name="CbLaserOnly.Text" xml:space="preserve">
+    <value>Lazer Kullan</value>
+  </data>
+  <data name="CbLaserOnly.ToolTip" xml:space="preserve">
+    <value>Lazer için, bir servo tarafından kaldırılan kalemle karşılaştırıldığında, Kalem yukarı ve aşağı koduna gerek yoktur.</value>
+  </data>
+  <data name="cBLaserModeOffEnd.ToolTip" xml:space="preserve">
+    <value>G Kodunun sonunda $32=0 değerini ayarlar</value>
+  </data>
+  <data name="cBLaserModeOnStart.ToolTip" xml:space="preserve">
+    <value>G Kodu başlangıcında $32=1 değerini ayarlar</value>
+  </data>
+  <data name="CbEngravingCross.Text" xml:space="preserve">
+    <value>Çapraz (+90° çizgi ekle)</value>
+  </data>
+  <data name="CbEngravingCross.ToolTip" xml:space="preserve">
+    <value>Eğer işaretlenirse 90 derece döndürülmüş 2. çizgi düzeni eklenecektir</value>
+  </data>
+  <data name="CbEngravingTopDown.Text" xml:space="preserve">
+    <value>Yukarıdan aşağıya</value>
+  </data>
+  <data name="CbEngravingTopDown.ToolTip" xml:space="preserve">
+    <value>Eğer açı=0 olarak işaretlenirse sol üst kenardan başlar.
+Aksi takdirde sol alt kenardan başlar.</value>
+  </data>
+  <data name="RbEngravingPattern.Text" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="RbEngravingLine.Text" xml:space="preserve">
+    <value>Satır satır</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>Açı</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Hat izleme</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>vektörleştir</value>
+  </data>
+  <data name="GbColorReplacingMode.Text" xml:space="preserve">
+    <value>Renk değiştirme modu</value>
+  </data>
+  <data name="RbPixelArtShape.Text" xml:space="preserve">
+    <value>Bir şekil çiz</value>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>Daire</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>Noktalar / şekiller arasındaki boşluk</value>
+  </data>
+  <data name="BtnPixelArtCalcSize.Text" xml:space="preserve">
+    <value>Genişlik ve yüksekliği hesaplayın</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>Nokta aracı çapı / şekil genişliği</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>Gösterilen renk sırası = G Kodunda takım değiştirme sırası</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Piksel başına nokta / şekil</value>
+  </data>
+  <data name="RbPixelArtPbP.Text" xml:space="preserve">
+    <value>Bir nokta çiz</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Piksel piksel çiz </value>
+  </data>
+  <data name="GbPixelArt.Text" xml:space="preserve">
+    <value>Piksel sanatı</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>Piksel sanatı</value>
+  </data>
+  <data name="RbPixelArt.Text" xml:space="preserve">
+    <value>Piksel sanatı</value>
+  </data>
+  <data name="GbColorReduction.Text" xml:space="preserve">
+    <value>Renk azaltma</value>
+  </data>
+  <data name="GbConversionWizzard.Text" xml:space="preserve">
+    <value>Dönüşüm Sihirbazı</value>
+  </data>
+  <data name="label29.ToolTip" xml:space="preserve">
+    <value>X ve Y yönünde piksel başına nokta sayısı.
+'2' sonucu 2x2 = 4 nokta olur.
+'3' sonucu 3x3 = 9 nokta olur.</value>
+  </data>
+  <data name="CbSortInvert.Text" xml:space="preserve">
+    <value>Sırayı tersine çevir</value>
+  </data>
+  <data name="RbSortToolsByNumber.Text" xml:space="preserve">
+    <value>Alet numarasına göre sırala</value>
+  </data>
+  <data name="RbSortToolsByPixel.Text" xml:space="preserve">
+    <value>Piksel miktarına göre sırala</value>
+  </data>
+  <data name="CbPixelArtShapeFill.Text" xml:space="preserve">
+    <value>Şekli doldur</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>Kalem çapı</value>
+  </data>
+  <data name="RbPixelArtDrawShapeRect.Text" xml:space="preserve">
+    <value>Dikdörtgen</value>
+  </data>
+  <data name="RbPixelArtDrawShapeCircle.Text" xml:space="preserve">
+    <value>Daire</value>
+  </data>
+  <data name="GbOutputSizeSet.Text" xml:space="preserve">
+    <value>Birim cinsinden çıktı boyutu</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>Yükseklik</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>Genişlik</value>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>G Kodu</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>Resim</value>
+  </data>
+  <data name="GbOutputSizeShow.Text" xml:space="preserve">
+    <value>Piksel Sanatı boyutu</value>
+  </data>
+  <data name="RbStartGrayS.ToolTip" xml:space="preserve">
+    <value>Yönlendirici, lazer veya tek renkli kalem veya fırça için
+Alet derinliğini veya gücünü kontrol etmek için gri tonlama değerini (0 - 255) kullanır.
+Gri tonlama oluşturulurken renk filtreleri ve efektler dikkate alınacaktır.</value>
+  </data>
+  <data name="RbStartGraySpecial.Text" xml:space="preserve">
+    <value>Gri değeri özel kullanım</value>
+  </data>
+  <data name="RbStartGraySpecial.ToolTip" xml:space="preserve">
+    <value>Sıvı dağıtıcı veya diğer özel makineler için.
+Gri tonlama değerini (0 - 255) ihtiyaç duyduğunuz herhangi bir ekseni kontrol etmek için kullanır.
+Gri tonlama oluşturulurken renk filtreleri ve efektler dikkate alınacaktır.</value>
+  </data>
+  <data name="RbStartGrayZ.ToolTip" xml:space="preserve">
+    <value>Yönlendirici, lazer veya tek renkli kalem veya fırça için
+Alet derinliğini veya gücünü kontrol etmek için gri tonlama değerini (0 - 255) kullanır.
+Gri tonlama oluşturulurken renk filtreleri ve efektler dikkate alınacaktır.</value>
+  </data>
+  <data name="nUDSpecialBottom.ToolTip" xml:space="preserve">
+    <value>Düşük değer</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>GCode sonrası</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>GCode uygulama değeri</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>Değer</value>
+  </data>
+  <data name="label40.Text" xml:space="preserve">
+    <value>GCode öncesi</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>Min (beyaz)</value>
+  </data>
+  <data name="label39.Text" xml:space="preserve">
+    <value>Max (siyah)</value>
+  </data>
+  <data name="RbPixelArtDrawShapeScript.Text" xml:space="preserve">
+    <value>Koddan / komut dosyasından</value>
+  </data>
+</root>

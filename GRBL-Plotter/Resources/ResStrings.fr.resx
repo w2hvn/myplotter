@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="serialCloseError" xml:space="preserve">
+    <value>Une connexion série est nécessaire. \r\nFermez la fenêtre principale à la place.</value>
+  </data>
+  <data name="mainAttention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="mainLimits1" xml:space="preserve">
+    <value>Le prochain mouvement dépassera les limites de la machine!\r</value>
+  </data>
+  <data name="mainLimits2" xml:space="preserve">
+    <value>\r\n Appuyez sur 'Ok' pour continuer quand même</value>
+  </data>
+  <data name="mainParseError" xml:space="preserve">
+    <value>Pas un numéro valide</value>
+  </data>
+  <data name="mainProblem" xml:space="preserve">
+    <value>Problème</value>
+  </data>
+  <data name="mainQuit" xml:space="preserve">
+    <value>Quittez GRBL-Plotter?</value>
+  </data>
+  <data name="mainToolChange" xml:space="preserve">
+    <value>Changement d'outil / stylo!</value>
+  </data>
+  <data name="mainToolChange1" xml:space="preserve">
+    <value>Changement d'outil nécessaire: \r</value>
+  </data>
+  <data name="mainToolChange2" xml:space="preserve">
+    <value>\r appuyez sur start pour continuer.</value>
+  </data>
+  <data name="mainInfoCheckCode" xml:space="preserve">
+    <value>Vérifier le code G</value>
+  </data>
+  <data name="mainInfoSendCode" xml:space="preserve">
+    <value>Envoyer le code G</value>
+  </data>
+  <data name="mainInfoStopStream" xml:space="preserve">
+    <value>ARRÊTER le streaming (</value>
+  </data>
+  <data name="mainInfoStopStream2" xml:space="preserve">
+    <value>ARRÊTER le streaming (Line</value>
+  </data>
+  <data name="mainInfoToolChange" xml:space="preserve">
+    <value>Changement d'outil ...</value>
+  </data>
+  <data name="mainInfoUndo" xml:space="preserve">
+    <value>Annuler la dernière action</value>
+  </data>
+  <data name="mainHotkeyError" xml:space="preserve">
+    <value>Fichier 'hotkeys.xml' non trouvé, aucun raccourci clavier défini!</value>
+  </data>
+  <data name="mainHotkeyError1" xml:space="preserve">
+    <value>Action inconnue:</value>
+  </data>
+  <data name="mainHotkeyError2" xml:space="preserve">
+    <value>Erreur avec Hotkey.xml</value>
+  </data>
+  <data name="mainLimits3" xml:space="preserve">
+    <value>La dimension graphique dépasse la dimension de la machine! \r\nLa transformation est recommandée pour éviter d’endommager la machine!</value>
+  </data>
+  <data name="mainLoadError" xml:space="preserve">
+    <value>Le streaming doit être arrêté avant de charger le nouveau fichier</value>
+  </data>
+  <data name="mainLoadError1" xml:space="preserve">
+    <value>Fichier non trouvé: '</value>
+  </data>
+  <data name="mainLoadError2" xml:space="preserve">
+    <value>L’extension d’URL n’est pas 'svg' ou 'dxf' \r\nEssayez quand même d’importer du SVG, mais sans définir la liste 'Fichier récent'.</value>
+  </data>
+  <data name="mainParseError1" xml:space="preserve">
+    <value>Numéro non valide, définissez la ligne sur 0</value>
+  </data>
+  <data name="mainPauseStream" xml:space="preserve">
+    <value>Pause streaming - appuyez sur play</value>
+  </data>
+  <data name="mainPauseStream1" xml:space="preserve">
+    <value>Le dernier travail a été mis en pause à la ligne</value>
+  </data>
+  <data name="mainPauseStream2" xml:space="preserve">
+    <value>Voulez-vous continuer le travail?</value>
+  </data>
+  <data name="mainStreamingActive" xml:space="preserve">
+    <value>Le streaming est toujours actif - appuyez sur Arrêter et réessayez.</value>
+  </data>
+  <data name="mainUnknownCode" xml:space="preserve">
+    <value>G-Code inconnu commenté: \r\n</value>
+  </data>
+  <data name="mainInfoErrorLine" xml:space="preserve">
+    <value>Erreur avant la ligne</value>
+  </data>
+  <data name="mainInfoFinishCheck" xml:space="preserve">
+    <value>Terminer la vérification du code G</value>
+  </data>
+  <data name="mainInfoFinishSend" xml:space="preserve">
+    <value>Terminer l'envoi du code G</value>
+  </data>
+  <data name="mainInfoKill" xml:space="preserve">
+    <value>Appuyez sur 'Kill Alarm' pour continuer</value>
+  </data>
+  <data name="mainInfoLaserModeOff" xml:space="preserve">
+    <value>Mode laser non actif $32 = 0</value>
+  </data>
+  <data name="mainInfoLaserModeOn" xml:space="preserve">
+    <value>Mode laser actif $32 = 1</value>
+  </data>
+  <data name="mainInfoPause" xml:space="preserve">
+    <value>Pause streaming - appuyez sur play (</value>
+  </data>
+  <data name="mainInfoProbing" xml:space="preserve">
+    <value>Sondage</value>
+  </data>
+  <data name="mainInfoResume" xml:space="preserve">
+    <value>Appuyez sur 'Reprendre' pour continuer</value>
+  </data>
+  <data name="mainInfoWaitIdle" xml:space="preserve">
+    <value>Attendez IDLE, puis faites une pause (</value>
+  </data>
+  <data name="mainProgress" xml:space="preserve">
+    <value>Le progrès</value>
+  </data>
+  <data name="probingCancel1" xml:space="preserve">
+    <value>Échantillonnage annulé</value>
+  </data>
+  <data name="probingCancel2" xml:space="preserve">
+    <value>Traiter la dernière commande</value>
+  </data>
+  <data name="probingProbingOn" xml:space="preserve">
+    <value>Enquête sur </value>
+  </data>
+  <data name="probingCenter" xml:space="preserve">
+    <value>Déplacer au centre</value>
+  </data>
+  <data name="probingFail1" xml:space="preserve">
+    <value>Echec: pas de contact</value>
+  </data>
+  <data name="probingFail2" xml:space="preserve">
+    <value>Annuler le sondage</value>
+  </data>
+  <data name="probingFinish" xml:space="preserve">
+    <value>Terminer</value>
+  </data>
+  <data name="probingSetCenter" xml:space="preserve">
+    <value>Définir le centre</value>
+  </data>
+  <data name="probingTimeOut" xml:space="preserve">
+    <value>Temps libre</value>
+  </data>
+  <data name="serialClose" xml:space="preserve">
+    <value>Proche</value>
+  </data>
+  <data name="mainLoadError3" xml:space="preserve">
+    <value>Extension de fichier non prise en charge "</value>
+  </data>
+  <data name="serialOpen" xml:space="preserve">
+    <value>Ouvrir</value>
+  </data>
+  <data name="mainSimuStart" xml:space="preserve">
+    <value>Lancer la simulation de trajectoire</value>
+  </data>
+  <data name="mainSimuStop" xml:space="preserve">
+    <value>Arrêter la simulation</value>
+  </data>
+  <data name="mainHelpLanguage" xml:space="preserve">
+    <value>N'hésitez pas à améliorer la traduction</value>
+  </data>
+  <data name="mainSimuSpeed" xml:space="preserve">
+    <value>La vitesse</value>
+  </data>
+  <data name="grblAlarm" xml:space="preserve">
+    <value>Alarme</value>
+  </data>
+  <data name="grblCheck" xml:space="preserve">
+    <value>Vérifier</value>
+  </data>
+  <data name="grblDoor" xml:space="preserve">
+    <value>Porte</value>
+  </data>
+  <data name="grblHold" xml:space="preserve">
+    <value>Tenir</value>
+  </data>
+  <data name="grblHome" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="grblProbe" xml:space="preserve">
+    <value>Sonde</value>
+  </data>
+  <data name="grblRun" xml:space="preserve">
+    <value>Courir</value>
+  </data>
+  <data name="grblSleep" xml:space="preserve">
+    <value>Sommeil</value>
+  </data>
+  <data name="statusStripeCheckCOM" xml:space="preserve">
+    <value>Consultez la fenêtre COM pour plus d'informations</value>
+  </data>
+  <data name="statusStripeClickKeys" xml:space="preserve">
+    <value>Alt-clic pour sélectionner Figure; Contrôle-cliquez pour sélectionner Groupe; Shift-Click pour sélectionner Tile; Ou cliquez sur XML-Tag</value>
+  </data>
+  <data name="statusStripeClickKeys2" xml:space="preserve">
+    <value>Cliquez sur: marquez la figure; Contrôle-clic: marque le groupe; Maj-clic: marque la vignette; Alt-clic: affiche la ligne GCode</value>
+  </data>
+  <data name="statusStripeDownKeys" xml:space="preserve">
+    <value>Contrôle-Bas pour déplacer le bloc sélectionné d'un vers le bas; Control-Shift-Down pour aller jusqu'à la fin</value>
+  </data>
+  <data name="statusStripeEditModeOn" xml:space="preserve">
+    <value>Mode édition activé - cliquez dans la vue 2D pour terminer</value>
+  </data>
+  <data name="statusStripeFileLoad" xml:space="preserve">
+    <value>Chargement de fichiers</value>
+  </data>
+  <data name="statusStripeFileNotFound" xml:space="preserve">
+    <value>Fichier introuvable - supprimer de la liste</value>
+  </data>
+  <data name="statusStripeGrblResetNeeded" xml:space="preserve">
+    <value>Le port série est peut-être verrouillé et un redémarrage de GRBL-Plotter est nécessaire</value>
+  </data>
+  <data name="statusStripeResetNeeded" xml:space="preserve">
+    <value>Une réinitialisation du contrôleur est probablement nécessaire</value>
+  </data>
+  <data name="statusStripeStreamingStatusSaved" xml:space="preserve">
+    <value>Le statut de streaming et le G-Code sont enregistrés dans '_lastProcessed.nc'. La poursuite après le redémarrage du programme est possible.</value>
+  </data>
+  <data name="statusStripeUpKeys" xml:space="preserve">
+    <value>Contrôle vers le haut pour déplacer le bloc sélectionné vers le haut; Control-Shift-Up pour aller en haut</value>
+  </data>
+  <data name="statusStripeSelectionMoved" xml:space="preserve">
+    <value>Sélection déplacée par</value>
+  </data>
+  <data name="statusStripeCheckUpdate" xml:space="preserve">
+    <value>'Vérifier la nouvelle version de GRBL-Plotter sur GitHub' - peut être désactivé dans [Configuration - Contrôle de programme]</value>
+  </data>
+  <data name="cameraMountFix" xml:space="preserve">
+    <value>Caméra montée fixe</value>
+  </data>
+  <data name="cameraMountXy" xml:space="preserve">
+    <value>Caméra montée sur plate-forme XY</value>
+  </data>
+  <data name="cameraMountXyz" xml:space="preserve">
+    <value>Caméra montée sur l'axe Z</value>
+  </data>
+  <data name="cameraSetRadius" xml:space="preserve">
+    <value>Définir le rayon</value>
+  </data>
+  <data name="cameraScaling" xml:space="preserve">
+    <value>Mise à l'échelle</value>
+  </data>
+  <data name="cameraTeachRadius" xml:space="preserve">
+    <value>Définir le rayon du cercle d'apprentissage</value>
+  </data>
+  <data name="cameraForUpperPos" xml:space="preserve">
+    <value>pour la position supérieure de la caméra</value>
+  </data>
+  <data name="cameraForLowerPos" xml:space="preserve">
+    <value>pour position basse de la caméra</value>
+  </data>
+  <data name="cameraQuit" xml:space="preserve">
+    <value>Appuyez sur 'ESC' pour terminer l'apprentissage.</value>
+  </data>
+  <data name="cameraSetMount" xml:space="preserve">
+    <value>Réglage du support de caméra</value>
+  </data>
+  <data name="cameraSetCrossHairs" xml:space="preserve">
+    <value>Cliquez pour définir la position du réticule</value>
+  </data>
+  <data name="cameraSetDistortion" xml:space="preserve">
+    <value>Marquez les quatre coins du rectangle déformé (rapport 4 : 3). Appuyez sur ESC pour annuler.</value>
+  </data>
+  <data name="cameraNoCamera" xml:space="preserve">
+    <value>Aucune source de caméra trouvée. Fermez et ouvrez cette fenêtre après avoir connecté une caméra.</value>
+  </data>
+  <data name="cameraNextClick" xml:space="preserve">
+    <value>Avec le clic suivant, la mise à l'échelle \ r \ n de la vue de la caméra est définie</value>
+  </data>
+  <data name="cameraDistortionMarker" xml:space="preserve">
+    <value>Marqueur de distorsion</value>
+  </data>
+  <data name="grblNotConnected" xml:space="preserve">
+    <value>le contrôleur grbl n'est pas connecté !\r\nImpossible d'effectuer l'action souhaitée !</value>
+  </data>
+  <data name="useCaseInfo" xml:space="preserve">
+    <value>Un cas d'utilisation est une configuration prédéfinie pour ajuster les paramètres d'une machine et/ou d'une application spécifique.\r\nLes paramètres d'un cas d'utilisation sélectionné et appliqué restent également après l'importation des graphiques.\r\nUn cas d'utilisation doit à stocker dans \data\usecases pour être accessible.\r\nLes paramètres de la machine exportés et leurs sous-ensembles peuvent également être utilisés.</value>
+  </data>
+  <data name="useCaseInfo2" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="useCaseHeader1" xml:space="preserve">
+    <value>Utiliser les paramètres actuels (dernier chargement : '{0}')</value>
+  </data>
+  <data name="useCaseHeader2" xml:space="preserve">
+    <value>Paramètres de '{0}'</value>
+  </data>
+  <data name="useCaseItem0" xml:space="preserve">
+    <value>### Paramètres actuels ###</value>
+  </data>
+  <data name="codeMessage_1_unknowncommand" xml:space="preserve">
+    <value>La commande donnée est inconnue ou non prise en charge, lancez un problème sur github pour clarifier.</value>
+  </data>
+  <data name="codeMessage_2_highdataamount" xml:space="preserve">
+    <value>Le nombre de chiffres uniques sélectionnables dépasse le maximum donné et réduirait les performances. Tous les chiffres sont résumés en un seul chiffre.\r\nLa limite peut être ajustée dans\r\n[Configuration - Importation de graphiques - Importation de chemin - Regroupement et outils - Concersion concernant]</value>
+  </data>
+  <data name="codeMessage_2_zdoubletang" xml:space="preserve">
+    <value>L'axe z est affecté deux fois : en tant qu'axe tangentiel ET en tant qu'axe de plume haut/bas. \r\nCela entraînera un comportement étrange et imprévisible.</value>
+  </data>
+  <data name="codeMessage_3_spindlestaysoff" xml:space="preserve">
+    <value>La commande M3|M4 / M5 ne sera pas envoyée ! -&gt; La broche reste éteinte. \r\nVérifiez l'option dans \r\n[Configuration - Importation de graphiques - Génération de code G - Axe Z Translation du stylet vers le haut/bas] \r\n☐ Ne pas allumer la broche</value>
+  </data>
+  <data name="codeMessage_3_zdoubleaux" xml:space="preserve">
+    <value>L'axe z est affecté deux fois : comme axe auxiliaire ET comme axe de plume haut/bas. \r\nCela entraînera un comportement étrange et imprévisible.</value>
+  </data>
+  <data name="codeMessage_3_zdoubletang" xml:space="preserve">
+    <value>L'axe z est affecté deux fois : en tant qu'axe tangentiel ET en tant qu'axe de plume haut/bas. \r\nCela entraînera un comportement étrange et imprévisible.</value>
+  </data>
+  <data name="codeMessage_attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="codeMessage_error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="codeMessage_warning" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="codeMessage_1202_dontplot" xml:space="preserve">
+    <value>Le calque n'est pas visible ou l'impression est désactivée.
+Vérifiez https://librecad.readthedocs.io/en/latest/ref/widgets.html#widget-layerlist</value>
+  </data>
+  <data name="codeMessage_1302_dontplot" xml:space="preserve">
+    <value>Le calque, le chemin ou l'objet n'est pas visible en raison de l'attribut de visibilité.</value>
+  </data>
+  <data name="statusStripeButtonBlocked" xml:space="preserve">
+    <value>Le bouton personnalisé est bloqué pendant la diffusion</value>
+  </data>
+  <data name="statusStripeStreamingPause" xml:space="preserve">
+    <value>PAUSE de la diffusion en continu</value>
+  </data>
+  <data name="statusStripeStreamingContinue" xml:space="preserve">
+    <value>Continuer la diffusion</value>
+  </data>
+  <data name="statusStripeStreamingCheck" xml:space="preserve">
+    <value>Vérifiez le code G sur le contrôleur grbl</value>
+  </data>
+  <data name="statusStripeStreamingStop" xml:space="preserve">
+    <value>Streaming STOP à la ligne</value>
+  </data>
+  <data name="statusStripeStreamingStart" xml:space="preserve">
+    <value>Streaming START à partir de la ligne</value>
+  </data>
+  <data name="statusStripeStreamingFinish" xml:space="preserve">
+    <value>Streaming TERMINÉ après</value>
+  </data>
+  <data name="codeMessage_1102_dontplot" xml:space="preserve">
+    <value>Le calque, le chemin ou l'objet n'est pas visible en raison de l'attribut de visibilité.</value>
+  </data>
+  <data name="codeMessage_1103_elementsupport" xml:space="preserve">
+    <value>Un élément SVG-XML non pris en charge a été trouvé.
+L'image résultante peut sembler différente de celle attendue.
+Solution de contournement possible : essayez de convertir l'objet en chemin.</value>
+  </data>
+  <data name="codeMessage_1104_elementuk" xml:space="preserve">
+    <value>Un élément SVG-XML inconnu a été trouvé.
+L'image résultante peut sembler différente de celle attendue.
+Solution de contournement possible : essayez de convertir l'objet en chemin.</value>
+  </data>
+  <data name="codeMessage_1105_textpath" xml:space="preserve">
+    <value>Un élément 'tspan' dans un élément 'textPath' a été trouvé. Cette combinaison n'est pas prise en charge.
+L'image résultante peut sembler différente de celle attendue.
+Solution de contournement possible : essayez de convertir l'objet en chemin.</value>
+  </data>
+  <data name="codeMessage_1106_attributesupport" xml:space="preserve">
+    <value>Un attribut SVG-XML non pris en charge a été trouvé.
+L'image résultante peut sembler différente de celle attendue.
+Solution de contournement possible : essayez de convertir l'objet en chemin.</value>
+  </data>
+  <data name="importMessageTitle" xml:space="preserve">
+    <value>importer des informations</value>
+  </data>
+  <data name="importMessageFileName" xml:space="preserve">
+    <value>Nom de fichier:</value>
+  </data>
+  <data name="importMessageFilePath" xml:space="preserve">
+    <value>Chemin du fichier:</value>
+  </data>
+  <data name="importMessageSVGMetaDataOk" xml:space="preserve">
+    <value>Métadonnées SVG traitées</value>
+  </data>
+  <data name="importMessageSVGMetaDataNok1" xml:space="preserve">
+    <value>Métadonnées SVG disponibles mais non activées !</value>
+  </data>
+  <data name="importMessageRelMovement" xml:space="preserve">
+    <value>Mouvements relatifs activés (peuvent entraîner des problèmes)</value>
+  </data>
+  <data name="importMessageAddGraphic" xml:space="preserve">
+    <value>Ajouter un graphique importé</value>
+  </data>
+  <data name="importMessageToolTableNeeded" xml:space="preserve">
+    <value>Nécessite une table d'outils, chargée en dernier :</value>
+  </data>
+  <data name="importMessageGeneralSettings" xml:space="preserve">
+    <value>Réglages généraux:</value>
+  </data>
+  <data name="importMessageXYFeed" xml:space="preserve">
+    <value>Alimentation XY</value>
+  </data>
+  <data name="importMessageMaxXYFeed" xml:space="preserve">
+    <value>grbl Avance max X/Y :</value>
+  </data>
+  <data name="importMessageGcodeHeader" xml:space="preserve">
+    <value>En-tête GCode</value>
+  </data>
+  <data name="importMessageGcodeFooter" xml:space="preserve">
+    <value>Pied de page GCode</value>
+  </data>
+  <data name="importMessageLaserMode" xml:space="preserve">
+    <value>Mode laser : utilisez M3S0 au lieu de M5 pour éteindre le laser (ou la broche)</value>
+  </data>
+  <data name="importMessageLaserModeNok" xml:space="preserve">
+    <value>le mode laser grbl $32 n'est pas activé</value>
+  </data>
+  <data name="importMessageLaserPower" xml:space="preserve">
+    <value>puissance laser</value>
+  </data>
+  <data name="importMessageSpindleSpeed" xml:space="preserve">
+    <value>vitesse de broche</value>
+  </data>
+  <data name="importMessageSpindleSpeedMax" xml:space="preserve">
+    <value>grbl vitesse de broche max.</value>
+  </data>
+  <data name="importMessagePUD" xml:space="preserve">
+    <value>Traduction du stylet haut/bas :</value>
+  </data>
+  <data name="importMessagePUDZ" xml:space="preserve">
+    <value>Axe Z activé</value>
+  </data>
+  <data name="importMessagePUDZNoSpindle" xml:space="preserve">
+    <value>La broche n'est pas allumée</value>
+  </data>
+  <data name="importMessagePUDZFeed" xml:space="preserve">
+    <value>Avance Z</value>
+  </data>
+  <data name="importMessagePUDZUp" xml:space="preserve">
+    <value>Z vers le haut (hauteur de sécurité)</value>
+  </data>
+  <data name="importMessagePUDZDown" xml:space="preserve">
+    <value>Z vers le bas (gravure)</value>
+  </data>
+  <data name="importMessagePUDZDepthPass" xml:space="preserve">
+    <value>profondeur par passe</value>
+  </data>
+  <data name="importMessagePUDZDepthPassNoZUp" xml:space="preserve">
+    <value>Pas de Z Up entre les passes</value>
+  </data>
+  <data name="importMessagePUDZFeedMax" xml:space="preserve">
+    <value>grbl Z avance max.:</value>
+  </data>
+  <data name="importMessagePUDPWM" xml:space="preserve">
+    <value>PWM activé (asservissement)</value>
+  </data>
+  <data name="importMessagePUDPWMUp" xml:space="preserve">
+    <value>PWM élevé</value>
+  </data>
+  <data name="importMessagePUDPWMZero" xml:space="preserve">
+    <value>PWM zéro</value>
+  </data>
+  <data name="importMessagePUDPWMDown" xml:space="preserve">
+    <value>PWM ci-dessous</value>
+  </data>
+  <data name="importMessagePUDSpindle" xml:space="preserve">
+    <value>Allumer/éteindre la broche avec le stylet bas/haut</value>
+  </data>
+  <data name="importMessagePUDIndividual" xml:space="preserve">
+    <value>Commandes individuelles</value>
+  </data>
+  <data name="importMessagePUDPenUp" xml:space="preserve">
+    <value>stylo vers le haut</value>
+  </data>
+  <data name="importMessagePUDPenDown" xml:space="preserve">
+    <value>stylo vers le bas</value>
+  </data>
+  <data name="importMessageOption1" xml:space="preserve">
+    <value>Interprétation du chemin :</value>
+  </data>
+  <data name="importMessageOptionNodesOnly" xml:space="preserve">
+    <value>Nœuds uniquement - créer des points à des coordonnées spécifiques</value>
+  </data>
+  <data name="importMessageOptionZFromWidth" xml:space="preserve">
+    <value>Trouve la valeur Z à partir de la largeur de ligne (profondeur).</value>
+  </data>
+  <data name="importMessageOptionSFromWidth" xml:space="preserve">
+    <value>Détermine la valeur S à partir de la largeur de ligne (puissance laser / vitesse de broche).</value>
+  </data>
+  <data name="importMessageOptionCircleToDot" xml:space="preserve">
+    <value>Convertir cercle en point</value>
+  </data>
+  <data name="importMessageOptionCircleRadiusToZ" xml:space="preserve">
+    <value>Convertit le rayon du cercle en valeur z</value>
+  </data>
+  <data name="importMessageOption2" xml:space="preserve">
+    <value>changement de chemin :</value>
+  </data>
+  <data name="importMessageOptionFilter" xml:space="preserve">
+    <value>Filtrer les éléments graphiques (supprimer des objets)</value>
+  </data>
+  <data name="importMessageOptionHatchFill" xml:space="preserve">
+    <value>Ajouter un remplissage hachuré</value>
+  </data>
+  <data name="importMessageOptionClip" xml:space="preserve">
+    <value>Graphique de recadrage ou de mosaïque</value>
+  </data>
+  <data name="importMessageOptionTangential" xml:space="preserve">
+    <value>axe tangentiel</value>
+  </data>
+  <data name="importMessageOptionDragTool" xml:space="preserve">
+    <value>Personnaliser le chemin pour l'outil de glissement</value>
+  </data>
+  <data name="importMessageOptionExtend" xml:space="preserve">
+    <value>Prolonger le chemin (par exemple pour la découpe au laser)</value>
+  </data>
+  <data name="importMessageOptionOutlineDevelop" xml:space="preserve">
+    <value>achèvement</value>
+  </data>
+  <data name="importMessageOptionWireBender" xml:space="preserve">
+    <value>cintreuse de fil</value>
+  </data>
+  <data name="importMessageOption1Link" xml:space="preserve">
+    <value>Interprétations de chemin possibles</value>
+  </data>
+  <data name="importMessageOption2Link" xml:space="preserve">
+    <value>Modifications de chemin possibles</value>
+  </data>
+  <data name="importMessageSourceMetadata" xml:space="preserve">
+    <value>À partir des métadonnées</value>
+  </data>
+  <data name="importMessageSourceTooltable" xml:space="preserve">
+    <value>De la table d'outils</value>
+  </data>
+  <data name="importMessageSpindleDirection" xml:space="preserve">
+    <value>Mode laser / sens de broche</value>
+  </data>
+  <data name="importMessageSpindleDirectionM3" xml:space="preserve">
+    <value>M3 (CW dans le sens des aiguilles d'une montre) Mode de puissance laser constante</value>
+  </data>
+  <data name="importMessageSpindleDirectionM4" xml:space="preserve">
+    <value>Mode d'alimentation laser dynamique M4 (CCW-sens antihoraire)</value>
+  </data>
+  <data name="loadMessageContinue" xml:space="preserve">
+    <value>Continuer le dernier travail ?</value>
+  </data>
+  <data name="loadMessageLastProcessed" xml:space="preserve">
+    <value>Chargement du dernier G-Code traité</value>
+  </data>
+  <data name="loadMessageLoad1" xml:space="preserve">
+    <value>Chargement du code G</value>
+  </data>
+  <data name="loadMessageNoImport" xml:space="preserve">
+    <value>Aucune option d'importation appliquée !</value>
+  </data>
+  <data name="loadMessageReplaceM34" xml:space="preserve">
+    <value>Option Load G-Code : Remplace la commande de mode laser M3 par M4</value>
+  </data>
+  <data name="loadMessageReplaceM43" xml:space="preserve">
+    <value>Option Load G-Code : Remplace la commande de mode laser M4 par M3</value>
+  </data>
+  <data name="loadMessageStreaming" xml:space="preserve">
+    <value>Le streaming est actif, impossible de charger un nouveau fichier.</value>
+  </data>
+  <data name="loadMessageToolChange" xml:space="preserve">
+    <value>Le changement d'outil automatique est activé</value>
+  </data>
+  <data name="mainStartMissingFiles" xml:space="preserve">
+    <value>Fichiers de programme manquants,&lt;br&gt;veuillez vérifier l'installation de GRBL-Plotter</value>
+  </data>
+  <data name="statusStripeSelectionMoveShift" xml:space="preserve">
+    <value>Appuyez sur Shift pour accrocher la grille</value>
+  </data>
+  <data name="statusStripeSelectionResize" xml:space="preserve">
+    <value>Redimensionné par</value>
+  </data>
+  <data name="statusStripeSelectionResizeCtrl" xml:space="preserve">
+    <value>Appuyez sur Ctrl pour maintenir le rapport</value>
+  </data>
+  <data name="statusStripeSelectionRotate" xml:space="preserve">
+    <value>Retourné</value>
+  </data>
+  <data name="statusStripeSelectionRotateShift" xml:space="preserve">
+    <value>Appuyez sur Shift pour afficher les degrés complets</value>
+  </data>
+  <data name="textNewFontException" xml:space="preserve">
+    <value>Si vous avez essayé de sélectionner une police installée pendant l'exécution de GRBL-Plotter, veuillez redémarrer GRBL-Plotter et réessayer !</value>
+  </data>
+  <data name="loadMessageReload" xml:space="preserve">
+    <value>Recharger</value>
+  </data>
+</root>
