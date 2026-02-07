@@ -272,7 +272,6 @@ namespace GrblPlotter
             this.tLPRechtsUnten = new System.Windows.Forms.TableLayoutPanel();
             this.tLPRechtsUntenRechts = new System.Windows.Forms.TableLayoutPanel();
             this.tC_RouterPlotterLaser = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.LblSpeedSetVal = new System.Windows.Forms.Label();
             this.RbSpindleCCW = new System.Windows.Forms.RadioButton();
             this.RbSpindleCW = new System.Windows.Forms.RadioButton();
@@ -285,7 +284,6 @@ namespace GrblPlotter
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnPenZero = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.PbLaser = new System.Windows.Forms.PictureBox();
             this.CbLasermodeVal = new System.Windows.Forms.Label();
             this.CbLasermode = new System.Windows.Forms.CheckBox();
@@ -307,7 +305,6 @@ namespace GrblPlotter
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.gB_Jog0 = new System.Windows.Forms.GroupBox();
-            this.tLPRechtsUntenRechtsMitte = new System.Windows.Forms.TableLayoutPanel();
             this.tLP_cB_StopJogging = new System.Windows.Forms.TableLayoutPanel();
             this.cBSendJogStop = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -428,13 +425,8 @@ namespace GrblPlotter
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createGCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textWizzardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createBarcodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createSimpleShapesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.wireCutterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createJogPathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startExtensionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.directControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unDoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.useOrigin = new System.Windows.Forms.ToolStripMenuItem();
@@ -479,11 +471,7 @@ namespace GrblPlotter
             this.removeAnyZMoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workpieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.probingToolLengthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.surfaceScanHeightMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jogPathCreatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.machineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.edgeFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.heightMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laserToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coordinateSystemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -491,9 +479,7 @@ namespace GrblPlotter
             this.startStreamingAtLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip_tb_StreamLine = new System.Windows.Forms.ToolStripTextBox();
             this.controlStreamingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.control2ndGRBLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.control3rdGRBLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grblSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.processAutomationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -543,10 +529,8 @@ namespace GrblPlotter
             this.tLPRechtsUnten.SuspendLayout();
             this.tLPRechtsUntenRechts.SuspendLayout();
             this.tC_RouterPlotterLaser.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudSpeed)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbLaser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TbLaser)).BeginInit();
             this.Gb_Jogging.SuspendLayout();
@@ -554,7 +538,6 @@ namespace GrblPlotter
             ((System.ComponentModel.ISupportInitialize)(this.NudJogAbsY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NudJogAbsX)).BeginInit();
             this.gB_Jog0.SuspendLayout();
-            this.tLPRechtsUntenRechtsMitte.SuspendLayout();
             this.tLP_cB_StopJogging.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -1780,39 +1763,16 @@ namespace GrblPlotter
             resources.ApplyResources(this.tLPRechtsUntenRechts, "tLPRechtsUntenRechts");
             this.tLPRechtsUntenRechts.Controls.Add(this.tC_RouterPlotterLaser, 0, 0);
             this.tLPRechtsUntenRechts.Controls.Add(this.Gb_Jogging, 0, 1);
-            this.tLPRechtsUntenRechts.Controls.Add(this.tLPRechtsUntenRechtsMitte, 0, 2);
             this.tLPRechtsUntenRechts.Controls.Add(this.tLP_cB_StopJogging, 0, 3);
             this.tLPRechtsUntenRechts.Name = "tLPRechtsUntenRechts";
             // 
             // tC_RouterPlotterLaser
             // 
-            this.tC_RouterPlotterLaser.Controls.Add(this.tabPage1);
             this.tC_RouterPlotterLaser.Controls.Add(this.tabPage2);
-            this.tC_RouterPlotterLaser.Controls.Add(this.tabPage3);
             resources.ApplyResources(this.tC_RouterPlotterLaser, "tC_RouterPlotterLaser");
             this.tC_RouterPlotterLaser.Name = "tC_RouterPlotterLaser";
             this.tC_RouterPlotterLaser.SelectedIndex = 0;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.LblSpeedSetVal);
-            this.tabPage1.Controls.Add(this.LblSpeedSet);
-            this.tabPage1.Controls.Add(this.RbSpindleCCW);
-            this.tabPage1.Controls.Add(this.RbSpindleCW);
-            this.tabPage1.Controls.Add(this.LblSpeedMaxVal);
-            this.tabPage1.Controls.Add(this.LblSpeedMinVal);
-            this.tabPage1.Controls.Add(this.CbMist);
-            this.tabPage1.Controls.Add(this.LblSpeedMax);
-            this.tabPage1.Controls.Add(this.LblSpeedMin);
-            this.tabPage1.Controls.Add(this.NudSpeed);
-            this.tabPage1.Controls.Add(this.CbSpindle);
-            this.tabPage1.Controls.Add(this.CbCoolant);
-            this.tabPage1.Controls.Add(this.lblTool);
-            this.tabPage1.Controls.Add(this.CbTool);
-            this.tabPage1.Controls.Add(this.lblSpeed);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // LblSpeedSetVal
             // 
@@ -1901,44 +1861,8 @@ namespace GrblPlotter
             this.BtnPenZero.UseVisualStyleBackColor = true;
             this.BtnPenZero.Click += new System.EventHandler(this.BtnPenZero_Click);
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.PbLaser);
-            this.tabPage3.Controls.Add(this.CbLasermodeVal);
-            this.tabPage3.Controls.Add(this.CbLasermode);
-            this.tabPage3.Controls.Add(this.LblLaserSetVal);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.LblLaserMaxVal);
-            this.tabPage3.Controls.Add(this.LblLaserMinVal);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.RbLaserM4);
-            this.tabPage3.Controls.Add(this.RbLaserM3);
-            this.tabPage3.Controls.Add(this.CbLaser);
-            this.tabPage3.Controls.Add(this.TbLaser);
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // PbLaser
-            // 
-            resources.ApplyResources(this.PbLaser, "PbLaser");
-            this.PbLaser.Name = "PbLaser";
-            this.PbLaser.TabStop = false;
-            // 
-            // CbLasermodeVal
-            // 
-            resources.ApplyResources(this.CbLasermodeVal, "CbLasermodeVal");
-            this.CbLasermodeVal.Name = "CbLasermodeVal";
-            // 
-            // CbLasermode
-            // 
-            resources.ApplyResources(this.CbLasermode, "CbLasermode");
-            this.CbLasermode.Name = "CbLasermode";
-            this.CbLasermode.UseVisualStyleBackColor = true;
-            this.CbLasermode.CheckedChanged += new System.EventHandler(this.CbLasermode_CheckedChanged);
-            // 
-            // LblLaserSetVal
             // 
             resources.ApplyResources(this.LblLaserSetVal, "LblLaserSetVal");
             this.LblLaserSetVal.Name = "LblLaserSetVal";
@@ -2108,10 +2032,7 @@ namespace GrblPlotter
             this.gB_Jog0.Name = "gB_Jog0";
             this.gB_Jog0.TabStop = false;
             // 
-            // tLPRechtsUntenRechtsMitte
             // 
-            resources.ApplyResources(this.tLPRechtsUntenRechtsMitte, "tLPRechtsUntenRechtsMitte");
-            this.tLPRechtsUntenRechtsMitte.Name = "tLPRechtsUntenRechtsMitte";
             // 
             // tLP_cB_StopJogging
             // 
@@ -3013,11 +2934,6 @@ namespace GrblPlotter
             // 
             this.createGCodeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.textWizzardToolStripMenuItem,
-            this.createBarcodeToolStripMenuItem,
-            this.imageToolStripMenuItem,
-            this.createSimpleShapesToolStripMenuItem,
-            this.directControlToolStripMenuItem,
-            this.wireCutterToolStripMenuItem,
             this.createJogPathToolStripMenuItem,
             this.startExtensionToolStripMenuItem});
             this.createGCodeToolStripMenuItem.Name = "createGCodeToolStripMenuItem";
@@ -3029,25 +2945,13 @@ namespace GrblPlotter
             resources.ApplyResources(this.textWizzardToolStripMenuItem, "textWizzardToolStripMenuItem");
             this.textWizzardToolStripMenuItem.Click += new System.EventHandler(this.TextWizzardToolStripMenuItem_Click);
             // 
-            // createBarcodeToolStripMenuItem
             // 
-            this.createBarcodeToolStripMenuItem.Name = "createBarcodeToolStripMenuItem";
-            resources.ApplyResources(this.createBarcodeToolStripMenuItem, "createBarcodeToolStripMenuItem");
             // 
-            // imageToolStripMenuItem
             // 
-            this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-            resources.ApplyResources(this.imageToolStripMenuItem, "imageToolStripMenuItem");
             // 
-            // createSimpleShapesToolStripMenuItem
             // 
-            this.createSimpleShapesToolStripMenuItem.Name = "createSimpleShapesToolStripMenuItem";
-            resources.ApplyResources(this.createSimpleShapesToolStripMenuItem, "createSimpleShapesToolStripMenuItem");
             // 
-            // wireCutterToolStripMenuItem
             // 
-            this.wireCutterToolStripMenuItem.Name = "wireCutterToolStripMenuItem";
-            resources.ApplyResources(this.wireCutterToolStripMenuItem, "wireCutterToolStripMenuItem");
             // 
             // createJogPathToolStripMenuItem
             // 
@@ -3059,10 +2963,7 @@ namespace GrblPlotter
             this.startExtensionToolStripMenuItem.Name = "startExtensionToolStripMenuItem";
             resources.ApplyResources(this.startExtensionToolStripMenuItem, "startExtensionToolStripMenuItem");
             // 
-            // directControlToolStripMenuItem
             // 
-            this.directControlToolStripMenuItem.Name = "directControlToolStripMenuItem";
-            resources.ApplyResources(this.directControlToolStripMenuItem, "directControlToolStripMenuItem");
             // 
             // gCodeToolStripMenuItem
             // 
@@ -3362,10 +3263,7 @@ namespace GrblPlotter
             // workpieceToolStripMenuItem
             // 
             this.workpieceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.probingToolLengthToolStripMenuItem,
-            this.surfaceScanHeightMapToolStripMenuItem,
-            this.jogPathCreatorToolStripMenuItem});
-            this.workpieceToolStripMenuItem.Name = "workpieceToolStripMenuItem";
+            this.probingToolLengthToolStripMenuItem});
             resources.ApplyResources(this.workpieceToolStripMenuItem, "workpieceToolStripMenuItem");
             // 
             // probingToolLengthToolStripMenuItem
@@ -3373,44 +3271,28 @@ namespace GrblPlotter
             this.probingToolLengthToolStripMenuItem.Name = "probingToolLengthToolStripMenuItem";
             resources.ApplyResources(this.probingToolLengthToolStripMenuItem, "probingToolLengthToolStripMenuItem");
             // 
-            // surfaceScanHeightMapToolStripMenuItem
             // 
-            this.surfaceScanHeightMapToolStripMenuItem.Name = "surfaceScanHeightMapToolStripMenuItem";
-            resources.ApplyResources(this.surfaceScanHeightMapToolStripMenuItem, "surfaceScanHeightMapToolStripMenuItem");
             // 
-            // jogPathCreatorToolStripMenuItem
             // 
-            this.jogPathCreatorToolStripMenuItem.Name = "jogPathCreatorToolStripMenuItem";
-            resources.ApplyResources(this.jogPathCreatorToolStripMenuItem, "jogPathCreatorToolStripMenuItem");
             // 
             // machineToolStripMenuItem
             // 
             this.machineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.edgeFinderToolStripMenuItem,
-            this.heightMapToolStripMenuItem,
             this.laserToolsToolStripMenuItem,
             this.coordinateSystemsToolStripMenuItem,
             this.setupToolStripMenuItem,
             this.toolStripMenuItem1,
             this.startStreamingAtLineToolStripMenuItem,
             this.controlStreamingToolStripMenuItem,
-            this.control2ndGRBLToolStripMenuItem,
             this.control3rdGRBLToolStripMenuItem,
-            this.projectorToolStripMenuItem,
             this.grblSetupToolStripMenuItem,
             this.processAutomationToolStripMenuItem});
             this.machineToolStripMenuItem.Name = "machineToolStripMenuItem";
             resources.ApplyResources(this.machineToolStripMenuItem, "machineToolStripMenuItem");
             // 
-            // edgeFinderToolStripMenuItem
             // 
-            this.edgeFinderToolStripMenuItem.Name = "edgeFinderToolStripMenuItem";
-            resources.ApplyResources(this.edgeFinderToolStripMenuItem, "edgeFinderToolStripMenuItem");
             // 
-            // heightMapToolStripMenuItem
             // 
-            this.heightMapToolStripMenuItem.Name = "heightMapToolStripMenuItem";
-            resources.ApplyResources(this.heightMapToolStripMenuItem, "heightMapToolStripMenuItem");
             // 
             // laserToolsToolStripMenuItem
             // 
@@ -3452,20 +3334,14 @@ namespace GrblPlotter
             resources.ApplyResources(this.controlStreamingToolStripMenuItem, "controlStreamingToolStripMenuItem");
             this.controlStreamingToolStripMenuItem.Click += new System.EventHandler(this.ControlStreamingToolStripMenuItem_Click);
             // 
-            // control2ndGRBLToolStripMenuItem
             // 
-            this.control2ndGRBLToolStripMenuItem.Name = "control2ndGRBLToolStripMenuItem";
-            resources.ApplyResources(this.control2ndGRBLToolStripMenuItem, "control2ndGRBLToolStripMenuItem");
             // 
             // control3rdGRBLToolStripMenuItem
             // 
             this.control3rdGRBLToolStripMenuItem.Name = "control3rdGRBLToolStripMenuItem";
             resources.ApplyResources(this.control3rdGRBLToolStripMenuItem, "control3rdGRBLToolStripMenuItem");
             // 
-            // projectorToolStripMenuItem
             // 
-            this.projectorToolStripMenuItem.Name = "projectorToolStripMenuItem";
-            resources.ApplyResources(this.projectorToolStripMenuItem, "projectorToolStripMenuItem");
             // 
             // grblSetupToolStripMenuItem
             // 
@@ -3723,12 +3599,8 @@ namespace GrblPlotter
             this.tLPRechtsUntenRechts.ResumeLayout(false);
             this.tLPRechtsUntenRechts.PerformLayout();
             this.tC_RouterPlotterLaser.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudSpeed)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbLaser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TbLaser)).EndInit();
             this.Gb_Jogging.ResumeLayout(false);
@@ -3738,7 +3610,6 @@ namespace GrblPlotter
             ((System.ComponentModel.ISupportInitialize)(this.NudJogAbsX)).EndInit();
             this.gB_Jog0.ResumeLayout(false);
             this.gB_Jog0.PerformLayout();
-            this.tLPRechtsUntenRechtsMitte.ResumeLayout(false);
             this.tLP_cB_StopJogging.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -3855,11 +3726,8 @@ namespace GrblPlotter
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem createGCodeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textWizzardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createSimpleShapesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveMachineParametersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadMachineParametersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem control2ndGRBLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LanguageToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deutschToolStripMenuItem;
@@ -3912,7 +3780,6 @@ namespace GrblPlotter
         private System.Windows.Forms.ToolStripMenuItem setupToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem ersetzteG23DurchLinienToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem heightMapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cmsPicBoxResetZooming;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.Label label_a;
@@ -3982,7 +3849,6 @@ namespace GrblPlotter
         private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.CheckBox CbCoolant;
         private System.Windows.Forms.CheckBox CbSpindle;
-        private System.Windows.Forms.TableLayoutPanel tLPRechtsUntenRechtsMitte;
         private System.Windows.Forms.ToolStripMenuItem mirrorRotaryToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label_c;
@@ -4025,10 +3891,8 @@ namespace GrblPlotter
         private System.Windows.Forms.ToolStripMenuItem chinesischToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tLPCustomButton1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ToolStripMenuItem edgeFinderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workpieceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem probingToolLengthToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem surfaceScanHeightMapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripViewPenUp;
         private System.Windows.Forms.ToolStripMenuItem cmsPicBoxMoveSelectedPathInCode;
         private System.Windows.Forms.ToolStripMenuItem toolStripViewRuler;
@@ -4079,14 +3943,12 @@ namespace GrblPlotter
         private System.Windows.Forms.Timer SplashScreenTimer;
         private System.Windows.Forms.ToolStripMenuItem cmsCodeBlocksSortByDistance;
         private System.Windows.Forms.ToolStripMenuItem copyContentTroClipboardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createBarcodeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cmsPicBoxReverseSelectedPath;
         private System.Windows.Forms.ToolStripMenuItem sortByLayerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortByPenWidthToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortByTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Timer loadTimer;
-        private System.Windows.Forms.ToolStripMenuItem jogPathCreatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createJogPathToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem control3rdGRBLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cmsPicBoxRotateSelectedPath;
@@ -4096,9 +3958,7 @@ namespace GrblPlotter
         private System.Windows.Forms.Button BtnOverrideD0;
         private System.Windows.Forms.ToolStripMenuItem czechToolStripMenuItem;
         private System.Windows.Forms.TabControl tC_RouterPlotterLaser;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TrackBar TbLaser;
         private System.Windows.Forms.Label LblSpeedMax;
         private System.Windows.Forms.Label LblSpeedMin;
@@ -4125,7 +3985,6 @@ namespace GrblPlotter
         private System.Windows.Forms.Label CbLasermodeVal;
         private System.Windows.Forms.PictureBox PbLaser;
         private System.Windows.Forms.ToolStripMenuItem showFormsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem projectorToolStripMenuItem;
         private System.Windows.Forms.CheckBox CbAddGraphic;
         private System.Windows.Forms.ToolStripMenuItem cmsPicBoxDuplicatePath;
         private System.Windows.Forms.ToolStripMenuItem cmsPicBoxShowProperties;
@@ -4139,7 +3998,6 @@ namespace GrblPlotter
         private System.Windows.Forms.ToolStripMenuItem cmsPicBoxReloadFile2;
         private System.Windows.Forms.ToolStripMenuItem convertToPolarCoordinatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem applyLastTransformToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem wireCutterToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tLP_cB_StopJogging;
         private System.Windows.Forms.CheckBox cBSendJogStop;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -4184,7 +4042,6 @@ namespace GrblPlotter
         private System.Windows.Forms.ToolStripMenuItem cmsPicBoxMoveGraphicsOriginTo00;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
         private System.Windows.Forms.ToolStripMenuItem offsetGraphicsMarkerPositionTolastToolPositionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem directControlToolStripMenuItem;
     }
 }
 
