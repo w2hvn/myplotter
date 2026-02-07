@@ -252,7 +252,7 @@ namespace GrblPlotter
             { /* "Get values from tool table" (importGCToolDefNr and importGCToolDefNrUse) will be processed in "Graphic2GCode.cs" */
                 if (cBFont.SelectedIndex < 0)
                 {
-                    MessageBox.Show("Please select a font", "Error");
+                    System.Windows.Forms.MessageBox.Show("Please select a font", "Error");
                     return;
                 }
                 Logger.Trace(culture, " createText()	");
@@ -488,7 +488,7 @@ namespace GrblPlotter
             {
                 Logger.Error(err, "BtnSelectFont_Click: Font:'{0}' ", fontDialog1.Font.FontFamily.Name);
                 EventCollector.StoreException("SelFont " + err.Message);
-                MessageBox.Show(Localization.GetString("textNewFontException") + "\r\n\r\nError from system:\r\n" + err.Message, Localization.GetString("mainAttention"));
+                System.Windows.Forms.MessageBox.Show(Localization.GetString("textNewFontException") + "\r\n\r\nError from system:\r\n" + err.Message, Localization.GetString("mainAttention"));
                 return;
             }
         }
@@ -567,7 +567,7 @@ namespace GrblPlotter
             catch (Exception err)
             {
                 Logger.Error(err, "LinkLabel_LinkClicked ");
-                MessageBox.Show("Could not open the link: " + err.Message, "Error");
+                System.Windows.Forms.MessageBox.Show("Could not open the link: " + err.Message, "Error");
             }
         }
 
@@ -583,7 +583,7 @@ namespace GrblPlotter
                 ShowTextSize();
             }
             else
-            { MessageBox.Show("Desired width causes invalid font size. Please choose other width.", "Error"); }
+            { System.Windows.Forms.MessageBox.Show("Desired width causes invalid font size. Please choose other width.", "Error"); }
         }
 
         private void BtnSetHeight_Click(object sender, EventArgs e)
@@ -598,7 +598,7 @@ namespace GrblPlotter
                 ShowTextSize();
             }
             else
-            { MessageBox.Show("Desired heigth causes invalid font size. Please choose other heigth.", "Error"); }
+            { System.Windows.Forms.MessageBox.Show("Desired heigth causes invalid font size. Please choose other heigth.", "Error"); }
         }
 
         private void CbWordWrap_CheckedChanged(object sender, EventArgs e)
@@ -646,7 +646,7 @@ namespace GrblPlotter
             catch (Exception err)
             {
                 Logger.Error(err, "BtnHelp_Click ");
-                MessageBox.Show("Could not open the link: " + err.Message, "Error");
+                System.Windows.Forms.MessageBox.Show("Could not open the link: " + err.Message, "Error");
             }
         }
 
@@ -672,7 +672,7 @@ namespace GrblPlotter
             {
                 EventCollector.StoreException("BtnSaveIni_Click " + err.Message);
                 Logger.Error(err, "BtnSaveIni_Click ");
-                MessageBox.Show("SaveMachineParameters: \r\n" + err.Message, "Error");
+                System.Windows.Forms.MessageBox.Show("SaveMachineParameters: \r\n" + err.Message, "Error");
             }
         }
 

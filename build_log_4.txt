@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+/app/GRBL-Plotter/GUI/MainForm.cs(410,60): error CS0246: The type or namespace name 'OverrideMsgEventArgs' could not be found (are you missing a using directive or an assembly reference?) [/app/GRBL-Plotter/GRBL-Plotter.csproj]
+/app/GRBL-Plotter/GCodeCreation/Vectorize/CsPotrace.cs(1800,16): warning CS8981: The type name 'opti' only contains lower-cased ascii characters. Such names may become reserved for the language. [/app/GRBL-Plotter/GRBL-Plotter.csproj]
+
+Build FAILED.
+
+/app/GRBL-Plotter/GCodeCreation/Vectorize/CsPotrace.cs(1800,16): warning CS8981: The type name 'opti' only contains lower-cased ascii characters. Such names may become reserved for the language. [/app/GRBL-Plotter/GRBL-Plotter.csproj]
+/app/GRBL-Plotter/GUI/MainForm.cs(410,60): error CS0246: The type or namespace name 'OverrideMsgEventArgs' could not be found (are you missing a using directive or an assembly reference?) [/app/GRBL-Plotter/GRBL-Plotter.csproj]
+    1 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:08.25

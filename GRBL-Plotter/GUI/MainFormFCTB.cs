@@ -61,6 +61,7 @@
 */
 
 using FastColoredTextBoxNS;
+using Range = FastColoredTextBoxNS.Range;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

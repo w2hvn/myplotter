@@ -72,18 +72,6 @@ namespace GrblPlotter
             {
                 case Graphic.SourceType.SVG:
                     { GCodeFromSvg.ConvertFromFile(source, worker, e); break; }
-                case Graphic.SourceType.DXF:
-                    { GCodeFromDxf.ConvertFromFile(source, worker, e); break; }
-                case Graphic.SourceType.HPGL:
-                    { GCodeFromHpgl.ConvertFromFile(source, worker, e); break; }
-                case Graphic.SourceType.CSV:
-                    { GCodeFromCsv.ConvertFromFile(source, worker, e); break; }
-                case Graphic.SourceType.Drill:
-                    { GCodeFromDrill.ConvertFromFile(source, worker, e); break; }
-                case Graphic.SourceType.Gerber:
-                    { GCodeFromGerber.ConvertFromFile(source, worker, e); break; }
-                case Graphic.SourceType.PDNJson:
-                    { GCodeFromPDNJson.ConvertFromFile(source, worker, e); break; }
             }
         }
 

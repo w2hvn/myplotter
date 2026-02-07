@@ -167,8 +167,6 @@ namespace GrblPlotter
                 VisuGCode.SetPosMarkerLine(fCTBCodeClickedLineNow, false);
             }
 
-            _diyControlPad?.SendFeedback("[" + e.Status.ToString() + "]");
-
             VisuGCode.ProcessedPath.ProcessedPathLine(actualCodeLine);//.CodeLineConfirmed);		// in GCodeSimulate.cs
 
             //    if (logStreaming)
@@ -203,8 +201,6 @@ namespace GrblPlotter
                     MainTimer.Stop();
                     MainTimer.Start();
                     timerUpdateControls = true; timerUpdateControlSource = "grblStreaming.pause";//updateControls(true);
-
-                    SaveStreamingStatus(e.CodeLineSent, "Pause", "");
 
                     if (Properties.Settings.Default.flowControlEnable) // send extra Pause-Code in MainTimer_Tick from Properties.Settings.Default.flowControlText
                         delayedSend = 2;
@@ -266,7 +262,6 @@ namespace GrblPlotter
                     ResetDetected = true;
                     lastErrorLine = 0;
                     ShowGrblLastMessage();
-                    SaveStreamingStatus(e.CodeLineSent, "Reset", "");
                     StopStreaming(false);
                     if (e.CodeProgress < 0)
                     { SetTextThreadSave(lbInfo, _serial_form.lastError, Color.Fuchsia); }
@@ -280,8 +275,6 @@ namespace GrblPlotter
                     ControlPowerSaving.EnableStandby();
                     VisuGCode.ProcessedPath.ProcessedPathClear();
                     //        SetGRBLBuffer();
-
-                    _process_form?.Feedback("G-Code Stream", "reset", false);
 
                     break;
 
@@ -300,8 +293,6 @@ namespace GrblPlotter
 
                     if (lastErrorLine != e.CodeLineConfirmed)
                     {
-                        SaveStreamingStatus(e.CodeLineSent, "Streaming error", tmpMessage);
-
                         int errorLine = e.CodeLineConfirmed - 1;
                         if (isStreamingCheck)
                             errorLine = e.CodeLineConfirmed - 2;
@@ -340,8 +331,6 @@ namespace GrblPlotter
                     if (Grbl.lastErrorNr == 9)  // G-code locked out during alarm or jog state -> stop streaming
                     { StopStreaming(false); }
 
-                    _process_form?.Feedback("G-Code Stream", "error", false);
-
                     break;
 
                 case GrblStreaming.finish:
@@ -360,7 +349,6 @@ namespace GrblPlotter
                     MainTimer.Stop();
                     MainTimer.Start();
                     timerUpdateControls = true; timerUpdateControlSource = "grblStreaming.finish";//updateControls();
-                    SaveStreamingStatus(0, "", "");
                     showPicBoxBgImage = false;                     // don't show background image anymore
                     pictureBox1.BackgroundImage = null;
                     ResetStreaming();
@@ -374,18 +362,14 @@ namespace GrblPlotter
                         else
                             Notifier.SendMessage(msg);
                     }
-                    _process_form?.Feedback("G-Code Stream", elapsed.ToString(@"hh\:mm\:ss"), true);
                     break;
 
                 case GrblStreaming.stop:
-                    SaveStreamingStatus(e.CodeLineSent, "Stop", "");
                     timerUpdateControls = true; timerUpdateControlSource = "grblStreaming.stop";// updateControls();
                     SetTextThreadSave(lbInfo, Localization.GetString("mainInfoStopStream") + e.CodeLineSent.ToString() + ")", Color.Fuchsia);
 
                     if (Properties.Settings.Default.flowControlEnable) // send extra Pause-Code in MainTimer_Tick from Properties.Settings.Default.flowControlText
                         delayedSend = 2;
-
-                    _process_form?.Feedback("G-Code Stream", "", false);
 
                     break;
 
@@ -532,7 +516,7 @@ namespace GrblPlotter
             {
                 if (Grbl.Status == GrblState.alarm)
                 {
-                    MessageBox.Show("Press 'Kill Alarm'! Otherwise no streaming is possible.");
+                    System.Windows.Forms.MessageBox.Show("Press 'Kill Alarm'! Otherwise no streaming is possible.");
                     return;
                 }
 
@@ -597,7 +581,7 @@ namespace GrblPlotter
                         catch (Exception err)
                         {
                             Logger.Error(err, "StartStreaming save code ");
-                            MessageBox.Show("Could not save the file: \r\n" + err.Message, "Error");
+                            System.Windows.Forms.MessageBox.Show("Could not save the file: \r\n" + err.Message, "Error");
                         }
 
                         SaveRecentFile(fileLastProcessed + ".nc");      // update last processed file
@@ -608,13 +592,13 @@ namespace GrblPlotter
                         EventCollector.StoreException("StartStreaming: IOEx-folder: " + Datapath.AppDataFolder + " ");
                         Datapath.AppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                         Logger.Error(err, "StartStreaming fileName: {0}, new Datapath.AppDataFolder: {1} ", fileName, Datapath.AppDataFolder);
-                        MessageBox.Show("Path does not exist and could not be created to save: " + fileName + "\r\nPath will be modified to " + Datapath.AppDataFolder, "Error");
+                        System.Windows.Forms.MessageBox.Show("Path does not exist and could not be created to save: " + fileName + "\r\nPath will be modified to " + Datapath.AppDataFolder, "Error");
                     }
                     catch (Exception err)
                     {
                         EventCollector.StoreException("StartStreaming: " + err.Message + "  " + fileName + " ");
                         Logger.Error(err, "StartStreaming fileName: {0}, new Datapath.AppDataFolder: {1} ", fileName, Datapath.AppDataFolder);
-                        MessageBox.Show("'last processed' file could not be created: " + fileName + "\r\nError: " + err.Message, "Error");
+                        System.Windows.Forms.MessageBox.Show("'last processed' file could not be created: " + fileName + "\r\nError: " + err.Message, "Error");
                         //  throw;		// unknown exception...  access denied 
                     }
 

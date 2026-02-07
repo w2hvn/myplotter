@@ -183,11 +183,6 @@ namespace GrblPlotter
             this.btnJogZeroY = new System.Windows.Forms.Button();
             this.btnJogZeroZ = new System.Windows.Forms.Button();
             this.cBMoveG0 = new System.Windows.Forms.CheckBox();
-            this.virtualJoystickA = new virtualJoystick.virtualJoystick();
-            this.virtualJoystickXY = new virtualJoystick.virtualJoystick();
-            this.virtualJoystickZ = new virtualJoystick.virtualJoystick();
-            this.virtualJoystickB = new virtualJoystick.virtualJoystick();
-            this.virtualJoystickC = new virtualJoystick.virtualJoystick();
             this.LblSpeedSet = new System.Windows.Forms.Label();
             this.LblSpeedMax = new System.Windows.Forms.Label();
             this.LblSpeedMin = new System.Windows.Forms.Label();
@@ -626,7 +621,6 @@ namespace GrblPlotter
             this.fCTBCode.AutoIndentCharsPatterns = "\r\n^\\s*[\\w\\.]+\\s*(?<range>=)\\s*(?<range>[^;]+);";
             resources.ApplyResources(this.fCTBCode, "fCTBCode");
             this.fCTBCode.BackBrush = null;
-            this.fCTBCode.CharCnWidth = 13;
             this.fCTBCode.CharHeight = 12;
             this.fCTBCode.CharWidth = 7;
             this.fCTBCode.ContextMenuStrip = this.cmsFCTB;
@@ -1130,135 +1124,7 @@ namespace GrblPlotter
             this.toolTip1.SetToolTip(this.cBMoveG0, resources.GetString("cBMoveG0.ToolTip"));
             this.cBMoveG0.UseVisualStyleBackColor = true;
             // 
-            // virtualJoystickA
             // 
-            resources.ApplyResources(this.virtualJoystickA, "virtualJoystickA");
-            this.virtualJoystickA.Joystick2Dimension = false;
-            this.virtualJoystickA.JoystickActive = System.Drawing.Color.Red;
-            this.virtualJoystickA.JoystickLabel = new double[] {
-        0.1D,
-        0.5D,
-        1D,
-        5D,
-        10D,
-        50D};
-            this.virtualJoystickA.JoystickRaster = 5;
-            this.virtualJoystickA.JoystickRasterMark = 0;
-            this.virtualJoystickA.JoystickStanby = System.Drawing.Color.Orange;
-            this.virtualJoystickA.JoystickText = "A";
-            this.virtualJoystickA.Name = "virtualJoystickA";
-            this.virtualJoystickA.ShowStop = true;
-            this.virtualJoystickA.TabStop = false;
-            this.toolTip1.SetToolTip(this.virtualJoystickA, resources.GetString("virtualJoystickA.ToolTip"));
-            this.virtualJoystickA.JoyStickEvent += new virtualJoystick.JogEventHandler(this.VirtualJoystickA_JoyStickEvent);
-            this.virtualJoystickA.Enter += new System.EventHandler(this.VirtualJoystickXY_Enter);
-            this.virtualJoystickA.Leave += new System.EventHandler(this.VirtualJoystickXY_Leave);
-            this.virtualJoystickA.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VirtualJoystickXY_MouseUp);
-            this.virtualJoystickA.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.VirtualJoystickXY_PreviewKeyDown);
-            // 
-            // virtualJoystickXY
-            // 
-            resources.ApplyResources(this.virtualJoystickXY, "virtualJoystickXY");
-            this.virtualJoystickXY.Joystick2Dimension = true;
-            this.virtualJoystickXY.JoystickActive = System.Drawing.Color.Red;
-            this.virtualJoystickXY.JoystickLabel = new double[] {
-        0.1D,
-        0.5D,
-        1D,
-        5D,
-        10D,
-        50D};
-            this.virtualJoystickXY.JoystickRaster = 5;
-            this.virtualJoystickXY.JoystickRasterMark = 0;
-            this.virtualJoystickXY.JoystickStanby = System.Drawing.Color.Orange;
-            this.virtualJoystickXY.JoystickText = "X / Y";
-            this.virtualJoystickXY.Name = "virtualJoystickXY";
-            this.virtualJoystickXY.ShowStop = true;
-            this.virtualJoystickXY.TabStop = false;
-            this.toolTip1.SetToolTip(this.virtualJoystickXY, resources.GetString("virtualJoystickXY.ToolTip"));
-            this.virtualJoystickXY.JoyStickEvent += new virtualJoystick.JogEventHandler(this.VirtualJoystickXY_JoyStickEvent);
-            this.virtualJoystickXY.Enter += new System.EventHandler(this.VirtualJoystickXY_Enter);
-            this.virtualJoystickXY.Leave += new System.EventHandler(this.VirtualJoystickXY_Leave);
-            this.virtualJoystickXY.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VirtualJoystickXY_MouseUp);
-            this.virtualJoystickXY.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.VirtualJoystickXY_PreviewKeyDown);
-            // 
-            // virtualJoystickZ
-            // 
-            resources.ApplyResources(this.virtualJoystickZ, "virtualJoystickZ");
-            this.virtualJoystickZ.Joystick2Dimension = false;
-            this.virtualJoystickZ.JoystickActive = System.Drawing.Color.Red;
-            this.virtualJoystickZ.JoystickLabel = new double[] {
-        0.1D,
-        0.5D,
-        1D,
-        5D,
-        10D,
-        50D};
-            this.virtualJoystickZ.JoystickRaster = 5;
-            this.virtualJoystickZ.JoystickRasterMark = 0;
-            this.virtualJoystickZ.JoystickStanby = System.Drawing.Color.Orange;
-            this.virtualJoystickZ.JoystickText = "Z";
-            this.virtualJoystickZ.Name = "virtualJoystickZ";
-            this.virtualJoystickZ.ShowStop = true;
-            this.virtualJoystickZ.TabStop = false;
-            this.toolTip1.SetToolTip(this.virtualJoystickZ, resources.GetString("virtualJoystickZ.ToolTip"));
-            this.virtualJoystickZ.JoyStickEvent += new virtualJoystick.JogEventHandler(this.VirtualJoystickZ_JoyStickEvent);
-            this.virtualJoystickZ.Enter += new System.EventHandler(this.VirtualJoystickXY_Enter);
-            this.virtualJoystickZ.Leave += new System.EventHandler(this.VirtualJoystickXY_Leave);
-            this.virtualJoystickZ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VirtualJoystickXY_MouseUp);
-            this.virtualJoystickZ.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.VirtualJoystickXY_PreviewKeyDown);
-            // 
-            // virtualJoystickB
-            // 
-            resources.ApplyResources(this.virtualJoystickB, "virtualJoystickB");
-            this.virtualJoystickB.Joystick2Dimension = false;
-            this.virtualJoystickB.JoystickActive = System.Drawing.Color.Red;
-            this.virtualJoystickB.JoystickLabel = new double[] {
-        0.1D,
-        0.5D,
-        1D,
-        5D,
-        10D,
-        50D};
-            this.virtualJoystickB.JoystickRaster = 5;
-            this.virtualJoystickB.JoystickRasterMark = 0;
-            this.virtualJoystickB.JoystickStanby = System.Drawing.Color.Orange;
-            this.virtualJoystickB.JoystickText = "B";
-            this.virtualJoystickB.Name = "virtualJoystickB";
-            this.virtualJoystickB.ShowStop = true;
-            this.virtualJoystickB.TabStop = false;
-            this.toolTip1.SetToolTip(this.virtualJoystickB, resources.GetString("virtualJoystickB.ToolTip"));
-            this.virtualJoystickB.JoyStickEvent += new virtualJoystick.JogEventHandler(this.VirtualJoystickB_JoyStickEvent);
-            this.virtualJoystickB.Enter += new System.EventHandler(this.VirtualJoystickXY_Enter);
-            this.virtualJoystickB.Leave += new System.EventHandler(this.VirtualJoystickXY_Leave);
-            this.virtualJoystickB.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VirtualJoystickXY_MouseUp);
-            this.virtualJoystickB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.VirtualJoystickXY_PreviewKeyDown);
-            // 
-            // virtualJoystickC
-            // 
-            resources.ApplyResources(this.virtualJoystickC, "virtualJoystickC");
-            this.virtualJoystickC.Joystick2Dimension = false;
-            this.virtualJoystickC.JoystickActive = System.Drawing.Color.Red;
-            this.virtualJoystickC.JoystickLabel = new double[] {
-        0.1D,
-        0.5D,
-        1D,
-        5D,
-        10D,
-        50D};
-            this.virtualJoystickC.JoystickRaster = 5;
-            this.virtualJoystickC.JoystickRasterMark = 0;
-            this.virtualJoystickC.JoystickStanby = System.Drawing.Color.Orange;
-            this.virtualJoystickC.JoystickText = "C";
-            this.virtualJoystickC.Name = "virtualJoystickC";
-            this.virtualJoystickC.ShowStop = true;
-            this.virtualJoystickC.TabStop = false;
-            this.toolTip1.SetToolTip(this.virtualJoystickC, resources.GetString("virtualJoystickC.ToolTip"));
-            this.virtualJoystickC.JoyStickEvent += new virtualJoystick.JogEventHandler(this.VirtualJoystickC_JoyStickEvent);
-            this.virtualJoystickC.Enter += new System.EventHandler(this.VirtualJoystickXY_Enter);
-            this.virtualJoystickC.Leave += new System.EventHandler(this.VirtualJoystickXY_Leave);
-            this.virtualJoystickC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VirtualJoystickXY_MouseUp);
-            this.virtualJoystickC.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.VirtualJoystickXY_PreviewKeyDown);
             // 
             // LblSpeedSet
             // 
@@ -2139,8 +2005,6 @@ namespace GrblPlotter
             this.Gb_Jogging.Controls.Add(this.gB_Jog0);
             this.Gb_Jogging.Name = "Gb_Jogging";
             this.Gb_Jogging.TabStop = false;
-            this.Gb_Jogging.Enter += new System.EventHandler(this.VirtualJoystickXY_Enter);
-            this.Gb_Jogging.Leave += new System.EventHandler(this.VirtualJoystickXY_Leave);
             // 
             // BtnJogAbsZ
             // 
@@ -2247,14 +2111,7 @@ namespace GrblPlotter
             // tLPRechtsUntenRechtsMitte
             // 
             resources.ApplyResources(this.tLPRechtsUntenRechtsMitte, "tLPRechtsUntenRechtsMitte");
-            this.tLPRechtsUntenRechtsMitte.Controls.Add(this.virtualJoystickA, 2, 0);
-            this.tLPRechtsUntenRechtsMitte.Controls.Add(this.virtualJoystickXY, 0, 0);
-            this.tLPRechtsUntenRechtsMitte.Controls.Add(this.virtualJoystickZ, 1, 0);
-            this.tLPRechtsUntenRechtsMitte.Controls.Add(this.virtualJoystickB, 3, 0);
-            this.tLPRechtsUntenRechtsMitte.Controls.Add(this.virtualJoystickC, 4, 0);
             this.tLPRechtsUntenRechtsMitte.Name = "tLPRechtsUntenRechtsMitte";
-            this.tLPRechtsUntenRechtsMitte.Enter += new System.EventHandler(this.VirtualJoystickXY_Enter);
-            this.tLPRechtsUntenRechtsMitte.Leave += new System.EventHandler(this.VirtualJoystickXY_Leave);
             // 
             // tLP_cB_StopJogging
             // 
@@ -3176,31 +3033,26 @@ namespace GrblPlotter
             // 
             this.createBarcodeToolStripMenuItem.Name = "createBarcodeToolStripMenuItem";
             resources.ApplyResources(this.createBarcodeToolStripMenuItem, "createBarcodeToolStripMenuItem");
-            this.createBarcodeToolStripMenuItem.Click += new System.EventHandler(this.CreateBarcodeToolStripMenuItem_Click);
             // 
             // imageToolStripMenuItem
             // 
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
             resources.ApplyResources(this.imageToolStripMenuItem, "imageToolStripMenuItem");
-            this.imageToolStripMenuItem.Click += new System.EventHandler(this.ImageToolStripMenuItem_Click);
             // 
             // createSimpleShapesToolStripMenuItem
             // 
             this.createSimpleShapesToolStripMenuItem.Name = "createSimpleShapesToolStripMenuItem";
             resources.ApplyResources(this.createSimpleShapesToolStripMenuItem, "createSimpleShapesToolStripMenuItem");
-            this.createSimpleShapesToolStripMenuItem.Click += new System.EventHandler(this.CreateSimpleShapesToolStripMenuItem_Click);
             // 
             // wireCutterToolStripMenuItem
             // 
             this.wireCutterToolStripMenuItem.Name = "wireCutterToolStripMenuItem";
             resources.ApplyResources(this.wireCutterToolStripMenuItem, "wireCutterToolStripMenuItem");
-            this.wireCutterToolStripMenuItem.Click += new System.EventHandler(this.WireCutterToolStripMenuItem_Click);
             // 
             // createJogPathToolStripMenuItem
             // 
             this.createJogPathToolStripMenuItem.Name = "createJogPathToolStripMenuItem";
             resources.ApplyResources(this.createJogPathToolStripMenuItem, "createJogPathToolStripMenuItem");
-            this.createJogPathToolStripMenuItem.Click += new System.EventHandler(this.JogCreatorToolStripMenuItem_Click);
             // 
             // startExtensionToolStripMenuItem
             // 
@@ -3211,7 +3063,6 @@ namespace GrblPlotter
             // 
             this.directControlToolStripMenuItem.Name = "directControlToolStripMenuItem";
             resources.ApplyResources(this.directControlToolStripMenuItem, "directControlToolStripMenuItem");
-            this.directControlToolStripMenuItem.Click += new System.EventHandler(this.DirectControlToolStripMenuItem_Click);
             // 
             // gCodeToolStripMenuItem
             // 
@@ -3521,19 +3372,16 @@ namespace GrblPlotter
             // 
             this.probingToolLengthToolStripMenuItem.Name = "probingToolLengthToolStripMenuItem";
             resources.ApplyResources(this.probingToolLengthToolStripMenuItem, "probingToolLengthToolStripMenuItem");
-            this.probingToolLengthToolStripMenuItem.Click += new System.EventHandler(this.EdgeFinderopen);
             // 
             // surfaceScanHeightMapToolStripMenuItem
             // 
             this.surfaceScanHeightMapToolStripMenuItem.Name = "surfaceScanHeightMapToolStripMenuItem";
             resources.ApplyResources(this.surfaceScanHeightMapToolStripMenuItem, "surfaceScanHeightMapToolStripMenuItem");
-            this.surfaceScanHeightMapToolStripMenuItem.Click += new System.EventHandler(this.HeightMapToolStripMenuItem_Click);
             // 
             // jogPathCreatorToolStripMenuItem
             // 
             this.jogPathCreatorToolStripMenuItem.Name = "jogPathCreatorToolStripMenuItem";
             resources.ApplyResources(this.jogPathCreatorToolStripMenuItem, "jogPathCreatorToolStripMenuItem");
-            this.jogPathCreatorToolStripMenuItem.Click += new System.EventHandler(this.JogCreatorToolStripMenuItem_Click);
             // 
             // machineToolStripMenuItem
             // 
@@ -3558,19 +3406,16 @@ namespace GrblPlotter
             // 
             this.edgeFinderToolStripMenuItem.Name = "edgeFinderToolStripMenuItem";
             resources.ApplyResources(this.edgeFinderToolStripMenuItem, "edgeFinderToolStripMenuItem");
-            this.edgeFinderToolStripMenuItem.Click += new System.EventHandler(this.EdgeFinderopen);
             // 
             // heightMapToolStripMenuItem
             // 
             this.heightMapToolStripMenuItem.Name = "heightMapToolStripMenuItem";
             resources.ApplyResources(this.heightMapToolStripMenuItem, "heightMapToolStripMenuItem");
-            this.heightMapToolStripMenuItem.Click += new System.EventHandler(this.HeightMapToolStripMenuItem_Click);
             // 
             // laserToolsToolStripMenuItem
             // 
             this.laserToolsToolStripMenuItem.Name = "laserToolsToolStripMenuItem";
             resources.ApplyResources(this.laserToolsToolStripMenuItem, "laserToolsToolStripMenuItem");
-            this.laserToolsToolStripMenuItem.Click += new System.EventHandler(this.Laseropen);
             // 
             // coordinateSystemsToolStripMenuItem
             // 
@@ -3582,13 +3427,11 @@ namespace GrblPlotter
             // 
             this.setupToolStripMenuItem.Name = "setupToolStripMenuItem";
             resources.ApplyResources(this.setupToolStripMenuItem, "setupToolStripMenuItem");
-            this.setupToolStripMenuItem.Click += new System.EventHandler(this.DIYControlopen);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.CameraToolStripMenuItem_Click);
             // 
             // startStreamingAtLineToolStripMenuItem
             // 
@@ -3613,19 +3456,16 @@ namespace GrblPlotter
             // 
             this.control2ndGRBLToolStripMenuItem.Name = "control2ndGRBLToolStripMenuItem";
             resources.ApplyResources(this.control2ndGRBLToolStripMenuItem, "control2ndGRBLToolStripMenuItem");
-            this.control2ndGRBLToolStripMenuItem.Click += new System.EventHandler(this.Control2ndGRBLToolStripMenuItem_Click);
             // 
             // control3rdGRBLToolStripMenuItem
             // 
             this.control3rdGRBLToolStripMenuItem.Name = "control3rdGRBLToolStripMenuItem";
             resources.ApplyResources(this.control3rdGRBLToolStripMenuItem, "control3rdGRBLToolStripMenuItem");
-            this.control3rdGRBLToolStripMenuItem.Click += new System.EventHandler(this.Control3rdSerialCOMToolStripMenuItem_Click);
             // 
             // projectorToolStripMenuItem
             // 
             this.projectorToolStripMenuItem.Name = "projectorToolStripMenuItem";
             resources.ApplyResources(this.projectorToolStripMenuItem, "projectorToolStripMenuItem");
-            this.projectorToolStripMenuItem.Click += new System.EventHandler(this.ProjectorToolStripMenuItem_Click);
             // 
             // grblSetupToolStripMenuItem
             // 
@@ -3752,7 +3592,6 @@ namespace GrblPlotter
             // 
             // gamePadTimer
             // 
-            this.gamePadTimer.Tick += new System.EventHandler(this.GamePadTimer_Tick);
             // 
             // simulationTimer
             // 
@@ -3856,8 +3695,6 @@ namespace GrblPlotter
             this.ResizeEnd += new System.EventHandler(this.MainForm_Resize);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.MainForm_PreviewKeyDown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -4133,7 +3970,6 @@ namespace GrblPlotter
         private System.Windows.Forms.ToolStripMenuItem cmsFindDialog;
         private System.Windows.Forms.TableLayoutPanel tLPRechtsUntenRechts;
         private System.Windows.Forms.GroupBox Gb_Jogging;
-        private virtualJoystick.virtualJoystick virtualJoystickA;
         private System.Windows.Forms.Button btnJogStop;
         private System.Windows.Forms.GroupBox gB_Jog0;
         private System.Windows.Forms.Button btnJogZeroA;
@@ -4143,8 +3979,6 @@ namespace GrblPlotter
         private System.Windows.Forms.Button btnJogZeroZ;
         private System.Windows.Forms.Label lblTool;
         private System.Windows.Forms.CheckBox CbTool;
-        private virtualJoystick.virtualJoystick virtualJoystickZ;
-        private virtualJoystick.virtualJoystick virtualJoystickXY;
         private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.CheckBox CbCoolant;
         private System.Windows.Forms.CheckBox CbSpindle;
@@ -4159,8 +3993,6 @@ namespace GrblPlotter
         private System.Windows.Forms.Button btnZeroB;
         private System.Windows.Forms.Label label_mb;
         private System.Windows.Forms.Label label_wb;
-        private virtualJoystick.virtualJoystick virtualJoystickB;
-        private virtualJoystick.virtualJoystick virtualJoystickC;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
         private System.Windows.Forms.ToolStripMenuItem convertZToSspindleSpeedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rotate180ToolStripMenuItem;

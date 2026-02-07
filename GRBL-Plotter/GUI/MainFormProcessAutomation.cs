@@ -118,35 +118,6 @@ namespace GrblPlotter
                 if (act.Contains("stream"))
                     StartStreaming(0, fCTBCode.LinesCount - 1);
             }
-            else if (act == "probe automatic")
-            {
-                if (_probing_form == null)
-                { probingToolLengthToolStripMenuItem.PerformClick(); }
-                if (_probing_form != null)
-                {
-                    _probing_form.StartProbing(e.Value.ToUpper());
-                    // when finished, probing form sends event back _probing_form.RaiseProcessEvent += OnRaiseProbingProcessEvent;
-                }
-                else
-                {
-                    _process_form?.Feedback(e.Command, "Probing form is not open", false);
-                }
-            }
-            else if (act == "camera automatic")
-            {
-                if (_camera_form == null)
-                { toolStripMenuItem1.PerformClick(); }
-                if (_camera_form != null)
-                {
-                    _camera_form.StartFiducialDetection();
-                    // when finished, camera form sends event back _camera_form.RaiseProcessEvent += OnRaiseCameraProcessEvent;
-                }
-                else
-                {
-                    _process_form?.Feedback(e.Command, "Camera form is not open", false);
-                }
-            }
-
             else if (act.Contains("createtext"))
             {
                 if (_text_form == null)
@@ -173,27 +144,6 @@ namespace GrblPlotter
                 else
                 {
                     _process_form?.Feedback(e.Command, "Text form is not open", false);
-                }
-            }
-
-            else if (act.Contains("createbarcode"))	// == "Barcode 1D Text")
-            {
-                if (_barcode_form == null)
-                { createBarcodeToolStripMenuItem.PerformClick(); }
-
-                if (_barcode_form != null)
-                {
-                    if (act.Contains("1d text")) { _barcode_form.SetText1D(e.Value); }
-                    else if (act.Contains("1d data")) { _barcode_form.SetText1D(e.Value); }
-                    else if (act.Contains("2d text")) { _barcode_form.SetText2D(e.Value); }
-                    else if (act.Contains("2d data")) { _barcode_form.SetText2D(e.Value); }
-                    else if (act.Contains("2d url")) { _barcode_form.SetUrl2D(e.Value); }
-                    else if (act.Contains("2d durl")) { _barcode_form.SetUrl2D(e.Value); }
-                    _process_form?.Feedback(e.Command, "Barcode form: " + e.Value, true);
-                }
-                else
-                {
-                    _process_form?.Feedback(e.Command, "Barcode form is not open", false);
                 }
             }
 
@@ -297,8 +247,7 @@ namespace GrblPlotter
 
             else if (act == "checkform")
             {
-                if (e.Value == "Probe") { _process_form?.Feedback(e.Command, e.Value, (_probing_form != null)); }
-                if (e.Value == "Cam") { _process_form?.Feedback(e.Command, e.Value, (_camera_form != null)); }
+                // Removed checks for Probe and Cam
             }
         }
 

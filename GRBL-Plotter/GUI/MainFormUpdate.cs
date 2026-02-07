@@ -249,8 +249,6 @@ namespace GrblPlotter
                 StatusStripSet(0, "Logging enabled", Color.Yellow);
             else
                 StatusStripClear(0);
-
-            _projector_form?.Invalidate();
         }
         public void Update2DView(object sender, EventArgs e)
         {
@@ -276,10 +274,6 @@ namespace GrblPlotter
             MenuTranslateSetup();				// set rotary info in menu item 'translate'
 
             GuiEnableAxisABC();					// enable and resize axis ABC GUI buttons (set 0)
-            virtualJoystickA.Visible |= ctrl4thAxis || Grbl.axisA;
-            virtualJoystickA.JoystickText = ctrl4thName;
-            JoystickSetup();					// Joystick step and speed
-            JoystickResize();                   // relative size
 
             // 2-D view settings
             toolStripViewMachine.Checked = Properties.Settings.Default.machineLimitsShow;
@@ -303,9 +297,7 @@ namespace GrblPlotter
             if ((index >= 0) && (index < 5))
                 Grbl.pollInterval = interval[index];
 
-            gamePadTimer.Enabled = Properties.Settings.Default.gamePadEnable;
             CheckMachineLimit();
-            LoadHotkeys();
 
             // changed PWM settings			
             toolTip1.SetToolTip(BtnPenUp, string.Format("send 'M3 S{0}'", Properties.Settings.Default.importGCPWMUp));
@@ -477,64 +469,6 @@ namespace GrblPlotter
             }
 
         }
-        private void JoystickSetup()
-        {
-            joystickXYStep[0] = 0;
-            joystickXYStep[1] = (double)Properties.Settings.Default.guiJoystickXYStep1;
-            joystickXYStep[2] = (double)Properties.Settings.Default.guiJoystickXYStep2;
-            joystickXYStep[3] = (double)Properties.Settings.Default.guiJoystickXYStep3;
-            joystickXYStep[4] = (double)Properties.Settings.Default.guiJoystickXYStep4;
-            joystickXYStep[5] = (double)Properties.Settings.Default.guiJoystickXYStep5;
-            joystickXYSpeed[0] = 0.1;
-            joystickXYSpeed[1] = (double)Properties.Settings.Default.guiJoystickXYSpeed1;
-            joystickXYSpeed[2] = (double)Properties.Settings.Default.guiJoystickXYSpeed2;
-            joystickXYSpeed[3] = (double)Properties.Settings.Default.guiJoystickXYSpeed3;
-            joystickXYSpeed[4] = (double)Properties.Settings.Default.guiJoystickXYSpeed4;
-            joystickXYSpeed[5] = (double)Properties.Settings.Default.guiJoystickXYSpeed5;
-            joystickZStep[0] = 0;
-            joystickZStep[1] = (double)Properties.Settings.Default.guiJoystickZStep1;
-            joystickZStep[2] = (double)Properties.Settings.Default.guiJoystickZStep2;
-            joystickZStep[3] = (double)Properties.Settings.Default.guiJoystickZStep3;
-            joystickZStep[4] = (double)Properties.Settings.Default.guiJoystickZStep4;
-            joystickZStep[5] = (double)Properties.Settings.Default.guiJoystickZStep5;
-            joystickZSpeed[0] = 0.1;
-            joystickZSpeed[1] = (double)Properties.Settings.Default.guiJoystickZSpeed1;
-            joystickZSpeed[2] = (double)Properties.Settings.Default.guiJoystickZSpeed2;
-            joystickZSpeed[3] = (double)Properties.Settings.Default.guiJoystickZSpeed3;
-            joystickZSpeed[4] = (double)Properties.Settings.Default.guiJoystickZSpeed4;
-            joystickZSpeed[5] = (double)Properties.Settings.Default.guiJoystickZSpeed5;
-            joystickAStep[0] = 0;
-            joystickAStep[1] = (double)Properties.Settings.Default.guiJoystickAStep1;
-            joystickAStep[2] = (double)Properties.Settings.Default.guiJoystickAStep2;
-            joystickAStep[3] = (double)Properties.Settings.Default.guiJoystickAStep3;
-            joystickAStep[4] = (double)Properties.Settings.Default.guiJoystickAStep4;
-            joystickAStep[5] = (double)Properties.Settings.Default.guiJoystickAStep5;
-            joystickASpeed[0] = 0.1;
-            joystickASpeed[1] = (double)Properties.Settings.Default.guiJoystickASpeed1;
-            joystickASpeed[2] = (double)Properties.Settings.Default.guiJoystickASpeed2;
-            joystickASpeed[3] = (double)Properties.Settings.Default.guiJoystickASpeed3;
-            joystickASpeed[4] = (double)Properties.Settings.Default.guiJoystickASpeed4;
-            joystickASpeed[5] = (double)Properties.Settings.Default.guiJoystickASpeed5;
-            virtualJoystickXY.JoystickLabel = joystickXYStep;
-            virtualJoystickZ.JoystickLabel = joystickZStep;
-            virtualJoystickA.JoystickLabel = joystickAStep;
-            virtualJoystickB.JoystickLabel = joystickAStep;
-            virtualJoystickC.JoystickLabel = joystickAStep;
-
-            int raster = 5;
-            if (!Properties.Settings.Default.guiJoystickApperance1)
-            {
-                raster = 1;
-                cBSendJogStop.Enabled = false;
-            }
-            else
-            { cBSendJogStop.Enabled = true; }
-            virtualJoystickXY.JoystickRaster = raster;
-            virtualJoystickZ.JoystickRaster = raster;
-            virtualJoystickA.JoystickRaster = raster;
-            virtualJoystickB.JoystickRaster = raster;
-            virtualJoystickC.JoystickRaster = raster;
-        }
 
         // update controls on Main form (disable if streaming or no serial)
         // private void UpdateControlEnables()
@@ -559,13 +493,6 @@ namespace GrblPlotter
             bool allowControl = isStreamingPause;
             Logger.Trace("◯◯◯ updateControls isConnected:{0} isStreaming:{1} streamingAllowControl:{2} source:{3}", isConnected, isStreaming, allowControl, timerUpdateControlSource);
             timerUpdateControlSource = "";
-
-            virtualJoystickC.Enabled = isConnected && (!isStreaming || allowControl);
-            virtualJoystickB.Enabled = isConnected && (!isStreaming || allowControl);
-            virtualJoystickA.Enabled = isConnected && (!isStreaming || allowControl);
-            virtualJoystickZ.Enabled = isConnected && (!isStreaming || allowControl);
-            virtualJoystickXY.Enabled = isConnected && (!isStreaming || allowControl);
-            virtualJoystickXY.Invalidate();
 
             btnHome.Enabled = isConnected & !isStreaming | allowControl;
             btnZeroX.Enabled = isConnected & !isStreaming | allowControl;
@@ -638,8 +565,7 @@ namespace GrblPlotter
 
             if (!Grbl.isVersion_0)
             {
-                virtualJoystickXY.ShowStop = virtualJoystickZ.ShowStop = btnJogStop.Visible = true;
-                virtualJoystickA.ShowStop = virtualJoystickB.ShowStop = virtualJoystickC.ShowStop = true;
+                btnJogStop.Visible = true;
                 gBoxOverride.Enabled = isConnected;
                 tableLayoutPanel4.RowStyles[0].Height = 30f;
                 tableLayoutPanel4.RowStyles[1].Height = 30f;
@@ -647,8 +573,7 @@ namespace GrblPlotter
             }
             else
             {
-                virtualJoystickXY.ShowStop = virtualJoystickZ.ShowStop = btnJogStop.Visible = false;
-                virtualJoystickA.ShowStop = virtualJoystickB.ShowStop = virtualJoystickC.ShowStop = false;
+                btnJogStop.Visible = false;
                 gBoxOverride.Enabled = false;
                 tableLayoutPanel4.RowStyles[0].Height = 40f;
                 tableLayoutPanel4.RowStyles[1].Height = 0f;

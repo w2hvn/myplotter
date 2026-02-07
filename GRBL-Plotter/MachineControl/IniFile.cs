@@ -107,11 +107,8 @@ namespace GrblPlotter
             if (!iniSection.ContainsKey(sectionSetupJoystick)) { iniSection.Add(sectionSetupJoystick, keyValueSetupJoystick); }
             if (!iniSection.ContainsKey(sectionSetupGamePad)) { iniSection.Add(sectionSetupGamePad, keyValueSetupGamePad); }
             /* other forms */
-            if (!iniSection.ContainsKey(sectionCamera)) { iniSection.Add(sectionCamera, keyValueCamera); }
             if (!iniSection.ContainsKey(sectionConnections)) { iniSection.Add(sectionConnections, keyValueConnections); }
             if (!iniSection.ContainsKey(sectionText)) { iniSection.Add(sectionText, keyValueText); }
-            if (!iniSection.ContainsKey(sectionBarcode)) { iniSection.Add(sectionBarcode, keyValueBarcode); }
-            if (!iniSection.ContainsKey(sectionShapeTool)) { iniSection.Add(sectionShapeTool, keyValueShapeTool); }
             if (!iniSection.ContainsKey(sectionProcAuto)) { iniSection.Add(sectionProcAuto, keyValueProcAuto); }
         }
 
@@ -325,11 +322,8 @@ namespace GrblPlotter
             var setup = Properties.Settings.Default;
             string section;
 
-            WriteSection(sectionCamera);
             WriteSection(sectionConnections);
             WriteSection(sectionText);
-            WriteSection(sectionBarcode);
-            WriteSection(sectionShapeTool);
             WriteSection(sectionProcAuto);
 
             if (setup.guiExtendedLoggingEnabled)

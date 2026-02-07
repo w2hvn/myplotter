@@ -536,88 +536,14 @@ namespace GrblPlotter
 
         private void TabPage24_Enter(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
-            try { ControlGamePad.Initialize(); timer1.Interval = 200; }
-            catch (Exception err) { Logger.Error(err, "TabPage24_Enter "); }
         }
 
         private void TabPage24_Leave(object sender, EventArgs e)
         {
-            timer1.Enabled = false;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                if (ControlGamePad.gamePad != null)
-                {
-                    ControlGamePad.gamePad.Poll();
-                    var datas = ControlGamePad.gamePad.GetBufferedData();
-                    //     lblgp.Text = "";
-                    foreach (var state in datas)
-                    {
-                        lblgp.Text = state.Offset + " Value: " + state.Value.ToString() + " Hex: " + state.Value.ToString("X4");// + " | ";
-                        ProcessGamepad(state);
-                    }
-                }
-            }
-            catch
-            {
-                try { ControlGamePad.Initialize(); timer1.Interval = 200; }
-                catch { timer1.Interval = 5000; }
-            }
-        }
-        private void ProcessGamepad(SharpDX.DirectInput.JoystickUpdate state)
-        {
-            string offset = state.Offset.ToString();
-            int value = state.Value;
-            if (offset.IndexOf("Buttons") >= 0)
-            {
-                foreach (Control c in this.tab7gB1.Controls)
-                {
-                    if (c.Name == ("lbl" + offset)) if (c != null)
-                        { c.BackColor = (value > 0) ? Color.Lime : Color.LightGray; break; }
-                }
-            }
-            else if (offset.IndexOf("PointOfViewControllers0") >= 0)
-            {
-                lblPOVC00.BackColor = lblPOVC01.BackColor = lblPOVC02.BackColor = lblPOVC03.BackColor = Color.LightGray;
-                lblPOVC04.BackColor = lblPOVC05.BackColor = lblPOVC06.BackColor = lblPOVC07.BackColor = Color.LightGray;
-                if (value == 0) { lblPOVC00.BackColor = Color.Lime; } // up
-                else if (value == 4500) { lblPOVC01.BackColor = Color.Lime; } // up-right
-                else if (value == 9000) { lblPOVC02.BackColor = Color.Lime; } // right
-                else if (value == 13500) { lblPOVC03.BackColor = Color.Lime; } // down-right
-                else if (value == 18000) { lblPOVC04.BackColor = Color.Lime; } // down
-                else if (value == 22500) { lblPOVC05.BackColor = Color.Lime; } // down-left
-                else if (value == 27000) { lblPOVC06.BackColor = Color.Lime; } // left
-                else if (value == 31500) { lblPOVC07.BackColor = Color.Lime; } // up-left
-            }
-
-            else if (offset == "X")
-            { trackBarX.Value = value; lblValX.Text = GamePadGetValue(value); lblValX.BackColor = GamePadGetColor(value); }
-            else if (offset == "Y")
-            { trackBarY.Value = value; lblValY.Text = GamePadGetValue(value); lblValY.BackColor = GamePadGetColor(value); }
-            else if (offset == "Z")
-            { trackBarZ.Value = value; lblValZ.Text = GamePadGetValue(value); lblValZ.BackColor = GamePadGetColor(value); }
-            else if (offset == "RotationZ")
-            { trackBarR.Value = value; lblValR.Text = GamePadGetValue(value); lblValR.BackColor = GamePadGetColor(value); }
-        }
-        private string GamePadGetValue(int value)
-        { return (value - nUDOffset.Value).ToString(); }
-        private Color GamePadGetColor(int value)
-        {
-            int center = (int)Math.Abs(value - nUDOffset.Value);
-            Color tmp = Color.Transparent;
-            if (center <= 5)
-                return tmp;
-            if (center <= nUDDead.Value)
-            { tmp = Color.Lime; }
-            else if (center <= nUDMinimum.Value)
-            { tmp = Color.Yellow; }
-            else
-            { tmp = Color.Fuchsia; }
-            return tmp;
         }
 
         private void HsFilterScroll(object sender, ScrollEventArgs e)
@@ -1383,12 +1309,6 @@ namespace GrblPlotter
 
         private void CbGPEnable_CheckedChanged(object sender, EventArgs e)
         {
-            if (cBGPEnable.Checked)
-            {
-                try { ControlGamePad.Initialize(); }
-                catch (Exception err) { Logger.Error(err, "CbGPEnable_CheckedChanged "); }
-
-            }
         }
 
         private void Cbsimulation_CheckedChanged(object sender, EventArgs e)

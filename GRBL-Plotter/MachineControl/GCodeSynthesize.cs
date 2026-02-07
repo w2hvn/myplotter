@@ -50,36 +50,12 @@ namespace GrblPlotter
         { return CreateGCodeProg(false, false, false, ConvertMode.RemoveZ); }   // createGCodeProg(bool replaceG23, bool splitMoves, bool applyNewZ, bool removeZ, HeightMap Map=null)
 
         /// <summary>
-        /// apply new z-value to all gcode coordinates
-        /// </summary>
-        internal static string ApplyHeightMap(HeightMap Map)//IList<string> oldCode,
-        {
-            heightMapGridWidth = (float)Map.GridX;
-            //getGCodeLines(oldCode, null, null, true);                // read gcode and process subroutines
-            Logger.Debug("ApplyHeightMap  splitMoves by:{0}", heightMapGridWidth);
-            IList<string> tmp = CreateGCodeProg(true, true, false, ConvertMode.Nothing, null, "Split moves").Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None).ToList();      // split lines and arcs createGCodeProg(bool replaceG23, bool applyNewZ, bool removeZ, HeightMap Map=null)
-            Logger.Debug("ApplyHeightMap  reload code");
-            GetGCodeLines(tmp, null, null, false);                  // reload code
-            Logger.Debug("ApplyHeightMap  apply map");
-            return CreateGCodeProg(false, false, true, ConvertMode.Nothing, Map, "Apply Map");        // apply new Z-value;
-        }
-
-        /// <summary>
-        /// undo height map (reload saved backup)
-        /// </summary>
-        public static void ClearHeightMap()
-        {
-            pathHeightMap.Reset();
-            pathBackground.Reset();
-        }
-
-        /// <summary>
         /// Generate GCode from given coordinates in GCodeList
         /// only replace lines with coordinate information
         /// </summary>
         private static string CreateGCodeProg(string info = "")
-        { return CreateGCodeProg(false, false, false, ConvertMode.Nothing, null, info); }
-        internal static string CreateGCodeProg(bool replaceG23, bool splitMoves, bool applyNewZ, ConvertMode specialCmd, HeightMap Map = null, string info = "")
+        { return CreateGCodeProg(false, false, false, ConvertMode.Nothing, info); }
+        internal static string CreateGCodeProg(bool replaceG23, bool splitMoves, bool applyNewZ, ConvertMode specialCmd, string info = "")
         {
             Logger.Debug("+++ CreateGCodeProg replaceG23: {0}, splitMoves: {1}, applyNewZ: {2}, specialCmd: {3}, info: '{4}'", replaceG23, splitMoves, applyNewZ, specialCmd, info);
             if (replaceG23)
@@ -207,18 +183,6 @@ namespace GrblPlotter
                         if (gcline.y != null)
                         { tmpCode.AppendFormat(" Y{0}", Gcode.FrmtNum((double)gcline.y)); getCoordinateXY = true; }
 
-                        if ((getCoordinateXY || (gcline.z != null)) && applyNewZ && (Map != null))  //(gcline.motionMode != 0) &&       if (getCoordinateXY && applyNewZ && (Map != null))
-                        {
-                            if (!gcline.ismachineCoordG53 && gcline.isdistanceModeG90)				//  ismachineCoordG53 includes G28 (GCodeParser.cs)
-                            {
-                                newZ = Map.InterpolateZ(gcline.actualPos.X, gcline.actualPos.Y);
-                                if (gcline.z == null)
-                                    gcline.z = gcline.actualPos.Z;
-                                //      infoCode = string.Format("( dZ:{0:0.000} actZ:{1:0.000} )", newZ, gcline.z);
-                                if (gcline.motionMode != 0)
-                                { gcline.z += newZ; }
-                            }
-                        }
 
                         if (specialCmd == ConvertMode.ConvertZToS)
                         {

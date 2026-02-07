@@ -1,4 +1,4 @@
-﻿/*  GRBL-Plotter. Another GCode sender for GRBL.
+/*  GRBL-Plotter. Another GCode sender for GRBL.
     This file is part of the GRBL-Plotter application.
    
     Copyright (C) 2015-2025 Sven Hasemann contact: svenhb@web.de
@@ -16,24 +16,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-/*
- * 2019-07-08 add foldCode() to text and image import 
- * 2020-01-01 replace #if debuginfo by Logger.Info
- * 2021-01-15 import code from jog path creator
- * 2021-01-20 move code for camera handling from 'MainForm' to here
- * 2021-01-20 bug fix rotation from camera form
- * 2021-07-02 code clean up / code quality
- * 2022-04-04 in TransformEnd() add _projector_form.Invalidate();
- * 2022-07-29 Update_GCode_Depending_Controls add try catch
- * 2022-10-19 line 258, 298 check if Graphic.GCode == null
- * 2022-12-21 line 319 GetGCodeFromImage check if _image_form != null
- * 2023-01-28 add AfterImport to bring main GUI to front after getting gcode
- * 2023-09-06 l:235 f:InsertCodeFromForm add SetSelection (MainFormPictureBox.cs) to select newly inserted object
- * 2024-03-11 l:851 new f: convertToPolarCoordinatesToolStripMenuItem_Click
- * 2024-05-06 l:385 f:GetGCodeJogCreator2 check if form != null
- * 2024-05-28 l:103 f:ApplyHeightMap add log
- * 2024-11-27 l:517 f:TransformStart	add try catch
-*/
+
 using FastColoredTextBoxNS;
 using System;
 using System.Drawing;
@@ -46,105 +29,6 @@ namespace GrblPlotter
 {
     public partial class MainForm : Form
     {
-
-        // handle event from create Height Map form
-        #region heightmap
-        private void GetGCodeScanHeightMap(object sender, EventArgs e)
-        {
-            if (!isStreaming && _serial_form.SerialPortOpen)
-            {
-                if (_heightmap_form.scanStarted)
-                {
-                    string[] commands = _heightmap_form.GetCode.ToString().Split('\r');
-                    _serial_form.IsHeightProbing = true;
-                    foreach (string cmd in commands)            // fill up send queue
-                    {
-                        if (machineStatus == GrblState.alarm)
-                            break;
-                        SendCommand(cmd);
-                    }
-                    VisuGCode.DrawHeightMap(_heightmap_form.Map);
-                    VisuGCode.CreateMarkerPath();
-                    VisuGCode.CalcDrawingArea();
-                    pictureBox1.BackgroundImage = null;
-                    pictureBox1.Invalidate();
-                    if (_diyControlPad != null)
-                    { _diyControlPad.isHeightProbing = true; }
-                    Properties.Settings.Default.counterUseHeightMap += 1;
-
-                }
-                else
-                {
-                    _serial_form.StopStreaming(true);   // isNotStartup = true
-                    if (_diyControlPad != null)
-                    { _diyControlPad.isHeightProbing = false; }
-                }
-                isHeightMapApplied = false;
-            }
-        }
-        private void LoadHeightMap(object sender, EventArgs e)
-        { LoadHeightMap(); }
-        private void LoadHeightMap()
-        { 
-            if ((_heightmap_form!=null) && _heightmap_form.mapIsLoaded)
-            {
-                VisuGCode.DrawHeightMap(_heightmap_form.Map);
-                VisuGCode.CreateMarkerPath();
-                VisuGCode.CalcDrawingArea();
-                pictureBox1.BackgroundImage = null;
-                pictureBox1.Invalidate();
-                isHeightMapApplied = false;
-                _heightmap_form.mapIsLoaded = false;
-            }
-        }
-
-        private bool isHeightMapApplied = false;
-        private readonly StringBuilder codeBeforeHeightMap = new StringBuilder();
-        private void ApplyHeightMap(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-			Logger.Debug("ApplyHeightMap  isApplied:{0}", isHeightMapApplied);
-            if (!isHeightMapApplied)
-            {
-                LoadHeightMap(sender, e);
-                codeBeforeHeightMap.Clear();
-                foreach (string codeline in fCTBCode.Lines)
-                {
-                    if (codeline.Length > 0)
-                        codeBeforeHeightMap.AppendLine(codeline);
-                }
-                VisuGCode.GetGCodeLines(fCTBCode.Lines, null, null);
-                fCTBCode.Text = VisuGCode.ApplyHeightMap(_heightmap_form.Map);//fCTBCode.Lines,
-                Update_GCode_Depending_Controls();
-                _heightmap_form.SetBtnApply(isHeightMapApplied);
-                isHeightMapApplied = true;
-                delayedHeightMapShow = 2;
-            }
-            else
-            {
-                fCTBCode.Text = codeBeforeHeightMap.ToString();
-                Update_GCode_Depending_Controls();
-                _heightmap_form.SetBtnApply(isHeightMapApplied);
-                isHeightMapApplied = false;
-            }
-            Cursor.Current = Cursors.Default;
-        }
-
-        private void GetGCodeFromHeightMap(object sender, EventArgs e)
-        {
-            if (!isStreaming)
-            {
-                SimuStop();
-                VisuGCode.ClearHeightMap();
-                NewCodeStart();     // GetGCodeFromHeightMap
-                SetFctbCodeText(_heightmap_form.scanCode.ToString().Replace(',', '.'));
-                SetLastLoadedFile("from height map", "");
-                NewCodeEnd();       // GetGCodeFromHeightMap
-            }
-        }
-
-        #endregion
-
         // handle event from create Text,  shape, barcode, image, jog path creator
         #region create_from_form
 
@@ -171,7 +55,7 @@ namespace GrblPlotter
                     Place selStartGrp;
                     selStartGrp.iLine = XmlMarker.FindInsertPositionFigureMostBottom(insertLineNr);
                     selStartGrp.iChar = 0;
-                    Range mySelectionGrp = new Range(fCTBCode);
+                FastColoredTextBoxNS.Range mySelectionGrp = new FastColoredTextBoxNS.Range(fCTBCode);
                     mySelectionGrp.Start = mySelectionGrp.End = selStartGrp;
                     fCTBCode.Selection = mySelectionGrp;
                     fCTBCode.InsertText("(" + XmlMarker.GroupEnd + ">)\r\n", false);    // insert new code
@@ -285,26 +169,6 @@ namespace GrblPlotter
 
         // Create GCode forms
 
-        private void GetGCodeForWireCutter(object sender, EventArgs e)
-        {
-            if (!isStreaming)
-            {
-                string tmpCode = "(no gcode)";
-                if (Graphic.GCode != null)
-                {
-                    tmpCode = Graphic.GCode.ToString();
-                }
-                InsertCodeFromForm(tmpCode, "for wirecutter", _wireCutter_form.PathBackground);
-         //       Properties.Settings.Default.counterImportText += 1;
-                string source = "Iwi";
-                if (Properties.Settings.Default.fromFormInsertEnable)
-                    source = "I" + source;
-                AfterImport(source);
-            }
-            else
-                MessageBox.Show(Localization.GetString("mainStreamingActive"), Localization.GetString("mainAttention"), MessageBoxButtons.OK, MessageBoxIcon.Stop);
-        }
-
         private void GetGCodeFromText(object sender, EventArgs e)
         {
             if (!isStreaming)
@@ -325,178 +189,6 @@ namespace GrblPlotter
                 MessageBox.Show(Localization.GetString("mainStreamingActive"), Localization.GetString("mainAttention"), MessageBoxButtons.OK, MessageBoxIcon.Stop);
         }
 
-        private void GetGCodeFromBarcode(object sender, EventArgs e)
-        {
-            Logger.Info("▀▀▀▀▀▀ GetGCodeFromBarcode");
-            if (!isStreaming)
-            {
-                string tmpCode = "(no gcode)";
-                if (Graphic.GCode != null)
-                {
-                    tmpCode = Graphic.GCode.ToString();
-                }
-                InsertCodeFromForm(tmpCode, "from barcode");
-                Properties.Settings.Default.counterImportBarcode += 1;
-                string source = "Ibqr";
-                if (Properties.Settings.Default.fromFormInsertEnable)
-                    source = "I" + source;
-                AfterImport(source);
-            }
-            else
-                MessageBox.Show(Localization.GetString("mainStreamingActive"));
-
-            Cursor.Current = Cursors.Default;
-        }
-
-        private void GetGCodeFromImage(object sender, EventArgs e)
-        {
-            Logger.Info("▀▀▀▀▀▀ GetGCodeFromImage");
-            if (!isStreaming)
-            {
-                if ((_image_form != null) && (!String.IsNullOrEmpty(_image_form.ImageGCode)))
-                {
-                    SimuStop();
-                    VisuGCode.pathBackground.Reset();
-                    NewCodeStart(false);             // GetGCodeFromImage
-                    SetFctbCodeText(_image_form.ImageGCode);
-                    if (Properties.Settings.Default.importImageResoApply)
-                        penDown.Width = (float)Properties.Settings.Default.importImageReso;
-                    else
-                        penDown.Width = (float)Properties.Settings.Default.gui2DWidthPenDown;
-                    //    SetLastLoadedFile("from image", "");
-                    NewCodeEnd();                   // GetGCodeFromImage
-                    FoldCodeOnLoad();
-                    Properties.Settings.Default.counterImportImage += 1;
-                    AfterImport("Iimg");
-                    CalculatePicScaling();          // update picScaling
-                }
-                else
-                { Logger.Error("GetGCodeFromImage form is already closed or string is empty"); }
-            }
-            else
-                MessageBox.Show(Localization.GetString("mainStreamingActive"));
-        }
-
-        private void GetGCodeFromShape(object sender, EventArgs e)
-        {
-            Logger.Info("▀▀▀▀▀▀ GetGCodeFromShape");
-            if (!isStreaming)
-            {
-                if (_shape_form != null)
-                {
-                    InsertCodeFromForm(_shape_form.ShapeGCode, "from shape", _shape_form.PathBackground);
-                    Properties.Settings.Default.counterImportShape += 1;
-                    string source = "Ishp";
-                    if (Properties.Settings.Default.fromFormInsertEnable)
-                        source = "I" + source;
-                    AfterImport(source);
-                }
-            }
-            else
-                MessageBox.Show(Localization.GetString("mainStreamingActive"));
-        }
-
-        private void GetGCodeJogCreator(object sender, EventArgs e)
-        {
-            Logger.Info("▀▀▀▀▀▀ GetGCodeJogCreator");
-            if (!isStreaming)
-            {
-                if (_jogPathCreator_form != null)
-                {
-                    SendCommands(_jogPathCreator_form.JogGCode, true);
-                }
-            }
-            else
-                MessageBox.Show(Localization.GetString("mainStreamingActive"));
-        }
-
-        private void GetGCodeJogCreator2(object sender, EventArgs e)
-        {
-            Logger.Info("▀▀▀▀▀▀ GetGCodeJogCreator2");
-            if (!isStreaming)
-            {
-                if (_jogPathCreator_form != null)
-                {
-                    SimuStop();
-                    importOptions = "";
-                    NewCodeStart();             // GetGCodeJogCreator2
-                    SetFctbCodeText(_jogPathCreator_form.JogGCode);
-                    SetLastLoadedFile("from jog path creator", "");
-                    NewCodeEnd();       // GetGCodeJogCreator2
-                    ShowImportOptions();
-                }
-            }
-            else
-                MessageBox.Show(Localization.GetString("mainStreamingActive"));
-        }
-
-        #endregion
-
-        // handle positon click event from camera form
-        #region camera
-        private void OnRaisePositionClickEvent(object sender, XyzEventArgs e)
-        {
-            if (e.Command.IndexOf("G90") >= 0)
-            {
-                string final = e.Command;
-                if (Grbl.isMarlin) final += ";G1 ";
-                if (e.PosX != null)
-                    final += string.Format(" X{0}", Gcode.FrmtNum((float)e.PosX));
-                if (e.PosY != null)
-                    final += string.Format(" Y{0}", Gcode.FrmtNum((float)e.PosY));
-                if (e.PosZ != null)
-                    final += string.Format(" Z{0}", Gcode.FrmtNum((float)e.PosZ));
-                final += string.Format(" F{0}", Gcode.FrmtNum((float)Grbl.DefaultFeed));
-                SendCommands(final.Replace(',', '.'), true);
-            }
-        }
-        private void OnRaiseCameraClickEvent(object sender, XYEventArgs e)
-        {
-            if (e.Command == "a")
-            {
-                if (fCTBCode.LinesCount > 1)
-                {
-                    VisuGCode.MarkSelectedFigure(-1);           // rotate all figures
-                    TransformStart(string.Format("Rotate {0:0.00}", e.Angle));
-                    fCTBCode.Text = VisuGCode.TransformGCodeRotate(e.Angle, e.Scale, e.Point, false);     // use given center
-                    TransformEnd();
-                }
-            }
-            else
-            {
-                double realStepX = Math.Round(e.Point.X, 3);
-                double realStepY = Math.Round(e.Point.Y, 3);
-                int speed;
-                string s;
-                string[] line = e.Command.Split(';');
-                foreach (string cmd in line)
-                {
-                    if (cmd.Trim() == "G92")
-                    {
-                        s = String.Format(cmd + " X{0} Y{1}", realStepX, realStepY).Replace(',', '.');
-                        SendCommand(s);
-                    }
-                    else if ((cmd.Trim().IndexOf("G0") >= 0) || (cmd.Trim().IndexOf("G1") >= 0))        // no jogging
-                    {
-                        s = String.Format(cmd + " X{0} Y{1}", realStepX, realStepY).Replace(',', '.');
-                        SendCommand(s);
-                    }
-                    else if ((cmd.Trim().IndexOf("G90") >= 0) || (cmd.Trim().IndexOf("G91") == 0))      // no G0 G1, then jogging
-                    {
-                        speed = 100 + (int)Math.Sqrt(realStepX * realStepX + realStepY * realStepY) * 120;
-                        s = String.Format("{0} X{1} Y{2} F{3}", cmd, realStepX, realStepY, speed).Replace(',', '.');
-                        if (Grbl.isMarlin)
-                            s = String.Format("{0}; G1 X{1} Y{2} F{3}", cmd, realStepX, realStepY, speed).Replace(',', '.');
-
-                        SendCommands(s, true);
-                    }
-                    else
-                    {
-                        SendCommand(cmd.Trim());
-                    }
-                }
-            }
-        }
         #endregion
 
         #region MAIN-MENU GCode Transform
@@ -539,7 +231,7 @@ namespace GrblPlotter
             manualEdit = false;
             fCTBCode.BackColor = Color.White;
             resetView = false;
-            _projector_form?.Invalidate();
+            // _projector_form?.Invalidate(); // Removed
             GuiVariables.WriteDimensionToRegistry();
             Logger.Info("▲▲▲▲▲▲ TransformEnd");
             if (MyApplication.ESCwasPressed)
