@@ -63,7 +63,7 @@ namespace GrblPlotter
         /* check prog. version */
         private void Button2_Click(object sender, EventArgs e)
         {
-            CheckUpdate.CheckVersion(true, Properties.Settings.Default.guiLastEndReason);
+            MessageBox.Show("Update check disabled in this version.");
         }
 
         /* open AppData */

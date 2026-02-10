@@ -21,7 +21,6 @@
  * 2024-03-19 l:60 f:CalcArc replace float by double
 */
 
-using AForge.Math;
 using System;
 using System.Collections.Generic;
 using System.Windows;

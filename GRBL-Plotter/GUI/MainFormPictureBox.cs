@@ -349,8 +349,6 @@ namespace GrblPlotter
                 if (Properties.Settings.Default.guiDimensionShow)
                     e.DrawPath(penDimension, VisuGCode.pathDimension);
 
-                e.DrawPath(penHeightMap, VisuGCode.pathHeightMap);
-
                 if (Properties.Settings.Default.gui2DRulerShow)
                 {
                     if ((picScaling * zoomFactor) > 10)
@@ -696,8 +694,6 @@ namespace GrblPlotter
 
             if ((diff <= SystemInformation.DoubleClickTime) && (diff > 100))
             { PictureBox1_DoubleClick(sender, e); } // reset zoom factor on middle btn
-
-            _projector_form?.Invalidate();
         }
 
         private void ApplyTransform(SelectionHandle.TransformData tmpTransform)
@@ -755,8 +751,6 @@ namespace GrblPlotter
             Logger.Trace("applyLastTransformToolStripMenuItem_Click");
             if (SelectionHandle.IsActive)
                 ApplyTransform(SelectionHandle.LastTransform);
-
-            _projector_form?.Invalidate();
         }
 
         // find closest coordinate in GCode and mark
@@ -1216,8 +1210,6 @@ namespace GrblPlotter
             fCTBCode.Clear();
             NewCodeEnd();
             globalCollectionCounter = 1;
-            _heightmap_form?.SetBtnApply(true);
-            isHeightMapApplied = false;
 
             lastLoaded = "";
             ShowFormText();
@@ -1236,7 +1228,7 @@ namespace GrblPlotter
         private void DuplicateSelectedPath()
         {
             UnDo.SetCode(fCTBCode.Text, cmsPicBoxDuplicatePath.Text, this);
-            Range range = fCTBCode.Selection.Clone();
+            FastColoredTextBoxNS.Range range = fCTBCode.Selection.Clone();
             Logger.Trace("++▽▽ DuplicateSelectedPath lines:{0}  figureIsMarked:{1}  lastMarkerType:{2}   range:{3}", fCTBCode.LinesCount, figureIsMarked, lastMarkerType, range);
             if (figureIsMarked && (lastMarkerType != XmlMarkerType.Node))
             {

@@ -97,16 +97,6 @@ namespace GrblPlotter
 
             if (isStreaming && Properties.Settings.Default.guiProgressShow && !VisuGCode.largeDataAmount)
                 VisuGCode.ProcessedPath.ProcessedPathDraw(Grbl.posWork);
-
-
-            if (_diyControlPad != null)
-            {
-                if (oldRaw != e.Raw)
-                {
-                    _diyControlPad.SendFeedback(e.Raw);     //hand over original grbl text
-                    oldRaw = e.Raw;
-                }
-            }
         }
 
         private void ProcessStatusMessage(ModState StatMsg)
@@ -214,11 +204,6 @@ namespace GrblPlotter
                 }
             }
 
-            if (_probing_form != null)
-            {
-                _probing_form.SetGrblMachineState = StatMsg;
-            }
-
         }
         private void SetAccessoryButton(Button Btn, bool setOn)
         {
@@ -229,8 +214,6 @@ namespace GrblPlotter
         }
         private void ProcessOverrideValues(string txt)
         {
-            _streaming_form2?.ShowOverrideValues(txt);
-
             string[] value = txt.Split(',');
             if (value.Length > 2)
             {
@@ -242,8 +225,6 @@ namespace GrblPlotter
 
         private void ProcessOverrideCurrentFeedSpeed(string txt)
         {
-            _streaming_form2?.ShowActualValues(txt);
-
             string[] value = txt.Split(',');
             if (value.Length > 1)
             {
@@ -375,7 +356,6 @@ namespace GrblPlotter
                         StatusStripSet(1, Grbl.StatusToText(machineStatus) + " " + Grbl.lastMessage, Grbl.GrblStateColor(machineStatus));
                         StatusStripSet(2, lblInfoText, Color.Yellow);
                         Grbl.lastMessage = "";
-                        _heightmap_form?.StopScan();
                         break;
 
                     case GrblState.check:
@@ -394,19 +374,6 @@ namespace GrblPlotter
 
                     case GrblState.probe:
                         posProbe = _serial_form.posProbe;
-                        if (_diyControlPad != null)
-                        {
-                            if (alternateZ != null)
-                                posProbe.Z = (double)alternateZ;
-                        }
-                        if (_heightmap_form != null)
-                            _heightmap_form.SetPosProbe = posProbe;
-
-                        if (_probing_form != null)
-                        {
-                            Logger.Info("Update Probing {0}", Grbl.DisplayCoord("PRB"));
-                            _probing_form.SetPosProbe = Grbl.GetCoord("PRB");
-                        }
 
                         lastInfoText = lbInfo.Text;
                         SetTextThreadSave(lbInfo, string.Format("{0}: X:{1:0.00} Y:{2:0.00} Z:{3:0.00}", Localization.GetString("mainInfoProbing"), posProbe.X, posProbe.Y, posProbe.Z), Color.Yellow);
@@ -429,8 +396,6 @@ namespace GrblPlotter
                     default:
                         break;
                 }
-                if (_probing_form != null)
-                { _probing_form.SetGrblState = machineStatus; }
 
             }
             lastMachineStatus = machineStatus;
@@ -464,8 +429,6 @@ namespace GrblPlotter
 
                 lblCurrentG.Text = "G" + cmd.coord_select.ToString();
                 lblCurrentG.BackColor = (cmd.coord_select == 54) ? Color.Lime : Color.Fuchsia;
-                if (_camera_form != null)
-                    _camera_form.SetCoordG = cmd.coord_select;
                 if (_coordSystem_form != null)
                 {
                     _coordSystem_form.MarkActiveCoordSystem(lblCurrentG.Text);

@@ -67,7 +67,7 @@ namespace GrblPlotter
         private int dataLine = 0;
 
         private static List<ProcessAutomationItem> actionItems = new List<ProcessAutomationItem>();
-        private readonly ContextMenu ctm = new ContextMenu();
+        private readonly ContextMenuStrip ctm = new ContextMenuStrip();
         const string reg_key = "HKEY_CURRENT_USER\\SOFTWARE\\GRBL-Plotter";
 
         // Trace, Debug, Info, Warn, Error, Fatal
@@ -135,7 +135,7 @@ namespace GrblPlotter
 
             actionItems = GetActionItems();
             foreach (ProcessAutomationItem item in actionItems)
-                ctm.MenuItems.Add(item.Command);
+                ctm.Items.Add(item.Command);
 
             InitializeComponent();
         }
@@ -277,7 +277,7 @@ namespace GrblPlotter
 
         private void BtnLoad_Click(object sender, EventArgs e)
         {
-            OpenFileDialog sfd = new OpenFileDialog
+            System.Windows.Forms.OpenFileDialog sfd = new System.Windows.Forms.OpenFileDialog
             {
                 Filter = "Script|*.xml;*.ini"
             };
@@ -312,7 +312,7 @@ namespace GrblPlotter
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog
+            System.Windows.Forms.SaveFileDialog sfd = new System.Windows.Forms.SaveFileDialog
             {
                 Filter = "Script|*.xml"
             };
@@ -349,7 +349,7 @@ namespace GrblPlotter
         {
             try
             {
-                SaveFileDialog sfd = new SaveFileDialog
+                System.Windows.Forms.SaveFileDialog sfd = new System.Windows.Forms.SaveFileDialog
                 {
                     Filter = "Machine Ini files (*.ini)|*.ini",
                     FileName = "ProcessAutomation_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".ini"
@@ -1264,7 +1264,7 @@ namespace GrblPlotter
 
         private void BtnLoadData_Click(object sender, EventArgs e)
         {
-            OpenFileDialog sfd = new OpenFileDialog
+            System.Windows.Forms.OpenFileDialog sfd = new System.Windows.Forms.OpenFileDialog
             {
                 Filter = "CSV|*.csv;*.txt"
             };
@@ -1618,7 +1618,7 @@ namespace GrblPlotter
 
                 if (currentMouseOverRow >= 0)
                 {
-                    ctm.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
+                    ctm.Items.Add(new ToolStripMenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
                 }
 
                 ctm.Show(dataGridView1, new Point(e.X, e.Y));

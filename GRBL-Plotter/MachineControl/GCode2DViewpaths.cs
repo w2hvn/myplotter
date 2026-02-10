@@ -70,7 +70,6 @@ namespace GrblPlotter
         internal static GraphicsPath pathGrid10000 = new GraphicsPath();
         internal static GraphicsPath pathTool = new GraphicsPath();
         internal static GraphicsPath pathMarker = new GraphicsPath();
-        internal static GraphicsPath pathHeightMap = new GraphicsPath();
         internal static GraphicsPath pathMachineLimit = new GraphicsPath();
         internal static GraphicsPath pathToolTable = new GraphicsPath();
         internal static GraphicsPath pathBackground = new GraphicsPath();
@@ -96,7 +95,6 @@ namespace GrblPlotter
             pathRuler.Reset();
             pathTool.Reset();
             pathMarker.Reset();
-            pathHeightMap.Reset();
             //       pathBackground.Reset();
             pathMarkSelection.Reset();
             pathRotaryInfo.Reset();
@@ -430,81 +428,6 @@ namespace GrblPlotter
             origWCOMachineLimit = (XyPoint)Grbl.posWCO;
         }
 
-        /// <summary>
-        /// create height map path in work coordinates
-        /// </summary>
-        internal static void DrawHeightMap(HeightMap Map)
-        {
-            pathHeightMap.Reset();
-            Vector2 tmp, tmpOld;
-            int x = 0, y;
-            for (y = 0; y < Map.SizeY; y++)
-            {
-                tmp = Map.GetCoordinates(x, y);
-                pathHeightMap.StartFigure();
-                pathHeightMap.AddLine((float)Map.Min.X, (float)tmp.Y, (float)Map.Max.X, (float)tmp.Y);
-            }
-            for (x = 0; x < Map.SizeX; x++)
-            {
-                tmp = Map.GetCoordinates(x, Map.SizeY - 1);
-                pathHeightMap.StartFigure();
-                pathHeightMap.AddLine((float)tmp.X, (float)Map.Min.Y, (float)tmp.X, (float)Map.Max.Y);
-            }
-
-            // show X shape -> Z on Y axis
-            double z, zOld, offsetX = -10, offsetY = -10;
-            //	double dimX = Map.Max.X - Map.Min.X;
-            float emSize = 2;
-            float emOffset = emSize / 2;
-            GraphicsPath pathToDraw = pathBackground;
-            pathToDraw.Reset();
-            pathToDraw.StartFigure();
-            tmpOld = Map.GetCoordinates(0, 0);
-            zOld = Map.InterpolateZ(tmpOld.X, tmpOld.Y);
-            if (Math.Abs(zOld) < emSize)
-                emOffset = emSize;
-
-            /* info below x axis */
-            pathToDraw.AddLine((float)Map.Min.X, (float)(Map.Min.Y + offsetY), (float)Map.Max.X, (float)(Map.Min.Y + offsetY));     // zreo Z
-            AddBackgroundText(pathToDraw, new PointF((float)Map.Min.X, (float)(Map.Min.Y + offsetY + emSize * 1.5)), emSize, string.Format("Z profile over X, at Y={0:0.00}", tmpOld.Y));
-            AddBackgroundText(pathToDraw, new PointF((float)Map.Max.X + emSize, (float)(Map.Min.Y + offsetY + emSize / 2)), emSize, "Z= 0.00");
-            AddBackgroundText(pathToDraw, new PointF((float)Map.Max.X + emSize, (float)(Map.Min.Y + offsetY + zOld - emOffset)), emSize, string.Format("Z= {0:0.00}", zOld));
-
-            pathToDraw.StartFigure();
-            for (x = 1; x < Map.SizeX; x++)
-            {
-                tmp = Map.GetCoordinates(x, 0);
-                z = Map.InterpolateZ(tmp.X, tmp.Y);
-                pathToDraw.AddLine((float)tmpOld.X, (float)(Map.Min.Y + offsetY + zOld), (float)tmp.X, (float)(Map.Min.Y + offsetY + z));
-                tmpOld = tmp;
-                zOld = z;
-            }
-
-            /* info left of y axis */
-            tmpOld = Map.GetCoordinates(0, 0);
-            zOld = Map.InterpolateZ(tmpOld.X, tmpOld.Y);
-
-            pathToDraw.StartFigure();
-            pathToDraw.AddLine((float)(Map.Min.X + offsetX), (float)Map.Min.Y, (float)(Map.Min.X + offsetX), (float)Map.Max.Y);     // zreo Z
-                                                                                                                                    //	AddBackgroundText(pathToDraw, new PointF((float)Map.Min.X, (float)(offsetY + emSize * 1.5)), emSize, string.Format("Z profile over X, at Y={0:0.00}", tmpOld.Y));
-                                                                                                                                    //	AddBackgroundText(pathToDraw, new PointF((float)(Map.Max.X + offsetX - emSize), (float)(Map.Min.Y - emSize/2)), emSize, "Z= 0.00", true);
-                                                                                                                                    //	AddBackgroundText(pathToDraw, new PointF((float)(Map.Max.X + offsetX + zOld - emOffset), (float)(Map.Min.Y - emSize/2)), emSize, string.Format("Z= {0:0.00}",zOld), true);
-
-            pathToDraw.StartFigure();
-            for (y = 1; y < Map.SizeY; y++)
-            {
-                tmp = Map.GetCoordinates(0, y);
-                z = Map.InterpolateZ(tmp.X, tmp.Y);
-                pathToDraw.AddLine((float)(Map.Min.X + offsetX + zOld), (float)tmpOld.Y, (float)(Map.Min.X + offsetX + z), (float)tmp.Y);
-                tmpOld = tmp;
-                zOld = z;
-            }
-
-            tmp = Map.GetCoordinates(0, 0);
-            xyzSize.SetDimensionXY(tmp.X, tmp.Y);
-            tmp = Map.GetCoordinates(Map.SizeX, Map.SizeY);
-            xyzSize.SetDimensionXY(tmp.X, tmp.Y);
-        }
 
         /// <summary>
         /// copy actual gcode-pathPenDown to background path with machine coordinates

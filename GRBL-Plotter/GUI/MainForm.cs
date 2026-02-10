@@ -76,7 +76,6 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using virtualJoystick;
 
 
 namespace GrblPlotter
@@ -199,7 +198,6 @@ namespace GrblPlotter
                 toolSelect = 0;
             tC_RouterPlotterLaser.SelectedIndex = toolSelect;
 
-            LoadExtensionList();			// fill menu with available extension-scripts
             CmsPicBoxEnable(false);			// no graphic - no tasks
 
             gBoxDRO.Click += GrpBoxDRO_Click;
@@ -214,13 +212,6 @@ namespace GrblPlotter
             GbJoggingLarge = false;
 
             lbDimension.Select(0, 0);       // unselect text Dimension box
-
-            try
-            {
-                if (ControlGamePad.Initialize())
-                    Logger.Info(culture, "GamePad found");
-            }
-            catch (Exception er) { Logger.Error(er, " MainForm - ControlGamePad.Initialize "); }
 
             Grbl.Init();                    // load and set grbl messages in grblRelated.cs
             CodeMessage.Init();
@@ -239,12 +230,6 @@ namespace GrblPlotter
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             SetGUISize();               // resize GUI arcodring last size and check if within display in MainFormUpdate.cs
 
-            if (Properties.Settings.Default.guiCheckUpdate)
-            {
-                StatusStripSet(2, Localization.GetString("statusStripeCheckUpdate"), Color.LightGreen);
-                CheckUpdate.CheckVersion(false, Properties.Settings.Default.guiLastEndReason);     // check update
-            }
-
             mainTimerCount = 0;
             SplashScreenTimer.Enabled = true;
             SplashScreenTimer.Stop();
@@ -260,28 +245,13 @@ namespace GrblPlotter
 
                 if (_serial_form == null)
                 {
-                    if (Properties.Settings.Default.ctrlUseSerial2)
-                    {
-                        _serial_form2 = new ControlSerialForm("COM Tool changer", 2);
-                        if (showFormInFront) _serial_form2.Show(this);
-                        else _serial_form2.Show();
-                    }
-                    if (Properties.Settings.Default.ctrlUseSerial3)
-                    {
-                        _serial_form3 = new SimpleSerialForm();// "COM simple", 3);
-                        if (showFormInFront) _serial_form3.Show(this);
-                        else _serial_form3.Show();
-                    }
-                    _serial_form = new ControlSerialForm("COM CNC", 1, _serial_form2, _serial_form3);
+                    _serial_form = new ControlSerialForm("COM CNC", 1, null, null);
                     if (showFormInFront) _serial_form.Show(this);
                     else _serial_form.Show();
 
                     _serial_form.RaisePosEvent += OnRaisePosEvent;
                     _serial_form.RaiseStreamEvent += OnRaiseStreamEvent;
                 }
-
-                if (Properties.Settings.Default.ctrlUseSerialDIY)
-                { DIYControlopen(sender, e); }
 
                 if (_splashscreen != null)
                 {
@@ -303,9 +273,6 @@ namespace GrblPlotter
                 timerUpdateControls = true;
                 Properties.Settings.Default.guiLastStart = DateTime.Now.Ticks;
                 Properties.Settings.Default.guiLastEndReason = "";
-
-                if (Properties.Settings.Default.processOpenOnProgStart)
-                { ProcessAutomationFormOpen(sender, e); }
 
                 CheckProgramFiles();
             }
@@ -341,7 +308,7 @@ namespace GrblPlotter
 
             Properties.Settings.Default.guiLastEnd = DateTime.Now.Ticks;
 
-            SaveSettings();
+            Properties.Settings.Default.Save();
             Logger.Info("###### GRBL-Plotter STOP ######");
         }
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -418,8 +385,6 @@ namespace GrblPlotter
         }
 
 
-        private void OnRaiseOverrideMessage(object sender, OverrideMsgEventArgs e)   // command from streaming_form2 - Override
-        { SendRealtimeCommand(e.MSG); }
 
         // get override events from form "StreamingForm" for GRBL 0.9
         private string overrideMessage = "";
@@ -622,11 +587,6 @@ namespace GrblPlotter
                         delayedMessageFormClose++;
                 }
             }
-            if (delayedHeightMapShow > 0)
-            {
-                if (delayedHeightMapShow-- == 1)
-                { LoadHeightMap(); }
-            }
             mainTimerCount++;
         }
 
@@ -788,157 +748,12 @@ namespace GrblPlotter
         }
 
 
-        // virtualJoystic sends two step-width-values per second. One position should be reached before next command
-        // speed (units/min) = 2 * stepsize * 60 * factor (to compensate speed-ramps)
         private int virtualJoystickXY_lastIndex = 1;
         private int virtualJoystickZ_lastIndex = 1;
         private int virtualJoystickA_lastIndex = 1;
-        private void VirtualJoystickXY_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            switch (e.KeyCode)
-            {
-                case Keys.Left:
-                case Keys.Right:
-                case Keys.Down:
-                case Keys.Up:
-                    e.IsInputKey = true;
-                    break;
-            }
-        }
 
-        private void VirtualJoystickXY_JoyStickEvent(object sender, JogEventArgs e)
-        { VirtualJoystickXY_move(e.JogPosX, e.JogPosY); }
-        private void VirtualJoystickXY_move(int index_X, int index_Y)
-        {
-            int indexX = Math.Abs(index_X);
-            int indexY = Math.Abs(index_Y);
-            int dirX = Math.Sign(index_X);
-            int dirY = Math.Sign(index_Y);
-            virtualJoystickXY_lastIndex = Math.Max(indexX, indexY);
-            if (indexX >= joystickXYStep.Length)
-            { indexX = joystickXYStep.Length - 1; index_X = indexX; }
-            if (indexX < 0)
-            { indexX = 0; index_X = 0; }
-            if (indexY >= joystickXYStep.Length)
-            { indexY = joystickXYStep.Length - 1; index_Y = indexY; }
-            if (indexY < 0)
-            { indexY = 0; index_Y = 0; }
-
-            if ((index_X == 0) && (index_Y == 0))
-            { if (!Grbl.isVersion_0) SendRealtimeCommand(133); return; }
-
-            int speed = (int)Math.Max(joystickXYSpeed[indexX], joystickXYSpeed[indexY]);
-            String strX = Gcode.FrmtNum(joystickXYStep[indexX] * dirX);
-            String strY = Gcode.FrmtNum(joystickXYStep[indexY] * dirY);
-            //    Logger.Error("VirtualJoystickXY_move speed==0  x:{0}  y:{1}", index_X, index_Y);
-            if (speed > 0)
-            {
-                if (Properties.Settings.Default.machineLimitsAlarm && Properties.Settings.Default.machineLimitsShow)
-                {
-                    if (!Dimensions.WithinLimits(Grbl.posMachine, joystickXYStep[indexX] * dirX, joystickXYStep[indexY] * dirY))
-                    {
-                        decimal minx = Properties.Settings.Default.machineLimitsHomeX;
-                        decimal maxx = minx + Properties.Settings.Default.machineLimitsRangeX;
-                        decimal miny = Properties.Settings.Default.machineLimitsHomeY;
-                        decimal maxy = miny + Properties.Settings.Default.machineLimitsRangeY;
-
-                        string tmp = string.Format(culture, "minX: {0:0.0} moveTo: {1:0.0} maxX: {2:0.0}", minx, (Grbl.posMachine.X + joystickXYStep[indexX] * dirX), maxx);
-                        tmp += string.Format(culture, "\r\nminY: {0:0.0} moveTo: {1:0.0} maxY: {2:0.0}", miny, (Grbl.posMachine.Y + joystickXYStep[indexY] * dirY), maxy);
-                        System.Media.SystemSounds.Beep.Play();
-                        DialogResult dialogResult = MessageBox.Show(Localization.GetString("mainLimits1") + tmp + Localization.GetString("mainLimits2"), Localization.GetString("mainAttention"), MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-                        if (dialogResult == DialogResult.Cancel)
-                            return;
-                    }
-                }
-                String s = "G91 ";
-                if (Grbl.isMarlin) { s += ";G1 "; }
-                if (index_X == 0)
-                    s += String.Format(culture, "Y{0} F{1}", strY, speed).Replace(',', '.');
-                else if (index_Y == 0)
-                    s += String.Format(culture, "X{0} F{1}", strX, speed).Replace(',', '.');
-                else
-                    s += String.Format(culture, "X{0} Y{1} F{2}", strX, strY, speed).Replace(',', '.');
-
-                SendCommands(s, true);
-            }
-            else
-                Logger.Error("VirtualJoystickXY_move speed==0  index: x:{0}  y:{1}", index_X, index_Y);
-
-        }
-        private void VirtualJoystickXY_MouseUp(object sender, MouseEventArgs e)
-        { if (!Grbl.isVersion_0 && cBSendJogStop.Checked) SendRealtimeCommand(133); }
         private void BtnJogStop_Click(object sender, EventArgs e)
         { if (!Grbl.isVersion_0) SendRealtimeCommand(133); }    //0x85
-
-        private void VirtualJoystickXY_Enter(object sender, EventArgs e)
-        {
-            if (Grbl.isVersion_0) SendCommands("G91;G1F100");
-            Gb_Jogging.BackColor = Color.LightGreen;
-        }
-        private void VirtualJoystickXY_Leave(object sender, EventArgs e)
-        {
-            if (Grbl.isVersion_0) SendCommand("G90");
-            Gb_Jogging.BackColor = SystemColors.Control;
-            virtualJoystickXY.JoystickRasterMark = 0;
-            virtualJoystickZ.JoystickRasterMark = 0;
-            virtualJoystickA.JoystickRasterMark = 0;
-            virtualJoystickB.JoystickRasterMark = 0;
-            virtualJoystickC.JoystickRasterMark = 0;
-        }
-        private void VirtualJoystickZ_JoyStickEvent(object sender, JogEventArgs e)
-        { VirtualJoystickZ_move(e.JogPosY); }
-        private void VirtualJoystickZ_move(int index_Z)
-        {
-            int indexZ = Math.Abs(index_Z);
-            int dirZ = Math.Sign(index_Z);
-            if (indexZ >= joystickZStep.Length)
-            { indexZ = joystickZStep.Length - 1; }
-            if (indexZ < 0)
-            { indexZ = 0; }
-
-            if (index_Z == 0)
-            { if (!Grbl.isVersion_0) SendRealtimeCommand(133); return; }
-
-            virtualJoystickZ_lastIndex = indexZ;
-            int speed = (int)joystickZSpeed[indexZ];
-            String strZ = Gcode.FrmtNum(joystickZStep[indexZ] * dirZ);
-            if (speed > 0)
-            {
-                String s = "G91 ";
-                if (Grbl.isMarlin) { s += ";G1 "; }
-                s += String.Format(culture, "Z{0} F{1}", strZ, speed).Replace(',', '.');
-                SendCommands(s, true);
-            }
-        }
-        private void VirtualJoystickA_JoyStickEvent(object sender, JogEventArgs e)
-        { VirtualJoystickA_move(e.JogPosY, ctrl4thName); }
-        private void VirtualJoystickA_move(int index_A, string name)
-        {
-            int indexA = Math.Abs(index_A);
-            int dirA = Math.Sign(index_A);
-            if (indexA >= joystickAStep.Length)
-            { indexA = joystickAStep.Length - 1; }
-            if (indexA < 0)
-            { indexA = 0; }
-
-            if (index_A == 0)
-            { if (!Grbl.isVersion_0) SendRealtimeCommand(133); return; }
-
-            virtualJoystickA_lastIndex = indexA;
-            int speed = (int)joystickASpeed[indexA];
-            String strZ = Gcode.FrmtNum(joystickAStep[indexA] * dirA);
-            if (speed > 0)
-            {
-                String s = "G91 ";
-                if (Grbl.isMarlin) { s += ";G1 "; }
-                s += String.Format(culture, "{0}{1} F{2}", name, strZ, speed).Replace(',', '.');
-                SendCommands(s, true);
-            }
-        }
-        private void VirtualJoystickB_JoyStickEvent(object sender, JogEventArgs e)
-        { VirtualJoystickA_move(e.JogPosY, "B"); }
-        private void VirtualJoystickC_JoyStickEvent(object sender, JogEventArgs e)
-        { VirtualJoystickA_move(e.JogPosY, "C"); }
 
         // Spindle and coolant
         private void CbSpindle_CheckedChanged(object sender, EventArgs e)
@@ -1344,22 +1159,10 @@ namespace GrblPlotter
                 return;
             }
 
-            if (_diyControlPad != null)
-            { _diyControlPad.isHeightProbing = false; }
-
             foreach (string btncmd in commands)
             {
-                if (btncmd.StartsWith("($") && (_diyControlPad != null))
-                {
-                    string tmp = btncmd.Replace("($", "[");
-                    tmp = tmp.Replace(")", "]");
-                    _diyControlPad.SendFeedback(tmp);
-                }
-                else
-                {
-                    if (!ProcessSpecialCommands(command) && (!isStreaming || isStreamingPause))
-                        SendCommand(btncmd.Trim());         // processCommands
-                }
+                if (!ProcessSpecialCommands(command) && (!isStreaming || isStreamingPause))
+                    SendCommand(btncmd.Trim());         // processCommands
             }
         }
         private bool ProcessSpecialCommands(string command)
@@ -1468,60 +1271,6 @@ namespace GrblPlotter
         }
         private void JoystickResize()
         {
-            int virtualJoystickSize = Properties.Settings.Default.guiJoystickSize;
-            int zRatio = 25;                    // 20% of xyJoystick width
-            int zCount = 1;
-            Logger.Trace("resizeJoystick() visible:  A:{0} B:{1} C:{2}", Grbl.axisA, Grbl.axisB, Grbl.axisC);
-
-            if (ctrl4thAxis || Grbl.axisA) zCount = 2;
-            if (Grbl.axisB) { zCount = 3; zRatio = 25; }
-            if (Grbl.axisC) { zCount = 4; zRatio = 25; }
-            int spaceY = this.Height - 400;// 520;     // width is 125% or 150%    485
-            int spaceX = this.Width - 670;      // heigth is 100%
-            spaceX = Math.Max(spaceX, 120);// 235);     // minimum width is 235px
-
-            int aWidth = 0, bWidth = 0, cWidth = 0;
-            int zWidth = (spaceX * zRatio / (100 + zCount * zRatio));           // 
-            zWidth = Math.Min(zWidth, virtualJoystickSize * zRatio / 100);
-            int xyWidth = spaceX - zCount * zWidth;
-            if (xyWidth < 0) xyWidth = 0;
-
-            tLPRechtsUntenRechtsMitte.ColumnStyles[1].Width = zWidth;       // Z
-            virtualJoystickA.Visible = false;
-            virtualJoystickB.Visible = false;
-            virtualJoystickC.Visible = false;
-            if (ctrl4thAxis || Grbl.axisA)
-            { aWidth = zWidth; virtualJoystickA.Visible = true; }
-            if (Grbl.axisB)
-            { aWidth = bWidth = zWidth; virtualJoystickB.Visible = true; }
-            if (Grbl.axisC)
-            { aWidth = bWidth = cWidth = zWidth; virtualJoystickC.Visible = true; }
-
-            tLPRechtsUntenRechtsMitte.ColumnStyles[2].Width = aWidth;       // A
-            tLPRechtsUntenRechtsMitte.ColumnStyles[3].Width = bWidth;       // B
-            tLPRechtsUntenRechtsMitte.ColumnStyles[4].Width = cWidth;       // C
-
-            xyWidth = Math.Min(xyWidth, spaceY);
-            xyWidth = Math.Min(xyWidth, virtualJoystickSize);
-            xyWidth = Math.Max(xyWidth, 100);
-
-            spaceX = Math.Min(xyWidth + zWidth + aWidth + bWidth + cWidth + 10, spaceX);
-            spaceX = Math.Max(spaceX, 235);
-            tLPRechtsUntenRechts.Width = spaceX;
-            tLPRechtsUntenRechtsMitte.Width = spaceX;
-
-            tLPRechtsUntenRechtsMitte.Height = xyWidth;
-            tLPRechtsUntenRechtsMitte.ColumnStyles[0].Width = xyWidth;
-            virtualJoystickXY.Size = new Size(xyWidth, xyWidth);
-            virtualJoystickZ.Size = new Size(zWidth, xyWidth);
-            virtualJoystickA.Size = new Size(aWidth, xyWidth);
-            virtualJoystickB.Size = new Size(bWidth, xyWidth);
-            virtualJoystickC.Size = new Size(cWidth, xyWidth);
-            virtualJoystickXY.Invalidate();
-            virtualJoystickZ.Invalidate();
-            virtualJoystickA.Invalidate();
-            virtualJoystickB.Invalidate();
-            virtualJoystickC.Invalidate();
         }
 
 
@@ -1765,20 +1514,10 @@ namespace GrblPlotter
         {
             _serial_form?.BringToFront();
             if (_text_form != null) { _text_form.WindowState = FormWindowState.Normal; _text_form.BringToFront(); }
-            if (_image_form != null) { _image_form.WindowState = FormWindowState.Normal; _image_form.BringToFront(); }
-            if (_shape_form != null) { _shape_form.WindowState = FormWindowState.Normal; _shape_form.BringToFront(); }
-            if (_wireCutter_form != null) { _wireCutter_form.WindowState = FormWindowState.Normal; _wireCutter_form.BringToFront(); }
-            if (_barcode_form != null) { _barcode_form.WindowState = FormWindowState.Normal; _barcode_form.BringToFront(); }
-            if (_tablet_form != null) { _tablet_form.WindowState = FormWindowState.Normal; _tablet_form.BringToFront(); }
 
             if (_setup_form != null) { _setup_form.WindowState = FormWindowState.Normal; _setup_form.BringToFront(); }
-            if (_camera_form != null) { _camera_form.WindowState = FormWindowState.Normal; _camera_form.BringToFront(); }
             if (_coordSystem_form != null) { _coordSystem_form.WindowState = FormWindowState.Normal; _coordSystem_form.BringToFront(); }
-            if (_laser_form != null) { _laser_form.WindowState = FormWindowState.Normal; _laser_form.BringToFront(); }
-            if (_probing_form != null) { _probing_form.WindowState = FormWindowState.Normal; _probing_form.BringToFront(); }
-            if (_heightmap_form != null) { _heightmap_form.WindowState = FormWindowState.Normal; _heightmap_form.BringToFront(); }
             if (_grbl_setup_form != null) { _grbl_setup_form.WindowState = FormWindowState.Normal; _grbl_setup_form.BringToFront(); }
-            if (_process_form != null) { _process_form.WindowState = FormWindowState.Normal; _process_form.BringToFront(); }
             if (_grbl_setup_form != null) { _grbl_setup_form.WindowState = FormWindowState.Normal; _grbl_setup_form.BringToFront(); }
             //   _streaming_form.SendToBack();
         }

@@ -893,7 +893,7 @@ namespace GrblPlotter
 
         private static void RemoveOffset(List<PathObject> graphicToOffset, double offsetX, double offsetY, int start = 0)
         {
-            System.Diagnostics.StackTrace s = new System.Diagnostics.StackTrace(System.Threading.Thread.CurrentThread, true);
+            System.Diagnostics.StackTrace s = new System.Diagnostics.StackTrace(true);
             List<int> iLargest = new List<int>();
             double tlarge, largest = 0;
 
@@ -1011,7 +1011,7 @@ namespace GrblPlotter
         { Rotate(completeGraphic, angleRad, offsetX, offsetY); }
         private static void Rotate(List<PathObject> graphicToRotate, double angleRad, double offsetX, double offsetY)
         {
-            System.Diagnostics.StackTrace s = new System.Diagnostics.StackTrace(System.Threading.Thread.CurrentThread, true);
+            System.Diagnostics.StackTrace s = new System.Diagnostics.StackTrace(true);
             if (logEnable) Logger.Trace("...Rotate a:{0:0.00} X:{1:0.00} Y:{2:0.00} caller:{3} --------------------------------------", angleRad * 180 / Math.PI, offsetX, offsetY, s.GetFrame(1).GetMethod().Name);
             foreach (PathObject item in graphicToRotate)    // dot or path
             {
