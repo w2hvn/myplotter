@@ -17,6 +17,7 @@ namespace PdfToGCode.Views
         private List<PdfPageData>? _pagesData;
         private string? _gCode;
         private GlyphRenderer? _glyphRenderer;
+        private string? _loadedFontPath;
 
         public MainWindow()
         {
@@ -29,9 +30,8 @@ namespace PdfToGCode.Views
 
             // Disable interactions
             BtnImport.IsEnabled = !isBusy;
+            BtnSelectFont.IsEnabled = !isBusy;
 
-            // Logic for other buttons depends on state, but we can just disable all during busy
-            // and then re-evaluate enable state based on data presence
             if (isBusy)
             {
                 BtnFont.IsEnabled = false;
@@ -41,9 +41,27 @@ namespace PdfToGCode.Views
             else
             {
                 // Restore state
-                BtnFont.IsEnabled = _pagesData != null;
+                BtnFont.IsEnabled = _pagesData != null && !string.IsNullOrEmpty(_loadedFontPath);
                 BtnGenerate.IsEnabled = _glyphRenderer != null;
                 BtnSave.IsEnabled = !string.IsNullOrEmpty(_gCode);
+            }
+        }
+
+        private void BtnSelectFont_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = "SVG Font Files (*.svg)|*.svg|All Files (*.*)|*.*",
+                Title = "Select Single-Line SVG Font"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                _loadedFontPath = openFileDialog.FileName;
+                MessageBox.Show($"Font loaded: {System.IO.Path.GetFileName(_loadedFontPath)}", "Success");
+
+                // Update button state
+                BtnFont.IsEnabled = _pagesData != null;
             }
         }
 
@@ -102,23 +120,17 @@ namespace PdfToGCode.Views
         private async void BtnFont_Click(object sender, RoutedEventArgs e)
         {
             if (_pagesData == null) return;
+            if (string.IsNullOrEmpty(_loadedFontPath) || !File.Exists(_loadedFontPath))
+            {
+                MessageBox.Show("Please select a font file first.", "Warning");
+                return;
+            }
 
             try
             {
                 ToggleBusyState(true);
 
-                // Prepare font path
-                string fontPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Fonts", "CHUINHOA.svg");
-                if (!File.Exists(fontPath))
-                {
-                    string devPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Fonts", "CHUINHOA.svg");
-                    if (File.Exists(devPath)) fontPath = devPath;
-                    else
-                    {
-                         MessageBox.Show($"Font file not found at {fontPath}", "Error");
-                         return;
-                    }
-                }
+                string fontPath = _loadedFontPath;
 
                 // Parse Font (CPU bound)
                 var font = await Task.Run(() =>
@@ -154,17 +166,12 @@ namespace PdfToGCode.Views
         private async void BtnGenerate_Click(object sender, RoutedEventArgs e)
         {
             if (_pagesData == null || _glyphRenderer == null) return;
+            if (string.IsNullOrEmpty(_loadedFontPath) || !File.Exists(_loadedFontPath)) return;
 
             try
             {
                 ToggleBusyState(true);
-
-                string fontPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Fonts", "CHUINHOA.svg");
-                if (!File.Exists(fontPath))
-                {
-                    string devPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Fonts", "CHUINHOA.svg");
-                    if (File.Exists(devPath)) fontPath = devPath;
-                }
+                string fontPath = _loadedFontPath;
 
                 _gCode = await Task.Run(() =>
                 {
@@ -194,8 +201,9 @@ namespace PdfToGCode.Views
 
             var saveFileDialog = new SaveFileDialog
             {
-                Filter = "G-Code Files (*.gcode;*.nc)|*.gcode;*.nc|All Files (*.*)|*.*",
-                FileName = "output.gcode"
+                Filter = "NC Files (*.nc)|*.nc",
+                DefaultExt = ".nc",
+                FileName = "output.nc"
             };
 
             if (saveFileDialog.ShowDialog() == true)

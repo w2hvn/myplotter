@@ -31,7 +31,22 @@ namespace PdfToGCode.GCode
 
             foreach (var page in pages)
             {
-                // Sort text items: Top to Bottom (Descending Y), Left to Right (Ascending X)
+                // 1. Generate Geometry (Tables, Lines) first
+                foreach (var polyline in page.GeometricPaths)
+                {
+                     if (polyline.Count < 2) continue;
+
+                     var transformedPath = new List<Point>();
+                     foreach (var p in polyline)
+                     {
+                         // PDF points are already absolute in PDF space (Bottom-Left origin)
+                         // Just scale to machine units
+                         transformedPath.Add(new Point(p.X * _settings.Scale, p.Y * _settings.Scale));
+                     }
+                     AppendPath(sb, transformedPath);
+                }
+
+                // 2. Sort text items: Top to Bottom (Descending Y), Left to Right (Ascending X)
                 // Note: PDF Y coordinates increase upwards, so higher Y is "Top".
                 var sortedItems = page.TextItems
                     .OrderByDescending(t => t.Origin.Y)
